@@ -1,0 +1,15 @@
+---
+import { t, solutionLinks, industryLinks, auditHref, type Lang } from '../lib/v3';
+interface Props { lang?: Lang }
+const lang=Astro.props.lang??(Astro.url.pathname.startsWith('/en/')?'en':'es');
+const en=lang==='en';
+const keywordCopy=t('global','Footer SEO keyword line',lang);
+const keywords=en?keywordCopy:keywordCopy.replaceAll('Mexico','México').replace('agregacion','agregación');
+---
+<footer><div class="shell footer-main v3-footer-main">
+ <div><a class="brand" href={en?'/en/':'/'} aria-label="Vialterna"><img class="brand-logo" src="/brand/vialterna-logo-white.svg" alt="Vialterna" width="168" height="50" loading="lazy"/></a><p>{en?'Resilient connectivity':'Conectividad resiliente'}</p></div>
+ <div><h4>{en?'Solutions':'Soluciones'}</h4>{solutionLinks(lang).map(link=><a href={link.href}>{link.label}</a>)}<a href={auditHref(lang)}>{en?'Telco audit':'Auditoría Telco'}</a></div>
+ <div><h4>{en?'Industries':'Industrias'}</h4>{industryLinks(lang).map(link=><a href={link.href}>{link.label}</a>)}</div>
+ <div><h4>{en?'Company':'Empresa'}</h4><a href={en?'/en/company/':'/empresa/'}>{en?'Company':'Empresa'}</a><a href={en?'/en/insights/':'/insights/'}>Insights</a><a href={en?'/en/faq/':'/faq/'}>FAQ</a><a href={en?'/en/aviso-de-privacidad/':'/aviso-de-privacidad/'}>{en?'Privacy notice':'Aviso de privacidad'}</a><a href={en?'/en/contact/':'/contacto/'}>{en?'Contact':'Contacto'}</a></div>
+ <div><h4>{en?'Contact':'Contacto'}</h4><a href="mailto:atencionaclientes@vialterna.com">atencionaclientes@vialterna.com</a><a href="https://wa.me/525580626884">+52 55 8062 6884</a><a href="https://www.linkedin.com/company/vialterna/">LinkedIn</a><a href="https://www.instagram.com/vialterna_comunicaciones/">Instagram</a></div>
+</div><div class="shell footer-bottom"><span>© 2026 Vialterna</span><span>{en?'Site by':'Sitio realizado por'} <a href="https://www.o7digital.com/" target="_blank" rel="noopener noreferrer">o7digital</a></span><span>C. Montes Urales 720-PB, Lomas - Virreyes, Lomas de Chapultepec, Miguel Hidalgo, 11000 CDMX</span><a class="back-to-top" href="#top">{en?'Back to top':'Volver arriba'} ↑</a></div><div class="shell footer-keywords">{keywords}</div></footer>

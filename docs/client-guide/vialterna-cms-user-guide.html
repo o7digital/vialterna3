@@ -1,0 +1,1120 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guía operativa DatoCMS | Vialterna</title>
+  <style>
+    :root {
+      --ink: #101827;
+      --navy: #111827;
+      --blue: #1468ff;
+      --pink: #f20b83;
+      --cyan: #00cbd6;
+      --paper: #ffffff;
+      --soft: #f4f6f9;
+      --soft-blue: #edf5ff;
+      --soft-pink: #fff0f7;
+      --line: #d9e0e8;
+      --muted: #667085;
+      --green: #2aa876;
+      --amber: #f0a429;
+    }
+
+    * { box-sizing: border-box; }
+
+    @page { size: A4; margin: 0; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #dfe3e8;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 9.2pt;
+      line-height: 1.42;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .page {
+      position: relative;
+      width: 210mm;
+      height: 297mm;
+      margin: 0 auto 12px;
+      padding: 17mm 18mm 15mm;
+      overflow: hidden;
+      background: var(--paper);
+      page-break-after: always;
+      break-after: page;
+    }
+
+    .page:last-child {
+      margin-bottom: 0;
+      page-break-after: auto;
+      break-after: auto;
+    }
+
+    @media print {
+      html, body { background: #fff; }
+      .page { margin: 0; }
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0;
+      color: var(--navy);
+      font-size: 12pt;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand span { color: var(--pink); }
+
+    .topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 13mm;
+    }
+
+    .doc-label {
+      color: var(--muted);
+      font-size: 6.8pt;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .kicker {
+      margin: 0 0 2mm;
+      color: var(--pink);
+      font-size: 7.2pt;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, h4, p { margin-top: 0; }
+
+    h1 {
+      max-width: 145mm;
+      margin-bottom: 5mm;
+      color: var(--navy);
+      font-size: 29pt;
+      line-height: 1.04;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 0 0 5mm;
+      color: var(--navy);
+      font-size: 18pt;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 2.5mm;
+      color: var(--navy);
+      font-size: 11pt;
+      line-height: 1.2;
+    }
+
+    h4 {
+      margin-bottom: 1.5mm;
+      color: var(--navy);
+      font-size: 8.4pt;
+    }
+
+    p { margin-bottom: 3mm; }
+
+    .lead {
+      max-width: 150mm;
+      color: #4d5768;
+      font-size: 11pt;
+      line-height: 1.5;
+    }
+
+    .small { font-size: 7.6pt; }
+    .muted { color: var(--muted); }
+
+    .footer {
+      position: absolute;
+      right: 18mm;
+      bottom: 7mm;
+      left: 18mm;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 2.5mm;
+      border-top: .35mm solid var(--line);
+      color: #7a8493;
+      font-size: 6.2pt;
+    }
+
+    .cover {
+      padding-top: 19mm;
+    }
+
+    .cover .topline { margin-bottom: 28mm; }
+
+    .cover h1 {
+      max-width: 154mm;
+      font-size: 35pt;
+      line-height: 1.02;
+    }
+
+    .cover .lead {
+      max-width: 128mm;
+      margin-bottom: 12mm;
+    }
+
+    .cover-meta {
+      display: grid;
+      grid-template-columns: 1.15fr 1.15fr .85fr;
+      margin: 0 0 11mm;
+      border: .35mm solid var(--line);
+      background: var(--soft);
+    }
+
+    .cover-meta > div {
+      min-height: 17mm;
+      padding: 4mm;
+      border-right: .35mm solid var(--line);
+    }
+
+    .cover-meta > div:last-child { border-right: 0; }
+
+    .meta-label {
+      display: block;
+      margin-bottom: 2mm;
+      color: #798292;
+      font-size: 6.2pt;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .meta-value {
+      color: var(--ink);
+      font-size: 8.3pt;
+    }
+
+    .cover-band {
+      display: grid;
+      grid-template-columns: 1fr 1.55fr;
+      min-height: 31mm;
+      color: #fff;
+      background: var(--navy);
+    }
+
+    .cover-band strong {
+      display: flex;
+      align-items: center;
+      padding: 6mm;
+      font-size: 14pt;
+      line-height: 1.16;
+    }
+
+    .cover-band p {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 6mm;
+      color: #d8deea;
+      border-left: .35mm solid #384153;
+    }
+
+    .cover-mark {
+      position: absolute;
+      right: 18mm;
+      bottom: 31mm;
+      width: 42mm;
+      height: 42mm;
+      padding: 7mm;
+      background: var(--navy);
+    }
+
+    .cover-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .section-number {
+      display: inline-block;
+      margin-right: 2mm;
+      color: var(--pink);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5mm;
+      margin: 7mm 0;
+    }
+
+    .summary-box {
+      padding: 5mm;
+      border: .35mm solid var(--line);
+      background: var(--soft);
+    }
+
+    .summary-box strong {
+      display: block;
+      margin-bottom: 2mm;
+      color: var(--navy);
+      font-size: 10pt;
+    }
+
+    .summary-box p { margin-bottom: 0; }
+
+    .statement {
+      margin-top: 7mm;
+      padding: 5mm;
+      color: #fff;
+      background: var(--navy);
+      font-size: 10pt;
+      font-weight: 700;
+    }
+
+    .screenshot {
+      position: relative;
+      margin: 5mm 0 4mm;
+      border: .35mm solid #cfd6df;
+      background: #101318;
+      box-shadow: 0 1.5mm 5mm rgba(16, 24, 39, .12);
+    }
+
+    .screenshot img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .screenshot .marker {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 7mm;
+      height: 7mm;
+      color: #fff;
+      background: var(--pink);
+      border: .8mm solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 1mm 2.5mm rgba(0, 0, 0, .35);
+      font-size: 7pt;
+      font-weight: 800;
+    }
+
+    .caption {
+      margin: 0;
+      color: var(--muted);
+      font-size: 6.5pt;
+    }
+
+    .steps {
+      display: grid;
+      gap: 2.2mm;
+      margin: 5mm 0;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 8mm 1fr;
+      align-items: start;
+      gap: 2.5mm;
+    }
+
+    .step-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 6.5mm;
+      height: 6.5mm;
+      color: #fff;
+      background: var(--navy);
+      border-radius: 50%;
+      font-size: 7pt;
+      font-weight: 800;
+    }
+
+    .step p {
+      margin: .4mm 0 0;
+    }
+
+    .note, .warning, .success {
+      margin: 5mm 0;
+      padding: 4mm 4.5mm;
+      border-left: 1.2mm solid var(--blue);
+      background: var(--soft-blue);
+    }
+
+    .warning {
+      border-left-color: var(--amber);
+      background: #fff6e8;
+    }
+
+    .success {
+      border-left-color: var(--green);
+      background: #eef9f4;
+    }
+
+    .note strong, .warning strong, .success strong { color: var(--navy); }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6mm;
+    }
+
+    .two-col.wide-left { grid-template-columns: 1.2fr .8fr; }
+
+    .card {
+      padding: 4mm;
+      border: .35mm solid var(--line);
+      background: var(--paper);
+    }
+
+    .card.soft { background: var(--soft); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 4mm 0;
+      font-size: 7.7pt;
+    }
+
+    th, td {
+      padding: 2.7mm 3mm;
+      vertical-align: top;
+      border: .35mm solid var(--line);
+      text-align: left;
+    }
+
+    th {
+      color: var(--navy);
+      background: var(--soft);
+      font-weight: 800;
+    }
+
+    td:first-child {
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    code {
+      color: #3d2d62;
+      font-family: "Courier New", monospace;
+      font-size: 7.2pt;
+      font-weight: 700;
+    }
+
+    ul.clean {
+      margin: 2mm 0 4mm;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul.clean li {
+      position: relative;
+      margin: 0 0 2.2mm;
+      padding-left: 4.5mm;
+    }
+
+    ul.clean li::before {
+      position: absolute;
+      top: .7mm;
+      left: 0;
+      width: 2.2mm;
+      height: 2.2mm;
+      background: var(--pink);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .workflow {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin: 6mm 0;
+      border: .35mm solid var(--line);
+    }
+
+    .workflow > div {
+      min-height: 32mm;
+      padding: 4mm;
+      border-right: .35mm solid var(--line);
+      background: var(--soft);
+    }
+
+    .workflow > div:last-child { border-right: 0; }
+
+    .workflow .n {
+      display: block;
+      margin-bottom: 3mm;
+      color: var(--pink);
+      font-size: 15pt;
+      font-weight: 800;
+    }
+
+    .workflow strong {
+      display: block;
+      margin-bottom: 2mm;
+      color: var(--navy);
+    }
+
+    .status-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4mm;
+      margin: 5mm 0;
+    }
+
+    .status {
+      padding: 4mm;
+      border: .35mm solid var(--line);
+    }
+
+    .dot {
+      display: inline-block;
+      width: 2.5mm;
+      height: 2.5mm;
+      margin-right: 2mm;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    .dot.amber { background: var(--amber); }
+    .dot.gray { background: #9199a7; }
+
+    .field-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3mm;
+      margin: 4mm 0;
+    }
+
+    .field {
+      min-height: 22mm;
+      padding: 3.5mm;
+      border: .35mm solid var(--line);
+      background: var(--soft);
+    }
+
+    .field code {
+      display: block;
+      margin-bottom: 1.5mm;
+      color: var(--pink);
+    }
+
+    .field p { margin: 0; }
+
+    .language {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3mm;
+      margin: 4mm 0;
+    }
+
+    .language > div {
+      padding: 3mm 4mm;
+      border: .35mm solid var(--line);
+    }
+
+    .language strong {
+      color: var(--navy);
+      font-size: 8pt;
+    }
+
+    .language .en { border-top: 1.2mm solid var(--blue); }
+    .language .es { border-top: 1.2mm solid var(--pink); }
+
+    .checklist {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5mm 7mm;
+      margin: 4mm 0;
+    }
+
+    .check {
+      display: grid;
+      grid-template-columns: 6mm 1fr;
+      gap: 2mm;
+      align-items: start;
+    }
+
+    .box {
+      width: 4.5mm;
+      height: 4.5mm;
+      margin-top: .3mm;
+      border: .5mm solid var(--pink);
+    }
+
+    .support-band {
+      margin-top: 8mm;
+      padding: 6mm;
+      color: #fff;
+      background: var(--blue);
+    }
+
+    .support-band strong {
+      display: block;
+      margin-bottom: 1.5mm;
+      font-size: 12pt;
+    }
+
+    .support-band p { margin-bottom: 0; }
+
+    .do-dont {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5mm;
+      margin: 5mm 0;
+    }
+
+    .do-dont > div {
+      padding: 4mm;
+      border: .35mm solid var(--line);
+    }
+
+    .do { border-top: 1.2mm solid var(--green) !important; }
+    .dont { border-top: 1.2mm solid var(--pink) !important; }
+  </style>
+</head>
+<body>
+  <section class="page cover">
+    <div class="topline">
+      <div class="brand">O7<span>DIGITAL.</span></div>
+      <div class="doc-label">Guía operativa · Edición 1.0</div>
+    </div>
+
+    <p class="kicker">DatoCMS · Gestión de contenidos</p>
+    <h1>Guía de administración del sitio Vialterna</h1>
+    <p class="lead">Manual práctico para actualizar contenidos en español e inglés, validar los cambios en un entorno de prueba y mantener el sitio publicado con control.</p>
+
+    <div class="cover-meta">
+      <div>
+        <span class="meta-label">Cliente</span>
+        <span class="meta-value">Vialterna</span>
+      </div>
+      <div>
+        <span class="meta-label">Plataformas</span>
+        <span class="meta-value">DatoCMS + Vercel</span>
+      </div>
+      <div>
+        <span class="meta-label">Fecha</span>
+        <span class="meta-value">30 de julio de 2026</span>
+      </div>
+    </div>
+
+    <div class="cover-band">
+      <strong>Editar, validar y publicar con control</strong>
+      <p>Una referencia clara para el equipo responsable de contenidos, sin intervenir en la configuración técnica del sitio.</p>
+    </div>
+
+    <div class="cover-mark">
+      <img src="assets-v2/vialterna-logo-white.svg" alt="Vialterna" />
+    </div>
+
+    <div class="footer">
+      <span>O7 Digital Consulting · Guía DatoCMS para Vialterna</span>
+      <span>Página 1</span>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="topline">
+      <div class="brand">O7<span>DIGITAL.</span></div>
+      <div class="doc-label">Antes de comenzar</div>
+    </div>
+
+    <p class="kicker">Resumen ejecutivo</p>
+    <h2>Qué puede gestionar el equipo Vialterna</h2>
+    <p class="lead">DatoCMS centraliza los textos de las secciones comerciales del sitio. Cada registro contiene sus versiones en inglés y español y debe revisarse antes de publicarse.</p>
+
+    <div class="intro-grid">
+      <div class="summary-box">
+        <strong>Inicio · Soluciones</strong>
+        <p>Tarjetas destacadas para IoT / SIM, Telco as a Service, Core y Edge.</p>
+      </div>
+      <div class="summary-box">
+        <strong>Inicio · Industrias</strong>
+        <p>Tarjetas de acceso para los cinco sectores atendidos por Vialterna.</p>
+      </div>
+      <div class="summary-box">
+        <strong>Páginas de industria</strong>
+        <p>Contenido completo de logística, infraestructura, energía, retail y servicios financieros.</p>
+      </div>
+      <div class="summary-box">
+        <strong>Páginas de solución</strong>
+        <p>Contenido completo de las cuatro propuestas de conectividad y gestión.</p>
+      </div>
+      <div class="summary-box">
+        <strong>SEO</strong>
+        <p>Preferencias de posicionamiento. Modificar únicamente con criterios SEO validados.</p>
+      </div>
+      <div class="summary-box">
+        <strong>Blog</strong>
+        <p>Modelo preparado en DatoCMS; su conexión definitiva con el sitio aún debe validarse.</p>
+      </div>
+    </div>
+
+    <div class="statement">Regla principal: editar contenido, no configuración. No modificar Schema, API tokens, Environments, Roles, Webhooks ni Build triggers.</div>
+
+    <div class="do-dont">
+      <div class="do">
+        <h3>Sí puede hacer</h3>
+        <ul class="clean">
+          <li>Corregir textos y traducciones.</li>
+          <li>Actualizar títulos, beneficios y llamadas a la acción.</li>
+          <li>Guardar y publicar registros existentes.</li>
+          <li>Validar el resultado en una URL de Preview.</li>
+        </ul>
+      </div>
+      <div class="dont">
+        <h3>No debe hacer</h3>
+        <ul class="clean">
+          <li>Cambiar un <code>slug</code> o un <code>href</code> sin revisión.</li>
+          <li>Editar el modelo de datos.</li>
+          <li>Compartir claves o accesos técnicos.</li>
+          <li>Promover cambios directamente a producción.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>O7 Digital Consulting · Guía DatoCMS para Vialterna</span>
+      <span>Página 2</span>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="topline">
+      <div class="brand">O7<span>DIGITAL.</span></div>
+      <div class="doc-label">Acceso y navegación</div>
+    </div>
+
+    <p class="kicker">1. Entorno de trabajo</p>
+    <h2>Entrar al proyecto correcto</h2>
+
+    <div class="screenshot">
+      <img src="assets-v2/01-dashboard.png" alt="Pantalla inicial de DatoCMS" />
+      <span class="marker" style="left: 17%; top: 4%;">1</span>
+      <span class="marker" style="left: 8%; top: 23%;">2</span>
+      <span class="marker" style="left: 20%; top: 23%;">3</span>
+    </div>
+    <p class="caption">Pantalla inicial del proyecto Vialterna. Los contenidos aparecen en la columna izquierda.</p>
+
+    <div class="two-col wide-left" style="margin-top: 6mm;">
+      <div>
+        <div class="steps">
+          <div class="step"><span class="step-number">1</span><p>Confirmar el entorno activo en la barra superior. Para revisión se utiliza <strong>main-copy-2026-07-23 · SANDBOX</strong>.</p></div>
+          <div class="step"><span class="step-number">2</span><p>Entrar en <strong>Content</strong>. Es la única zona necesaria para la edición cotidiana.</p></div>
+          <div class="step"><span class="step-number">3</span><p>Elegir la colección que corresponde a la parte del sitio que se desea actualizar.</p></div>
+        </div>
+      </div>
+      <div class="card soft">
+        <h3>Idioma de la interfaz</h3>
+        <p>La administración puede aparecer en inglés, pero los contenidos se gestionan en dos pestañas:</p>
+        <div class="language">
+          <div class="en"><strong>English</strong></div>
+          <div class="es"><strong>Spanish</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="warning"><strong>Atención:</strong> si la barra superior indica <strong>main · PRIMARY</strong>, detenerse. El contenido de trabajo debe prepararse y revisarse en el entorno sandbox.</div>
+
+    <div class="footer">
+      <span>O7 Digital Consulting · Guía DatoCMS para Vialterna</span>
+      <span>Página 3</span>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="topline">
+      <div class="brand">O7<span>DIGITAL.</span></div>
+      <div class="doc-label">Método de trabajo</div>
+    </div>
+
+    <p class="kicker">2. Flujo de publicación</p>
+    <h2>De la edición a la publicación</h2>
+    <p class="lead">El contenido pasa por cuatro controles sencillos. Este flujo evita publicar textos incompletos o traducciones desincronizadas.</p>
+
+    <div class="workflow">
+      <div><span class="n">01</span><strong>Editar</strong><p>Actualizar los campos del registro en English y Spanish.</p></div>
+      <div><span class="n">02</span><strong>Guardar</strong><p>Hacer clic en Save y confirmar que no aparece ningún error.</p></div>
+      <div><span class="n">03</span><strong>Revisar</strong><p>Abrir la URL de Preview y comprobar escritorio y móvil.</p></div>
+      <div><span class="n">04</span><strong>Publicar</strong><p>Publicar el registro y solicitar la promoción a producción.</p></div>
+    </div>
+
+    <h3>Estados que aparecen en DatoCMS</h3>
+    <div class="status-row">
+      <div class="status"><span class="dot gray"></span><strong>Draft</strong><p class="small muted">Borrador aún no visible en el canal publicado.</p></div>
+      <div class="status"><span class="dot amber"></span><strong>Updated</strong><p class="small muted">Hay cambios guardados pendientes de publicación.</p></div>
+      <div class="status"><span class="dot"></span><strong>Published</strong><p class="small muted">La última versión del registro está publicada.</p></div>
+    </div>
+
+    <h3>Control bilingüe obligatorio</h3>
+    <div class="language">
+      <div class="en">
+        <strong>English</strong>
+        <p class="small">Revisar ortografía, enlaces, títulos y longitud del texto.</p>
+      </div>
+      <div class="es">
+        <strong>Spanish</strong>
+        <p class="small">Repetir la revisión. No pegar español dentro de la pestaña English.</p>
+      </div>
+    </div>
+
+    <div class="note"><strong>Guardar no siempre significa publicar.</strong> Después de Save, comprobar el estado del registro. Si indica Updated, todavía falta publicar la nueva versión.</div>
+
+    <div class="warning"><strong>Contenido eliminado:</strong> si al borrar un texto la web conserva la versión anterior, guardar el campo vacío, publicar el registro y solicitar una nueva Preview. El caché puede tardar unos minutos en renovarse.</div>
+
+    <div class="footer">
+      <span>O7 Digital Consulting · Guía DatoCMS para Vialterna</span>
+      <span>Página 4</span>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="topline">
+      <div class="brand">O7<span>DIGITAL.</span></div>
+      <div class="doc-label">Contenido de la Home</div>
+    </div>
+
+    <p class="kicker">3. Home · Soluciones</p>
+    <h2>Gestionar las tarjetas de solución</h2>
+
+    <div class="screenshot">
+      <img src="assets-v2/02-home-solutions.png" alt="Colección Home solution" />
+      <span class="marker" style="left: 7%; top: 23%;">1</span>
+      <span class="marker" style="left: 18%; top: 42%;">2</span>
+      <span class="marker" style="right: 2%; top: 5%;">3</span>
+    </div>
+    <p class="caption">Colección home solution con los cuatro accesos destacados de la página de inicio.</p>
+
+    <div class="two-col" style="margin-top: 5mm;">
+      <div>
+        <h3>Cómo editar</h3>
+        <div class="steps">
+          <div class="step"><span class="step-number">1</span><p>Seleccionar <strong>home solution</strong> en el menú lateral.</p></div>
+          <div class="step"><span class="step-number">2</span><p>Abrir el registro correspondiente: IoT / SIM, Telco as a Service, Core o Edge.</p></div>
+          <div class="step"><span class="step-number">3</span><p>No crear un nuevo registro salvo que se añada una nueva solución al sitio.</p></div>
+        </div>
+      </div>
+      <div class="card soft">
+        <h3>Registros existentes</h3>
+        <ul class="clean">
+          <li>IoT / SIM</li>
+          <li>Telco as a Service</li>
+          <li>Core · Managed SD-WAN</li>
+          <li>Edge · SuperWAN</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="success"><strong>Resultado esperado:</strong> la tarjeta actualizada mantiene el mismo destino y muestra el título y el resumen correctos en el idioma seleccionado.</div>
+
+    <div class="footer">
+      <span>O7 Digital Consulting · Guía DatoCMS para Vialterna</span>
+      <span>Página 5</span>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="topline">
+      <div class="brand">O7<span>DIGITAL.</span></div>
+      <div class="doc-label">Contenido de la Home</div>
+    </div>
+
+    <p class="kicker">4. Editar una solución de Home</p>
+    <h2>Campos y reglas de escritura</h2>
+
+    <div class="screenshot">
+      <img src="assets-v2/03-home-solution-edit.png" alt="Edición de una solución de Home" />
+      <span class="marker" style="left: 34%; top: 27%;">1</span>
+      <span class="marker" style="left: 34%; top: 41%;">2</span>
+      <span class="marker" style="left: 34%; top: 61%;">3</span>
+      <span class="marker" style="left: 34%; top: 78%;">4</span>
+    </div>
+    <p class="caption">Ejemplo de edición del registro IoT / SIM.</p>
+
+    <table>
+      <thead><tr><th>Campo</th><th>Función</th><th>Regla</th></tr></thead>
+      <tbody>
+        <tr><td><code>eyebrow</code></td><td>Etiqueta corta sobre el título.</td><td>Máximo recomendado: 35 caracteres.</td></tr>
+        <tr><td><code>title</code></td><td>Título principal de la tarjeta.</td><td>Directo, sin punto final.</td></tr>
+        <tr><td><code>text</code></td><td>Resumen comercial.</td><td>Una o dos frases; evitar párrafos largos.</td></tr>
+        <tr><td><code>href</code></td><td>Dirección de la página de destino.</td><td>No modificar sin validación técnica.</td></tr>
+        <tr><td><code>label</code></td><td>Texto corto del enlace o categoría.</td><td>Mantener coherencia con el idioma.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="warning"><strong>Enlaces:</strong> las rutas españolas suelen comenzar por <code>/soluciones/</code>. Las rutas inglesas deben corresponder a la estructura <code>/en/solutions/</code>. Un enlace incorrecto produce una página 404.</div>
+
+    <div class="footer">
+      <span>O7 Digital Consulting · Guía DatoCMS para Vialterna</span>
+      <span>Página 6</span>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="topline">
+      <div class="brand">O7<span>DIGITAL.</span></div>
+      <div class="doc-label">Contenido de la Home</div>
+    </div>
+
+    <p class="kicker">5. Home · Industrias</p>
+    <h2>Gestionar las tarjetas de industria</h2>
+
+    <div class="screenshot">
+      <img src="assets-v2/04-home-industries.png" alt="Colección Home Industry" />
+      <span class="marker" style="left: 8%; top: 23%;">1</span>
+      <span class="marker" style="left: 19%; top: 41%;">2</span>
+      <span class="marker" style="right: 2%; top: 4%;">3</span>
+    </div>
+    <p class="caption">Las cinco tarjetas de industria que aparecen en la página de inicio.</p>
+
+    <div class="two-col" style="margin-top: 5mm;">
+      <div>
+        <h3>Registros existentes</h3>
+        <ul class="clean">
+          <li>Logística y cadena de frío</li>
+          <li>Infraestructura de pagos</li>
+          <li>Energía e industria</li>
+          <li>Retail y franquicias</li>
+          <li>Servicios financieros</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Campos de la tarjeta</h3>
+        <ul class="clean">
+          <li><code>eyebrow</code>: categoría breve.</li>
+          <li><code>title</code>: nombre visible.</li>
+          <li><code>text</code>: resumen comercial.</li>
+          <li><code>href</code>: página de destino.</li>
+          <li><code>label</code>: texto del enlace.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="note"><strong>Relación importante:</strong> Home Industry controla la tarjeta de la página de inicio. Industry Page controla la página completa. Al cambiar el nombre de una industria, revisar ambos registros.</div>
+
+    <div class="footer">
+      <span>O7 Digital Consulting · Guía DatoCMS para Vialterna</span>
+      <span>Página 7</span>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="topline">
+      <div class="brand">O7<span>DIGITAL.</span></div>
+      <div class="doc-label">Páginas de detalle</div>
+    </div>
+
+    <p class="kicker">6. Páginas de industria</p>
+    <h2>Abrir la página que se desea actualizar</h2>
+
+    <div class="screenshot">
+      <img src="assets-v2/05-industry-pages.png" alt="Colección Industry Page" />
+      <span class="marker" style="left: 8%; top: 23%;">1</span>
+      <span class="marker" style="left: 21%; top: 40%;">2</span>
+      <span class="marker" style="right: 13%; top: 39%;">3</span>
+    </div>
+    <p class="caption">Colección Industry Page: una página completa por sector.</p>
+
+    <table>
+      <thead><tr><th>Registro</th><th>Ruta inglesa</th><th>Estado esperado</th></tr></thead>
+      <tbody>
+        <tr><td>logistics-cold-chain</td><td><code>/en/industries/logistics-cold-chain/</code></td><td>Published</td></tr>
+        <tr><td>infraestructura-pagos</td><td><code>/en/industries/infraestructura-pagos/</code></td><td>Published</td></tr>
+        <tr><td>energy-industry</td><td><code>/en/industries/energy-industry/</code></td><td>Published</td></tr>
+        <tr><td>retail-franchises</td><td><code>/en/industries/retail-franchises/</code></td><td>Published</td></tr>
+        <tr><td>financial-services</td><td><code>/en/industries/financial-services/</code></td><td>Published</td></tr>
+      </tbody>
+    </table>
+
+    <div class="warning"><strong>Slug = dirección de la página.</strong> Cambiarlo rompe enlaces existentes, favoritos y posicionamiento. No modificarlo sin una redirección validada.</div>
+
+    <div class="footer">
+      <span>O7 Digital Consulting · Guía DatoCMS para Vialterna</span>
+      <span>Página 8</span>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="topline">
+      <div class="brand">O7<span>DIGITAL.</span></div>
+      <div class="doc-label">Páginas de detalle</div>
+    </div>
+
+    <p class="kicker">7. Editar una página de industria</p>
+    <h2>Contenido principal y bloques comerciales</h2>
+
+    <div class="screenshot">
+      <img src="assets-v2/06-industry-edit.png" alt="Edición de Industry Page" />
+      <span class="marker" style="left: 52%; top: 23%;">1</span>
+      <span class="marker" style="left: 33%; top: 35%;">2</span>
+      <span class="marker" style="left: 33%; top: 49%;">3</span>
+      <span class="marker" style="left: 33%; top: 63%;">4</span>
+    </div>
+    <p class="caption">Ejemplo: versión inglesa de Logistics and Cold Chain.</p>
+
+    <div class="field-grid">
+      <div class="field"><code>slug</code><p>Identificador de URL. No modificar durante una actualización editorial.</p></div>
+      <div class="field"><code>eyebrow + title</code><p>Categoría y título del bloque principal de la página.</p></div>
+      <div class="field"><code>text</code><p>Introducción que explica la propuesta de valor del sector.</p></div>
+      <div class="field"><code>problemtitle + problem</code><p>Título y explicación del problema del cliente al que responde Vialterna.</p></div>
+      <div class="field"><code>items</code><p>Casos de uso en formato estructurado: título + descripción.</p></div>
+      <div class="field"><code>benefits</code><p>Lista corta de beneficios, sin frases excesivamente largas.</p></div>
+    </div>
+
+    <div class="note"><strong>Campos estructurados:</strong> si <code>items</code> o <code>benefits</code> aparecen como JSON, conservar exactamente los corchetes, comillas y comas. Cambiar únicamente el texto entre comillas.</div>
+
+    <div class="footer">
+      <span>O7 Digital Consulting · Guía DatoCMS para Vialterna</span>
+      <span>Página 9</span>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="topline">
+      <div class="brand">O7<span>DIGITAL.</span></div>
+      <div class="doc-label">Páginas de detalle</div>
+    </div>
+
+    <p class="kicker">8. Páginas de solución</p>
+    <h2>Actualizar la oferta de servicios</h2>
+
+    <div class="screenshot">
+      <img src="assets-v2/07-solution-pages.png" alt="Colección Solution page" />
+      <span class="marker" style="left: 8%; top: 23%;">1</span>
+      <span class="marker" style="left: 19%; top: 42%;">2</span>
+      <span class="marker" style="right: 13%; top: 41%;">3</span>
+    </div>
+    <p class="caption">Colección Solution page con las cuatro soluciones principales.</p>
+
+    <div class="two-col" style="margin-top: 5mm;">
+      <div class="card soft">
+        <h3>Registros disponibles</h3>
+        <ul class="clean">
+          <li><code>iot-sim</code></li>
+          <li><code>telco-as-a-service</code></li>
+          <li><code>core</code></li>
+          <li><code>edge</code></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Misma lógica editorial</h3>
+        <p>Las páginas de solución utilizan la misma estructura que las páginas de industria:</p>
+        <p><code>slug</code>, <code>eyebrow</code>, <code>title</code>, <code>text</code>, <code>problemtitle</code>, <code>problem</code>, <code>items</code> y <code>benefits</code>.</p>
+      </div>
+    </div>
+
+    <div class="success"><strong>Control recomendado:</strong> después de publicar, abrir la tarjeta de la Home y comprobar que dirige a la página de solución correcta en ambos idiomas.</div>
+
+    <div class="footer">
+      <span>O7 Digital Consulting · Guía DatoCMS para Vialterna</span>
+      <span>Página 10</span>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="topline">
+      <div class="brand">O7<span>DIGITAL.</span></div>
+      <div class="doc-label">Contenido editorial</div>
+    </div>
+
+    <p class="kicker">9. Blog · Insights</p>
+    <h2>Estado actual y modelo recomendado</h2>
+
+    <div class="screenshot">
+      <img src="assets-v2/08-blog.png" alt="Colección Blog" />
+      <span class="marker" style="left: 7%; top: 28%;">1</span>
+      <span class="marker" style="right: 3%; top: 5%;">2</span>
+      <span class="marker" style="left: 22%; top: 42%;">3</span>
+    </div>
+    <p class="caption">La colección Blog existe en DatoCMS y puede utilizarse como canal editorial del sitio.</p>
+
+    <div class="warning"><strong>Estado actual:</strong> la página Insights ya lee la colección Blog desde DatoCMS cuando el token está configurado. Si DatoCMS no está disponible, el sitio conserva los artículos existentes del repositorio como respaldo.</div>
+
+    <h3>Campos previstos para cada artículo</h3>
+    <table>
+      <thead><tr><th>Campo</th><th>Contenido</th><th>Regla bilingüe</th></tr></thead>
+      <tbody>
+        <tr><td><code>title</code> / <code>slug</code></td><td>Título y dirección del artículo.</td><td>Una versión por idioma.</td></tr>
+        <tr><td><code>excerpt</code></td><td>Resumen visible en la tarjeta.</td><td>120–180 caracteres.</td></tr>
+        <tr><td><code>content</code></td><td>Contenido completo del artículo.</td><td>Revisar títulos, listas y enlaces.</td></tr>
+        <tr><td><code>image</code> / <code>alt</code></td><td>Imagen principal y texto alternativo.</td><td>Alt descriptivo en ES y EN.</td></tr>
+        <tr><td><code>date</code> / <code>categories</code></td><td>Fecha y clasificación editorial.</td><td>Misma fecha, categorías traducidas.</td></tr>
+        <tr><td><code>seo</code></td><td>Título y descripción para buscadores.</td><td>Adaptar, no traducir literalmente.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="footer">
+      <span>O7 Digital Consulting · Guía DatoCMS para Vialterna</span>
+      <span>Página 11</span>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="topline">
+      <div class="brand">O7<span>DIGITAL.</span></div>
+      <div class="doc-label">Control final</div>
+    </div>
+
+    <p class="kicker">10. Preview, production y checklist</p>
+    <h2>Validar antes de mostrar al público</h2>
+
+    <div class="two-col">
+      <div class="card soft">
+        <h3>Preview · entorno de revisión</h3>
+        <p>URL temporal de Vercel utilizada para comprobar los cambios del sandbox.</p>
+        <ul class="clean">
+          <li>No afecta al dominio público.</li>
+          <li>Permite revisar ES y EN.</li>
+          <li>Debe probarse en escritorio y móvil.</li>
+        </ul>
+      </div>
+      <div class="card soft">
+        <h3>Production · sitio público</h3>
+        <p>Versión visible en <strong>www.vialterna.com</strong>.</p>
+        <ul class="clean">
+          <li>Solo después de aprobación.</li>
+          <li>Requiere promoción o despliegue validado.</li>
+          <li>No se gestiona desde los campos de contenido.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 7mm;">Checklist antes de solicitar publicación</h3>
+    <div class="checklist">
+      <div class="check"><span class="box"></span><span>El registro correcto fue editado.</span></div>
+      <div class="check"><span class="box"></span><span>English y Spanish están completos.</span></div>
+      <div class="check"><span class="box"></span><span>No se modificó el <code>slug</code>.</span></div>
+      <div class="check"><span class="box"></span><span>Los enlaces abren la página correcta.</span></div>
+      <div class="check"><span class="box"></span><span>No quedan textos de prueba como “XXX”.</span></div>
+      <div class="check"><span class="box"></span><span>El registro aparece como Published.</span></div>
+      <div class="check"><span class="box"></span><span>La Preview funciona en escritorio.</span></div>
+      <div class="check"><span class="box"></span><span>La Preview funciona en móvil.</span></div>
+      <div class="check"><span class="box"></span><span>La versión española está validada.</span></div>
+      <div class="check"><span class="box"></span><span>La versión inglesa está validada.</span></div>
+    </div>
+
+    <div class="note"><strong>Si un cambio no aparece:</strong> confirmar Save + Publish, recargar la Preview sin caché y esperar unos minutos. Si persiste, indicar al soporte la colección, el nombre del registro, el idioma y la URL revisada.</div>
+
+    <div class="support-band">
+      <strong>Escalamiento recomendado</strong>
+      <p>Para cambios de estructura, nuevas páginas, nuevas soluciones, nuevas industrias, redirecciones, SEO técnico o puesta en producción, solicitar intervención de O7 Digital.</p>
+    </div>
+
+    <div class="footer">
+      <span>O7 Digital Consulting · Guía DatoCMS para Vialterna</span>
+      <span>Página 12</span>
+    </div>
+  </section>
+</body>
+</html>

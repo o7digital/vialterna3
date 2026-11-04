@@ -1,0 +1,17 @@
+---
+import { t, split, solutionHref, auditHref, type Lang } from '../../lib/v3';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const slugs = ['edge', 'core', 'cloud', 'cloud', 'iot-sim'];
+---
+<section class="section v3-stack-section"><div class="shell">
+ <div class="kicker">Edge / Core / Cloud</div><h2 class="detail-section-title">{t('home', 'Stack diagram headline', lang)}</h2>
+ <div class="v3-stack" aria-label={lang === 'en' ? 'Managed network architecture' : 'Arquitectura de red administrada'}>
+  <div class="v3-stack-platform"><span class="v3-status-dot"></span><p>{t('home', 'Stack: platform (top bar)', lang)}</p></div>
+  <div class="v3-stack-services">{split(t('home', 'Stack: managed services (5 blocks)', lang)).map((text, i) => <a href={solutionHref(slugs[i], lang)}><span class="v3-step">0{i + 1} ↗</span><strong>{text.split(' (')[0]}</strong><p>{text.includes(' (') ? text.slice(text.indexOf(' (') + 2).replace(/\)$/, '') : ''}</p></a>)}</div>
+  <div class="v3-stack-connectors" aria-hidden="true">↓ &nbsp; ↓ &nbsp; ↓ &nbsp; ↓</div>
+  <div class="v3-stack-sources">{split(t('home', 'Stack: connection sources (4 blocks)', lang)).map(text => <div>{text}</div>)}</div>
+  <div class="v3-stack-foundation">{t('home', 'Stack: foundation (bottom bar)', lang)}</div>
+ </div>
+ <a class="v3-entry-link" href={auditHref(lang)}>{t('home', 'Stack: entry arrow', lang)} <span aria-hidden="true">↗</span></a>
+</div></section>

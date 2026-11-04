@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { insightPosts } from "../../data/insights";
+import { getBlogPosts } from "../../lib/dato";
+import { absoluteUrl } from "../../lib/seo";
+import { renderInsightContent } from "../../lib/renderInsightContent";
+
+export async function getStaticPaths() {
+  const posts = await getBlogPosts("es", insightPosts);
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post }
+  }));
+}
+
+const { post } = Astro.props;
+const content = renderInsightContent(post.content);
+const description = post.excerpt;
+const canonical = absoluteUrl(`/insights/${post.slug}/`);
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: post.title,
+  description,
+  image: post.image ? absoluteUrl(post.image) : undefined,
+  datePublished: post.date,
+  author: { "@type": "Person", name: post.author },
+  publisher: {
+    "@type": "Organization",
+    name: "Vialterna",
+    url: absoluteUrl("/"),
+    logo: { "@type": "ImageObject", url: absoluteUrl("/brand/vialterna-logo-white.svg") }
+  },
+  mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
+  inLanguage: "es-MX",
+  articleSection: post.categories.join(", ")
+};
+const formatDate = (date: string) => new Intl.DateTimeFormat("es-MX", {
+  day: "2-digit",
+  month: "long",
+  year: "numeric"
+}).format(new Date(date));
+---
+<BaseLayout
+  title={`${post.title} | Vialterna`}
+  description={description}
+  image={post.image || undefined}
+  type="article"
+  publishedTime={post.date}
+  author={post.author}
+  articleTags={post.categories}
+  structuredData={structuredData}
+>
+  <Header />
+  <main>
+    <article>
+      <section class="editorial-hero insight-detail-hero">
+        <div class="shell">
+          <div class="eyebrow reveal">{post.categories.join(" / ") || "Insights"}</div>
+          <h1 class="detail-title reveal">{post.title}</h1>
+          <p class="detail-lead reveal">{formatDate(post.date)} · {post.author}</p>
+        </div>
+      </section>
+
+      <section class="section insight-detail-section">
+        <div class="shell insight-detail">
+          {post.image && <img class="insight-detail-image reveal" src={post.image} alt={post.imageAlt ?? post.title} loading="lazy" decoding="async" />}
+          <div class="insight-content" set:html={content} />
+          <a class="back-to-insights" href="/insights/">Volver a insights</a>
+        </div>
+      </section>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import Actions from './v3/Actions.astro';
+import CTA from './v3/CTA.astro';
+import DataStrip from './v3/DataStrip.astro';
+import Questions from './v3/Questions.astro';
+import Rich from './v3/Rich.astro';
+import { t, items, split, solutionHref, type Lang } from '../lib/v3';
+import type { DetailPage as DetailPageData } from '../data/detailPages';
+interface Props { page: DetailPageData; lang?: Lang; type?: 'solution' | 'industry' }
+const { page, lang = 'es', type = 'solution' } = Astro.props;
+const en = lang === 'en', key = page.copyKey ?? '';
+const related = t(key, 'Related solutions', lang);
+const relatedSlugs = ['edge', 'core', 'cloud', 'iot-sim'].filter(slug => related.toLowerCase().includes(slug === 'iot-sim' ? 'iot' : slug));
+if (type === 'industry' && !relatedSlugs.length) relatedSlugs.push('edge', 'iot-sim');
+---
+<BaseLayout title={page.seoTitle || `${page.title} | Vialterna`} description={page.description} lang={en ? 'en' : 'es-MX'}>
+ <Header lang={lang}/><main>
+ <section class="detail-hero"><div class="shell detail-hero-grid"><div><div class="eyebrow">{page.eyebrow}</div><h1 class="detail-title">{page.title}</h1><p class="detail-lead">{page.description}</p><Actions lang={lang}/></div><div class="detail-network" aria-hidden="true"><i></i><i></i><i></i><span>{key === 'cloud' ? 'CLOUD' : 'NOC'}<br/>24 / 7</span></div></div></section>
+ <section class="detail-strip"><div class="shell detail-strip-grid"><div><strong>{en ? 'Multi-network' : 'Multirred'}</strong><span>{en ? 'Independent architecture' : 'Arquitectura independiente'}</span></div><div><strong>SLA</strong><span>{en ? 'SLA-backed availability' : 'Disponibilidad respaldada'}</span></div><div><strong>{en ? 'Resilience' : 'Resiliencia'}</strong><span>{en ? 'Operational continuity' : 'Continuidad operativa'}</span></div></div></section>
+ {page.problem && <section class="section detail-problem"><div class="shell detail-copy"><div class="kicker">{en ? 'Operational risk' : 'Riesgo operativo'}</div><h2>{page.problemTitle}</h2><p>{page.problem}</p>{t(key,'Data strip',lang) && <DataStrip text={t(key,'Data strip',lang)} />}{t(key,'Cost of standing still',lang) && <p class="v3-cost">{t(key,'Cost of standing still',lang)}</p>}</div></section>}
+ {t(key,'Promise',lang) && <section class="section v3-promise"><div class="shell"><Rich class="v3-promise-line" text={t(key,'Promise',lang)}/><div class="v3-layer-grid">{items(t(key,'How it works (3 layers)',lang)).map(layer => <article><h3>{layer.title}</h3><p>{layer.text}</p></article>)}</div><ul class="v3-proof-list">{split(t(key,'Proof box',lang)).map(proof => <li>{proof}</li>)}</ul></div></section>}
+ <section class="section detail-includes"><div class="shell"><div class="kicker">{en ? "What's included" : 'Qué incluye'}</div><h2 class="detail-section-title">{page.sectionTitle}</h2><div class="detail-items">{page.items.map((entry,i) => <article class="detail-item"><span>{String(i+1).padStart(2,'0')}</span><h3>{entry.title}</h3><p>{entry.text}</p>{key === 'core' && i === 3 && <a class="v3-text-link" href={solutionHref('cloud',lang)}>{en ? 'Explore Cloud and SASE' : 'Ver Cloud y SASE'} ↗</a>}{key === 'cloud' && i === 2 && <div class="actions"><a href={solutionHref('edge',lang)}>Edge ↗</a><a href={solutionHref('core',lang)}>Core ↗</a></div>}</article>)}</div></div></section>
+ <section class="section detail-benefits"><div class="shell detail-benefits-grid"><div><div class="kicker">{en ? 'Benefits' : 'Beneficios'}</div><h2>{page.benefitsTitle || (en ? 'Availability designed around your operation.' : 'Disponibilidad diseñada alrededor de tu operación.')}</h2></div><ul>{page.benefits.map(benefit => <li>{benefit}</li>)}</ul></div></section>
+ {t(key,'Reference case',lang) && <section class="section v3-reference"><div class="shell"><div class="kicker">{key === 'cloud' ? (en ? 'Alkira reference case' : 'Caso de referencia de Alkira') : en ? 'Reference case' : 'Caso de referencia'}</div><blockquote>{t(key,'Reference case',lang)}</blockquote></div></section>}
+ {relatedSlugs.length > 0 && <section class="section"><div class="shell"><div class="kicker">{en ? 'Related solutions' : 'Soluciones relacionadas'}</div><p class="v3-lead">{related}</p><div class="actions">{relatedSlugs.map(slug => <a class="button" href={solutionHref(slug,lang)}>{slug === 'iot-sim' ? 'IoT / SIM' : slug === 'edge' ? 'Edge · SuperWAN' : slug === 'core' ? 'Core' : 'Cloud · SASE'} ↗</a>)}</div></div></section>}
+ {t(key,'Questions',lang) && <Questions page={key} lang={lang}/>}
+ <CTA lang={lang}/></main><Footer lang={lang}/>
+</BaseLayout>

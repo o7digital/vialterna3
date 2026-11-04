@@ -1,0 +1,11 @@
+---
+import { t, split, stripButton, type Lang } from '../../lib/v3';
+import Actions from './Actions.astro';
+interface Props { page: string; lang: Lang }
+const { page, lang } = Astro.props;
+---
+<section class="section v3-questions"><div class="shell">
+ <div class="kicker">FAQ</div><h2 class="detail-section-title">{t(page, 'Questions headline', lang)}</h2>
+ <ol class="v3-question-list">{split(t(page, 'Questions', lang)).map(q => <li>{q}</li>)}</ol>
+ <p class="v3-lead">{stripButton(t(page, 'Questions close + button', lang))}</p><Actions lang={lang} />
+</div></section>

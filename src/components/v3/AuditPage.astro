@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../Header.astro';
+import Footer from '../Footer.astro';
+import Actions from './Actions.astro';
+import DataStrip from './DataStrip.astro';
+import AuditForm from './AuditForm.astro';
+import { t, items, metadata, type Lang } from '../../lib/v3';
+interface Props { lang: Lang }
+const { lang }=Astro.props,en=lang==='en',seo=metadata('audit',lang);
+---
+<BaseLayout title={seo.title} description={seo.description} lang={en?'en':'es-MX'}><Header lang={lang}/><main>
+ <section class="detail-hero"><div class="shell"><div class="eyebrow">{t('audit','Hero eyebrow',lang)}</div><h1 class="detail-title v3-wide-title">{t('audit','Hero headline',lang)}</h1><p class="detail-lead">{t('audit','Hero subhead',lang)}</p><Actions lang={lang} audit/></div></section>
+ <section class="section"><div class="shell detail-copy"><div class="kicker">{en?'The real cost':'El costo real'}</div><h2>{t('audit','Problem headline',lang)}</h2><p>{t('audit','Problem body',lang)}</p><DataStrip text={t('audit','Proof line',lang)}/></div></section>
+ <section class="section"><div class="shell"><div class="kicker">01 / {en?'Analysis':'Análisis'}</div><h2 class="detail-section-title">{en?'What we analyze':'Qué analizamos'}</h2><div class="detail-items">{items(t('audit','What we analyze (5 items)',lang)).map((entry,i)=><article class="detail-item"><span>0{i+1}</span><h3>{entry.title}</h3><p>{entry.text}</p></article>)}</div></div></section>
+ <section class="section v3-promise"><div class="shell"><div class="kicker">02 / {en?'Deliverables':'Entregables'}</div><h2 class="detail-section-title">{en?'What you get':'Qué recibes'}</h2><div class="v3-offerings">{items(t('audit','What you get (4 items)',lang)).map(entry=><article><h3>{entry.title}</h3><p>{entry.text}</p></article>)}</div><p class="v3-callout">{t('audit','Timing and cost',lang)}</p></div></section>
+ <AuditForm lang={lang}/></main><Footer lang={lang}/></BaseLayout>

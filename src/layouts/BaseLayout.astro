@@ -1,0 +1,156 @@
+---
+import "../styles/global.css";
+import OliviaAI from "../components/OliviaAI.astro";
+import { absoluteUrl, getSeoMetadata, getSeoRoute } from "../lib/seo";
+
+interface Props {
+  title: string;
+  description: string;
+  lang?: "es-MX" | "en";
+  image?: string;
+  type?: "website" | "article";
+  publishedTime?: string;
+  author?: string;
+  articleTags?: string[];
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const {
+  title,
+  description,
+  lang = "es-MX",
+  image = "/images/vialterna-meeting-room.webp",
+  type = "website",
+  publishedTime,
+  author,
+  articleTags = [],
+  structuredData = []
+} = Astro.props;
+const pathname = Astro.url.pathname;
+const { canonicalPath, canonical, alternates, isAlias } = getSeoRoute(pathname);
+const metadata = getSeoMetadata(canonicalPath, { title, description });
+const socialImage = absoluteUrl(image);
+const locale = lang === "en" ? "en_US" : "es_MX";
+const alternateLocale = lang === "en" ? "es_MX" : "en_US";
+const additionalStructuredData = Array.isArray(structuredData) ? structuredData : [structuredData];
+---
+<!doctype html>
+<html lang={lang} id="top">
+  <head>
+    {import.meta.env.PUBLIC_ENABLE_ANALYTICS === "true" && <>
+    <!-- Google Tag Manager -->
+    <script is:inline>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-K2JTF3VT');
+    </script>
+    <!-- End Google Tag Manager -->
+    </>}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{metadata.title}</title>
+    <meta name="description" content={metadata.description} />
+    {metadata.keywords && <meta name="keywords" content={metadata.keywords} />}
+    <meta name="robots" content={isAlias || import.meta.env.PUBLIC_SITE_INDEXABLE !== "true" ? "noindex,follow" : "index,follow,max-image-preview:large"} />
+    <link rel="canonical" href={canonical} />
+    {alternates && <>
+      <link rel="alternate" hreflang="es-MX" href={absoluteUrl(alternates.es)} />
+      <link rel="alternate" hreflang="en" href={absoluteUrl(alternates.en)} />
+      <link rel="alternate" hreflang="x-default" href={absoluteUrl(alternates.es)} />
+    </>}
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content="Vialterna" />
+    <meta property="og:locale" content={locale} />
+    <meta property="og:locale:alternate" content={alternateLocale} />
+    <meta property="og:title" content={metadata.title} />
+    <meta property="og:description" content={metadata.description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:alt" content={metadata.title} />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {author && <meta property="article:author" content={author} />}
+    {articleTags.map((tag) => <meta property="article:tag" content={tag} />)}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={metadata.title} />
+    <meta name="twitter:description" content={metadata.description} />
+    <meta name="twitter:image" content={socialImage} />
+    <meta name="twitter:image:alt" content={metadata.title} />
+    <meta name="theme-color" content="#000000" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Work+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Vialterna",
+      url: "https://www.vialterna.com/",
+      email: "atencionaclientes@vialterna.com",
+      telephone: "+52 55 8062 6884",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Montes Urales 720",
+        addressLocality: "Ciudad de México",
+        addressRegion: "CDMX",
+        postalCode: "11000",
+        addressCountry: "MX"
+      },
+      areaServed: [
+        { "@type": "Country", name: "México" },
+        { "@type": "City", name: "Ciudad de México", alternateName: "CDMX" }
+      ],
+      sameAs: ["https://www.linkedin.com/company/vialterna/"]
+    })} />
+    {additionalStructuredData.map((data) => (
+      <script is:inline type="application/ld+json" set:html={JSON.stringify(data)} />
+    ))}
+  </head>
+  <body>
+    {import.meta.env.PUBLIC_ENABLE_ANALYTICS === "true" && <>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2JTF3VT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    </>}
+    <slot />
+    <OliviaAI />
+    <script is:inline>
+      const nav = document.querySelector('[data-header]');
+      const menuButton = document.querySelector('[data-menu-button]');
+      const menu = document.querySelector('[data-menu]');
+      const onScroll = () => nav?.classList.toggle('is-scrolled', scrollY > 20);
+      addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+      menuButton?.addEventListener('click', () => {
+        const open = menu?.classList.toggle('is-open');
+        menuButton.setAttribute('aria-expanded', String(Boolean(open)));
+      });
+      menu?.querySelectorAll('[data-dropdown-trigger]').forEach((trigger) => trigger.addEventListener('click', (event) => {
+        if (!matchMedia('(max-width: 900px)').matches) return;
+        event.preventDefault();
+        const item = trigger.closest('.nav-item');
+        const open = item?.classList.toggle('is-dropdown-open');
+        trigger.setAttribute('aria-expanded', String(Boolean(open)));
+      }));
+      menu?.querySelectorAll('a:not([data-dropdown-trigger])').forEach((link) => link.addEventListener('click', () => {
+        menu.classList.remove('is-open');
+        menuButton?.setAttribute('aria-expanded', 'false');
+      }));
+      const items = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        }), { threshold: .1, rootMargin: '0px 0px -6% 0px' });
+        items.forEach((item, index) => {
+          item.style.setProperty('--delay', `${Math.min((index % 4) * 70, 210)}ms`);
+          observer.observe(item);
+        });
+      } else {
+        items.forEach((item) => item.classList.add('visible'));
+      }
+    </script>
+  </body>
+</html>

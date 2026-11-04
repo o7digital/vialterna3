@@ -1,0 +1,53 @@
+---
+import type { SitePageContent } from "../lib/dato";
+
+interface Props {
+  content?: SitePageContent;
+  lang?: "es" | "en";
+}
+
+const { content, lang = "es" } = Astro.props;
+const en = lang === "en";
+const capabilities = en
+  ? ["24/7 NOC", "Multi-carrier", "Automatic backup", "Managed SLA", "Nationwide coverage", "24/7 monitoring"]
+  : ["NOC 24/7", "Multioperador", "Respaldo automático", "SLA gestionado", "Cobertura nacional", "Monitoreo 24/7"];
+const eyebrow = content?.eyebrow ?? (en ? "For Mexican enterprises where downtime has a measurable cost." : "Para empresas mexicanas donde el downtime tiene un costo medible.");
+const heading = content?.heading ?? (en ? "Networks break. Your business does not." : "Las redes se caen. Tu negocio no.");
+const [headingStart, headingAccent] = heading.includes("|")
+  ? heading.split("|", 2)
+  : [heading, ""];
+const intro = content?.intro ?? (en ? "Vialterna is the multi-network resilience layer for large distributed enterprises in Mexico: network and technology independent, monitored 24/7 and backed by SLA. We do not sell a link. We deliver uptime." : "Vialterna es la capa de resiliencia multinetwork para grandes empresas distribuidas en México: independiente de red y tecnología, monitoreada 24/7 y respaldada por SLA. No vendemos un enlace. Entregamos continuidad operativa.");
+const ctaLabel = content?.ctaLabel ?? (en ? "Get your free Telco audit" : "Solicita tu auditoría Telco gratuita");
+const ctaHref = content?.ctaHref ?? (en ? "/en/contact/" : "/contacto/");
+const secondaryCtaLabel = content?.secondaryCtaLabel ?? (en ? "Talk to an expert" : "Habla con un experto");
+const secondaryCtaHref = content?.secondaryCtaHref ?? (en ? "/en/contact/" : "/contacto/");
+---
+<section class="hero">
+  <div class="shell hero-grid">
+    <div class="hero-content">
+      <div class="eyebrow reveal">{eyebrow}</div>
+      <h1 class="reveal">{headingStart.trim()} {headingAccent && <span class="accent">{headingAccent.trim()}</span>}</h1>
+      <p class="hero-copy reveal">{intro}</p>
+      <div class="actions reveal">
+        <a class="button primary" href={ctaHref}>{ctaLabel}</a>
+        <a class="button" href={secondaryCtaHref}>{secondaryCtaLabel}</a>
+      </div>
+      <p class="v3-platform-caption">{en ? "AIrConnect platform with real-time data visibility." : "Plataforma AIrConnect® con visibilidad de datos en tiempo real."}</p>
+    </div>
+    <div class="network-scene" aria-hidden="true">
+      <div class="orbit orbit-outer"><i></i><i></i><i></i><i></i></div>
+      <div class="orbit orbit-middle"></div>
+      <div class="orbit orbit-inner"></div>
+      <div class="network-center"><strong>NOC</strong><span>24 / 7</span></div>
+      <span class="tech-label label-fiber">{en ? "Fiber" : "Fibra"}</span>
+      <span class="tech-label label-lte">LTE</span>
+      <span class="tech-label label-5g">5G</span>
+      <span class="tech-label label-sat">{en ? "Satellite" : "Satelital"}</span>
+    </div>
+  </div>
+</section>
+<div class="capabilities" aria-label={en ? "Vialterna capabilities" : "Capacidades Vialterna"}>
+  <div class="capabilities-track">
+    {[0, 1].map(() => <span>{capabilities.map((capability) => <>{capability} <i></i> </>)}</span>)}
+  </div>
+</div>

@@ -1,0 +1,58 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { insightPosts } from "../../data/insights";
+import { getBlogPosts, getSitePage } from "../../lib/dato";
+
+const fallbackPage = {
+  seoTitle: "Insights de conectividad y redes empresariales | Vialterna",
+  seoDescription: "Artículos de Vialterna sobre SD-WAN, Internet celular, IoT, GPS y conectividad empresarial.",
+  eyebrow: "Insights",
+  heading: "Blog Vialterna",
+  intro: "Textos de Vialterna sobre conectividad empresarial, SD-WAN, IoT e Internet celular.",
+  sections: []
+};
+const page = await getSitePage("noticias", "es", fallbackPage);
+const posts = await getBlogPosts("es", insightPosts);
+
+const formatDate = (date: string) => new Intl.DateTimeFormat("es-MX", {
+  day: "2-digit",
+  month: "long",
+  year: "numeric"
+}).format(new Date(date));
+---
+<BaseLayout title={page.seoTitle ?? fallbackPage.seoTitle} description={page.seoDescription ?? page.intro}>
+  <Header />
+  <main>
+    <section class="editorial-hero">
+      <div class="shell">
+        <div class="eyebrow reveal">{page.eyebrow}</div>
+        <h1 class="detail-title reveal">{page.heading}</h1>
+        <p class="detail-lead reveal">{page.intro}</p>
+      </div>
+    </section>
+
+    <section class="section insights-index">
+      <div class="shell insights-grid">
+        {posts.map((post) => (
+          <article class="insight-card reveal">
+            <a href={`/insights/${post.slug}/`} aria-label={post.title}>
+              {post.image && <img src={post.image} alt="" loading="lazy" decoding="async" />}
+              <div class="insight-card-copy">
+                <div class="insight-meta">
+                  <span>{formatDate(post.date)}</span>
+                  {post.categories.slice(0, 2).map((category) => <span>{category}</span>)}
+                </div>
+                <h2>{post.title}</h2>
+                <p>{post.excerpt}</p>
+                <strong>Leer artículo</strong>
+              </div>
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

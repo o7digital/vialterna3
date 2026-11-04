@@ -1,0 +1,5 @@
+---
+import { marked } from 'marked';
+interface Props { text: string; class?: string }
+---
+<div class:list={['v3-rich', Astro.props.class]} set:html={marked.parse(Astro.props.text)} />

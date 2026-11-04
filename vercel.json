@@ -1,0 +1,51 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/soluciones/telco-as-a-service",
+      "destination": "/auditoria-telco/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/solutions/telco-as-a-service",
+      "destination": "/en/telco-audit/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/soluciones/telco-as-a-service",
+      "destination": "/en/telco-audit/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/industries",
+      "destination": "/en/industries/financial-services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/empresa",
+      "destination": "/en/company/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/contacto",
+      "destination": "/en/contact/",
+      "statusCode": 301
+    }
+  ],
+  "framework": "astro",
+  "buildCommand": "npm run build"
+}

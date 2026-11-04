@@ -1,0 +1,10 @@
+---
+import { auditHref, type Lang } from '../../lib/v3';
+interface Props { lang?: Lang; audit?: boolean }
+const { lang = 'es', audit = false } = Astro.props;
+const en = lang === 'en';
+---
+<div class="actions">
+ <a class="button primary" href={audit ? '#audit-form' : auditHref(lang)}>{en ? 'Get your free Telco audit' : 'Solicita tu auditoría Telco gratuita'} <span aria-hidden="true">↗</span></a>
+ {!audit && <a class="button" href={en ? '/en/contact/' : '/contacto/'}>{en ? 'Talk to an expert' : 'Habla con un experto'}</a>}
+</div>

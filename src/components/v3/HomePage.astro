@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../Header.astro';
+import Footer from '../Footer.astro';
+import Hero from '../Hero.astro';
+import Rich from './Rich.astro';
+import DataStrip from './DataStrip.astro';
+import Stack from './Stack.astro';
+import Questions from './Questions.astro';
+import HowWeWork from './HowWeWork.astro';
+import CTA from './CTA.astro';
+import { t, item, split, stripButton, metadata, solutionHref, industryLinks, auditHref, type Lang } from '../../lib/v3';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const en = lang === 'en';
+const seo = metadata('home', lang);
+const proof = split(t('home','Proof bar',lang));
+const cards = [['Path A card (Edge)','edge','01 / EDGE'],['Path C card (Core)','core','02 / CORE'],['Path B card','edge-to-cloud','03 / EDGE TO CLOUD']];
+const industryDescriptions = split(t('home','Industry cards 01–05',lang));
+const offerings = [['Card 01 Edge','edge'],['Card 02 Core','core'],['Card 03 Cloud','cloud'],['Card 04 IoT and SIM','iot-sim']];
+---
+<BaseLayout title={seo.title} description={seo.description} lang={en ? 'en' : 'es-MX'}>
+ <Header lang={lang}/><main>
+ <Hero lang={lang} content={{eyebrow:t('home','Hero eyebrow',lang),heading:t('home','Hero headline',lang).replace(en ? ' Your operation' : ' Tu operación',en ? ' | Your operation' : ' | Tu operación'),intro:t('home','Hero subhead',lang),ctaHref:auditHref(lang),ctaLabel:en?'Get your free Telco audit':'Solicita tu auditoría Telco gratuita',secondaryCtaHref:en?'/en/contact/':'/contacto/',secondaryCtaLabel:en?'Talk to an expert':'Habla con un experto',sections:[]}}/>
+ <section class="v3-bank-proof"><div class="shell"><Rich text={proof[0]}/><div class="v3-stats">{proof.slice(1).map(stat => <p>{stat}</p>)}</div></div></section>
+ <section class="section v3-paths"><div class="shell"><div class="kicker">Edge / Core / Cloud</div><h2 class="detail-section-title">{t('home','Path headline',lang)}</h2><div class="v3-path-grid">{cards.map(([key,slug,label])=>{const content=item(stripButton(t('home',key,lang)));return <a class="v3-path-card" href={solutionHref(slug,lang)}><span class="v3-step">{label}</span><h3>{content.title}</h3><p>{content.text}</p><span class="v3-card-link">{en?'Explore':'Ver'} {slug==='edge-to-cloud'?'Edge to Cloud':slug==='edge'?'Edge':'Core'} ↗</span></a>})}</div><div class="v3-callout"><Rich text={t('home','Shared line under the three cards',lang)}/></div></div></section>
+ <section class="section risk" id={en?'model':'modelo'}><div class="shell"><div class="kicker">{t('home','Risk eyebrow',lang)}</div><h2 class="risk-title">{t('home','Risk headline',lang)}</h2><p class="risk-lead">{t('home','Risk body',lang)}</p><p class="risk-proof">{t('home','Risk callout',lang)}</p><div class="v3-modernization"><div class="kicker">{t('home','Modernization eyebrow',lang)}</div><h2 class="detail-section-title">{t('home','Modernization headline',lang)}</h2><p class="v3-lead">{t('home','Modernization body',lang)}</p></div><DataStrip text={t('home','Data strip',lang)}/><h3 class="approaches-title">{t('home','Setups headline',lang)}</h3><div class="approaches">{[1,2].map(i=>{const setup=item(t('home',`Setup 0${i}`,lang));return <article class="approach"><div class="number">0{i}</div><h3>{setup.title}</h3><p>{setup.text}</p></article>})}</div></div></section>
+ <section class="section v3-promise"><div class="shell"><div class="kicker">Vialterna</div><h2 class="detail-section-title">{t('home','Promise headline',lang)}</h2><p class="v3-lead">{t('home','Promise body',lang)}</p><ul class="v3-proof-list">{split(t('home','Proof box (6 items): how we operate',lang)).map(proof=><li>{proof}</li>)}</ul></div></section>
+ <Questions page="home" lang={lang}/><Stack lang={lang}/>
+ <section class="section pillars-section"><div class="shell"><div class="kicker">{t('home','Model eyebrow',lang)}</div><h2 class="detail-section-title">{t('home','Model headline',lang)}</h2><p class="v3-lead">{t('home','Model body',lang)}</p><p class="pillars-lead">{t('home','Pillars intro',lang)}</p><div class="pillars">{[1,2,3].map(i=>{const p=item(t('home',`Pillar 0${i}`,lang));return <article class="pillar"><div class="pillar-number">0{i}</div><h3>{p.title}</h3><p>{p.text}</p></article>})}</div></div></section>
+ <section class="section solutions-section" id={en?'solutions':'soluciones'}><div class="shell"><div class="kicker">{t('home','Solutions eyebrow',lang)}</div><h2 class="detail-section-title">{t('home','Solutions headline',lang)}</h2><p class="v3-lead">{t('home','Solutions intro',lang)}</p><div class="v3-offerings">{offerings.map(([key,slug])=>{const s=item(stripButton(t('home',key,lang)));return <article><span class="v3-step">{slug==='iot-sim'?'IoT / SIM':slug.toUpperCase()}</span><h3>{s.title}</h3><p>{s.text}</p>{slug==='core'&&<a class="v3-text-link" href={solutionHref('cloud',lang)}>{en?'SASE from Cloud':'SASE desde Cloud'} ↗</a>}<a class="v3-card-link" href={solutionHref(slug,lang)}>{en?'Learn more':'Ver más'} ↗</a></article>})}</div></div></section>
+ <HowWeWork lang={lang}/>
+ <section class="section industries-section" id={en?'industries':'industrias'}><div class="shell"><div class="kicker">{t('home','Industries eyebrow',lang)}</div><h2 class="detail-section-title">{t('home','Industries headline',lang)}</h2><div class="industries">{industryLinks(lang).map((link,i)=>{const content=item(industryDescriptions[i]||'');return <a class="industry" href={link.href}><div class="industry-orbit"></div><span>0{i+1}</span><h3>{content.title||link.label}</h3><p>{content.text}</p></a>})}</div></div></section>
+ <CTA lang={lang} home/></main><Footer lang={lang}/>
+</BaseLayout>

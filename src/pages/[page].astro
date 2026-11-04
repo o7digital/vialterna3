@@ -1,0 +1,123 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ContactForm from "../components/ContactForm.astro";
+import privacyHtml from "../content/privacy.html?raw";
+import { getSitePage } from "../lib/dato";
+
+const pages = {
+  empresa: {
+    title: "Continuidad operativa para empresas distribuidas | Vialterna",
+    eyebrow: "Empresa mexicana, cobertura nacional",
+    heading: "Diseñamos continuidad operativa para empresas distribuidas en México",
+    intro: "Más de 15 años operando infraestructura crítica. Vialterna es la capa de resiliencia multinetwork para grandes empresas distribuidas en México.",
+    sections: [
+      { title: "Quiénes somos", text: "Entregamos continuidad operativa mediante conectividad siempre activa, con NOC propio 24/7, AIr Connect, cobertura nacional mediante ER Network, MVNO propio y alianza oficial con Starlink." },
+      { title: "Qué nos hace diferentes", text: "Vendemos uptime, somos independientes de red y tecnología, auditamos todo el stack Telco y administramos proactivamente más de 2,500 sitios y dispositivos." },
+      { title: "Dónde estamos en el mercado", text: "Los telcos venden capacidad y los integradores proyectos. Nosotros diseñamos y operamos conectividad resiliente como servicio administrado responsable." },
+      { title: "Prueba", text: "+2,500 sitios y dispositivos. 15+ años. 99.97%+ en Edge y SLA de 99.99% en Core. Cobertura nacional." },
+      { title: "Clientes de referencia", text: "Bancos nacionales, retail y franquicias, industria, pagos, logística y cadena de frío. Referencias específicas disponibles bajo NDA." }
+    ]
+  },
+  faq: {
+    title: "FAQ | Preguntas frecuentes de conectividad | Vialterna",
+    eyebrow: "FAQ",
+    heading: "Preguntas frecuentes sobre conectividad empresarial",
+    intro: "Información esencial para entender cómo Vialterna diseña, despliega y opera conectividad resiliente para empresas distribuidas.",
+    sections: [
+      { title: "¿Qué hace Vialterna?", text: "Vialterna diseña, despliega y opera conectividad empresarial resiliente para empresas con sitios distribuidos en México. Integramos diferentes operadores y tecnologías para mantener conectadas operaciones críticas." },
+      { title: "¿Vialterna es un operador tradicional?", text: "No. Vialterna es agnóstico de operador. Diseñamos la arquitectura alrededor de la operación del cliente, no alrededor de una red propia. Podemos combinar fibra, LTE, 5G, satélite y otras tecnologías según cada ubicación." },
+      { title: "¿Qué tipo de empresas atiende Vialterna?", text: "Trabajamos con empresas que operan múltiples sitios, sucursales, cajeros automáticos, tiendas, franquicias, centros de distribución, sitios industriales, dispositivos IoT o infraestructura transaccional." },
+      { title: "¿Qué significa Disponibilidad como Servicio?", text: "No entregamos solamente enlaces. Diseñamos, implementamos, monitoreamos y gestionamos una arquitectura orientada a mantener la operación disponible, con visibilidad, soporte y continuidad." },
+      { title: "¿Pueden trabajar con mis operadores actuales?", text: "Sí. Evaluamos enlaces existentes, identificamos riesgos y redundancias, proponemos mejoras y complementamos la arquitectura cuando es necesario." },
+      { title: "¿Vialterna ofrece respaldo satelital o celular?", text: "Sí. Diseñamos respaldo con LTE, 5G, satélite LEO u otras rutas secundarias para reducir la dependencia de un solo enlace o tecnología." },
+      { title: "¿Qué incluye un diagnóstico de conectividad?", text: "Revisa cobertura, operadores, enlaces, puntos únicos de falla, criticidad por sitio, gasto, desempeño, riesgos de desconexión y oportunidades de optimización." },
+      { title: "¿Pueden iniciar con un piloto?", text: "Sí. El proceso puede iniciar con pocos sitios para validar cobertura, desempeño, failover y operación antes de escalar." },
+      { title: "¿Vialterna gestiona SIMs empresariales e IoT?", text: "Sí. Administramos SIMs, conectividad celular, consumo, activaciones, alertas, optimización de planes y ciclo de vida." },
+      { title: "¿Cómo puedo contactar a Vialterna?", text: "Escribe a atencionaclientes@vialterna.com o comunícate por WhatsApp al 55 8062 6884." }
+    ]
+  },
+  contacto: {
+    title: "Contacto Vialterna | Diagnóstico de conectividad",
+    eyebrow: "Dos caminos",
+    heading: "Hablemos.",
+    intro: "La auditoría Telco es la forma más rápida de evaluar el encaje. El formulario es la forma más rápida de hablar con una persona.",
+    sections: [
+      { title: "Solicita tu auditoría Telco gratuita", text: "Recibe mapa de vulnerabilidades, modelo de costo de downtime, comparación TCO y recomendación de arquitectura en dos semanas." },
+      { title: "Habla con un experto", text: "Una conversación directa sobre tu situación, una solución específica o nuestra forma de trabajo. Sin compromiso." },
+      { title: "Contacto", text: "atencionaclientes@vialterna.com · +52 55 8062 6884" },
+      { title: "Qué sucede después", text: "Respondemos en un día hábil, hacemos una llamada inicial y coordinamos la auditoría o al experto adecuado. Sin secuencias automatizadas." }
+    ]
+  },
+  "aviso-de-privacidad": {
+    title: "Aviso de Privacidad Integral | Vialterna",
+    eyebrow: "Legal",
+    heading: "Aviso de Privacidad Integral",
+    intro: "VIALTERNA COMUNICACIONES. RFC: VCO1012206A8. Última actualización: 16 de junio de 2026.",
+    sections: [
+      { title: "Identidad y domicilio del Responsable", text: "Vialterna Comunicaciones, S.A. de C.V. es responsable de sus datos personales. Domicilio: Montes Pirineos 720-B, Lomas de Chapultepec, Miguel Hidalgo, C.P. 11000, Ciudad de México, México." },
+      { title: "Datos personales tratados", text: "Podremos tratar datos identificativos y de contacto, patrimoniales o financieros, así como datos de navegación, dispositivos y geolocalización. No recabamos datos personales sensibles." },
+      { title: "Finalidades del tratamiento", text: "Los datos se utilizan para informar sobre servicios, facilitar contratación, instalar equipos, procesar pagos, facturar, administrar clientes, brindar atención y generar estadísticas de navegación." },
+      { title: "Transferencias", text: "Los datos podrán transferirse a organismos públicos y autoridades competentes para cumplir obligaciones legales, y a prestadores de servicios para resguardo, administración y análisis." },
+      { title: "Derechos ARCO", text: "Puedes solicitar acceso, rectificación, cancelación u oposición al correo protecciondedatos@vialterna.com o en el domicilio del Responsable." },
+      { title: "Revocación y limitación", text: "Puedes solicitar la revocación del consentimiento o limitar el uso y divulgación siguiendo el procedimiento aplicable a los Derechos ARCO." },
+      { title: "Cookies", text: "El sitio utiliza cookies para facilitar la navegación y analizar información técnica. Puedes deshabilitarlas desde tu navegador." },
+      { title: "Modificaciones y contacto", text: "Vialterna puede actualizar este aviso. Para dudas escribe a atencionautoridades@vialterna.com o protecciondedatos@vialterna.com." }
+    ]
+  }
+};
+
+export function getStaticPaths() {
+  return ["aviso-de-privacidad"].map((page) => ({ params: { page } }));
+}
+const data = pages[Astro.params.page as keyof typeof pages];
+const isContact = Astro.params.page === "contacto";
+const editable = await getSitePage(Astro.params.page ?? "", "es", {
+  seoTitle: data.title,
+  seoDescription: data.intro,
+  eyebrow: data.eyebrow,
+  heading: data.heading,
+  intro: data.intro,
+  sections: data.sections
+});
+---
+<BaseLayout title={editable.seoTitle ?? data.title} description={editable.seoDescription ?? editable.intro}>
+  <Header />
+  <main>
+    <section class:list={["editorial-hero", Astro.params.page === "empresa" && "company-hero"]}><div class="shell"><div class="eyebrow">{editable.eyebrow}</div><h1 class="detail-title">{editable.heading}</h1><p class="detail-lead">{editable.intro}</p></div></section>
+    {isContact && <ContactForm lang="es" />}
+    {Astro.params.page === "aviso-de-privacidad"
+      ? <>
+          <section class="section legal-documents">
+            <div class="shell">
+              <div class="kicker">Área legal</div>
+              <h2>Documentos legales publicados por Vialterna</h2>
+              <div class="legal-downloads">
+                <a href="/legal/carta-derechos-minimos.pdf" target="_blank"><span>PDF</span><strong>Carta de derechos mínimos</strong><i>Descargar ↗</i></a>
+                <a href="/legal/registro-contrato-adhesion-profeco.pdf" target="_blank"><span>PDF</span><strong>Registro de contrato adhesión a la PROFECO</strong><i>Descargar ↗</i></a>
+                <a href="/legal/vialterna-codigo-practicas-comerciales.pdf" target="_blank"><span>PDF</span><strong>Código de prácticas comerciales</strong><i>Descargar ↗</i></a>
+                <a href="/legal/vialterna-colaboracion-seguridad-justicia.pdf" target="_blank"><span>PDF</span><strong>Colaboración en materia de seguridad y justicia</strong><i>Descargar ↗</i></a>
+              </div>
+            </div>
+          </section>
+          <section class="section"><article class="shell legal-content" set:html={privacyHtml} /></section>
+        </>
+      : <section class="section"><div class="shell editorial-list">{editable.sections.map((section, index) => (
+          <article>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            {section.eyebrow && <div class="kicker">{section.eyebrow}</div>}
+            <h2>{section.title}</h2>
+            {section.intro && <p>{section.intro}</p>}
+            {section.text && <p>{section.text}</p>}
+            {section.items?.length && (
+              <ul>
+                {section.items.map((item) => <li><strong>{item.title}</strong>{item.text && <> · {item.text}</>}</li>)}
+              </ul>
+            )}
+          </article>
+        ))}</div></section>
+    }
+  </main>
+  <Footer />
+</BaseLayout>

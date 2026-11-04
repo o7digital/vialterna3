@@ -1,0 +1,46 @@
+---
+interface Props {
+  lang?: "es" | "en";
+}
+
+const { lang = "es" } = Astro.props;
+const isEnglish = lang === "en";
+const copy = isEnglish
+  ? {
+      kicker: "Contact form",
+      title: "Start with a diagnostic",
+      intro: "We analyze your connectivity infrastructure, carrier contracts, spend, redundancy and performance to identify disconnection risks and optimization opportunities.",
+      fallback: "The form requires JavaScript. You can also contact us at atencionaclientes@vialterna.com."
+    }
+  : {
+      kicker: "Formulario de contacto",
+      title: "Empieza con un diagnóstico",
+      intro: "Analizamos tu infraestructura de conectividad, contratos con operadores, gasto, redundancias y desempeño para identificar riesgos de desconexión y oportunidades de optimización.",
+      fallback: "El formulario requiere JavaScript. También puedes escribir a atencionaclientes@vialterna.com."
+    };
+---
+<section class="section contact-form-section" aria-labelledby={`contact-form-title-${lang}`}>
+  <div class="shell">
+    <div class="contact-form-panel">
+      <div class="contact-form-header">
+        <div class="kicker">{copy.kicker}</div>
+        <h2 id={`contact-form-title-${lang}`}>{copy.title}</h2>
+        <p>{copy.intro}</p>
+      </div>
+
+      <div class="hubspot-form-shell">
+        <div
+          class="hs-form-frame"
+          data-region="na1"
+          data-form-id="d8ae4cdc-017f-4193-b687-873d987d52a9"
+          data-portal-id="51161603"
+        ></div>
+        <noscript>
+          <p class="hubspot-form-fallback">{copy.fallback}</p>
+        </noscript>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline src="https://js.hsforms.net/forms/embed/51161603.js" defer></script>

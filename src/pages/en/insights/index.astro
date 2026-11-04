@@ -1,0 +1,58 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import { insightPostsEn } from "../../../data/insightsEn";
+import { getBlogPosts, getSitePage } from "../../../lib/dato";
+
+const fallbackPage = {
+  seoTitle: "Business connectivity and enterprise network insights | Vialterna",
+  seoDescription: "Vialterna articles on SD-WAN, cellular internet, IoT, GPS, and enterprise connectivity.",
+  eyebrow: "Insights",
+  heading: "Vialterna Blog",
+  intro: "Vialterna texts on enterprise connectivity, SD-WAN, IoT, and cellular internet.",
+  sections: []
+};
+const page = await getSitePage("noticias", "en", fallbackPage);
+const posts = await getBlogPosts("en", insightPostsEn);
+
+const formatDate = (date: string) => new Intl.DateTimeFormat("en", {
+  day: "2-digit",
+  month: "long",
+  year: "numeric"
+}).format(new Date(date));
+---
+<BaseLayout title={page.seoTitle ?? fallbackPage.seoTitle} description={page.seoDescription ?? page.intro} lang="en">
+  <Header lang="en" />
+  <main>
+    <section class="editorial-hero">
+      <div class="shell">
+        <div class="eyebrow reveal">{page.eyebrow}</div>
+        <h1 class="detail-title reveal">{page.heading}</h1>
+        <p class="detail-lead reveal">{page.intro}</p>
+      </div>
+    </section>
+
+    <section class="section insights-index">
+      <div class="shell insights-grid">
+        {posts.map((post) => (
+          <article class="insight-card reveal">
+            <a href={`/en/insights/${post.slug}/`} aria-label={post.title}>
+              {post.image && <img src={post.image} alt="" loading="lazy" decoding="async" />}
+              <div class="insight-card-copy">
+                <div class="insight-meta">
+                  <span>{formatDate(post.date)}</span>
+                  {post.categories.slice(0, 2).map((category) => <span>{category}</span>)}
+                </div>
+                <h2>{post.title}</h2>
+                <p>{post.excerpt}</p>
+                <strong>Read article</strong>
+              </div>
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

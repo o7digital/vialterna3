@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import ContactForm from "../../components/ContactForm.astro";
+import privacyHtml from "../../content/privacyEn.html?raw";
+import { getSitePage } from "../../lib/dato";
+const pages = {
+  company: ["Mexican company, nationwide footprint", "We engineer business continuity for distributed enterprises across Mexico.", "Fifteen plus years operating critical infrastructure. The multi-network resilience layer for large distributed enterprises in Mexico.", [["Who we are", "We deliver business continuity through always-on, infrastructure-grade connectivity, with an owned 24/7 NOC, AIr Connect, a nationwide ER Network, our MVNO, and official Starlink partnership."], ["What makes us different", "We sell uptime, stay network and technology independent, audit the full Telco stack, and proactively manage more than 2,500 sites and devices."], ["Where we sit in the market", "Telcos sell capacity, integrators sell projects, and resellers compete on link price. We engineer and operate resilient connectivity as an accountable managed service."], ["Proof", "+2,500 managed sites and devices. 15+ years. 99.97%+ Edge availability and 99.99% Core SLA. Nationwide coverage."], ["Reference clients", "Trusted by national banks, retail and franchise operators, industrial companies, payments providers, and logistics operations. References available under NDA."], ["Start with a Telco audit", "See how we work with a free written diagnostic and no commitment."]]],
+  contact: ["Two paths forward", "Let us talk.", "Start with the free Telco audit or reach a human directly. We respond within one business day.", [["Get the Telco audit", "A written vulnerability map, downtime cost model, TCO comparison, and specific architecture recommendation within two weeks."], ["Talk to an expert", "A direct conversation about your situation, a solution, or how we work. No commitment."], ["Reach out", "Email atencionaclientes@vialterna.com or call +52 55 8062 6884."], ["What happens next", "We respond within one business day, schedule an initial call, and route you to the right expert or audit deep dive. No automated drip sequences."]]],
+  empresa: ["Company", "Vialterna: resilient enterprise connectivity for distributed operations in Mexico", "We connect everyone, everything, everywhere, always. Vialterna is a Mexican telecommunications company focused on enterprise connectivity, managed networks, SD-WAN, IoT, mobile internet, satellite internet and resilient connectivity.", [["More than 10 years innovating in enterprise telecommunications", "Vialterna was founded in December 2010 as a value-driven alternative to traditional industry models."], ["Connecting the physical world with digital strategy", "Connectivity provides access to relevant real-time information, monitoring of critical variables and better operational visibility."], ["Experience and capabilities", "National coverage, SD-WAN, IoT, M2M, mobile and satellite internet, with robust architectures using multiple links, carriers and technologies."]]],
+  faq: ["FAQ", "Frequently asked questions about enterprise connectivity", "Essential information about how Vialterna designs, deploys and operates resilient connectivity for distributed enterprises.", [["What does Vialterna do?", "Vialterna designs, deploys and operates resilient enterprise connectivity for companies with distributed sites in Mexico."], ["Is Vialterna a traditional carrier?", "No. Vialterna is carrier-agnostic and designs architecture around the customer’s operation, combining fiber, LTE, 5G, satellite and other technologies."], ["What types of companies does Vialterna support?", "Companies operating branches, ATMs, stores, franchises, distribution centers, industrial sites, IoT devices or transactional infrastructure."], ["What does Availability as a Service mean?", "We design, implement, monitor and manage connectivity architecture focused on keeping operations available."], ["Can you work with our current carriers?", "Yes. We assess existing links, identify risks and redundancies, and complement the architecture where needed."], ["Does Vialterna provide satellite or cellular backup?", "Yes. We design LTE, 5G and LEO satellite backup routes."], ["What is included in an assessment?", "Coverage, carriers, links, single points of failure, site criticality, spend, performance and optimization opportunities."], ["Can we start with a pilot?", "Yes. A small-site pilot can validate coverage, failover and operations before scaling."], ["Does Vialterna manage enterprise SIMs and IoT?", "Yes. We manage SIMs, cellular connectivity, usage, activations, alerts, plan optimization and lifecycle."], ["How can I contact Vialterna?", "Email atencionaclientes@vialterna.com or WhatsApp +52 55 8062 6884."]]],
+  contacto: ["Contact", "Ready to close the gap?", "Stop managing carriers. Start managing your business.", [["Solution Design", "Start a direct conversation with our business development team. WhatsApp: +52 55 8062 6884."], ["Project Specifications", "Send your infrastructure requirements to atencionaclientes@vialterna.com for a detailed technical proposal."], ["Meet us in person", "Montes Urales 720, Lomas de Chapultepec, Miguel Hidalgo, Mexico City 11000. Monday–Friday, 09:00–18:00 CST."], ["Start with an assessment", "We analyze infrastructure, carrier contracts, spend, redundancy and performance to identify disconnection risks and optimization opportunities."]]],
+  "aviso-de-privacidad": ["Legal", "Comprehensive Privacy Notice", "VIALTERNA COMUNICACIONES. RFC: VCO1012206A8. Last updated June 16, 2026.", [["Privacy notice", "The legally controlling privacy notice is currently published in Spanish below. Contact protecciondedatos@vialterna.com for questions or ARCO rights requests."]]]
+};
+export function getStaticPaths() { return ["empresa","contacto","aviso-de-privacidad"].map(page => ({ params: { page } })); }
+const data = pages[Astro.params.page as keyof typeof pages];
+const isContact = ["contact", "contacto"].includes(Astro.params.page ?? "");
+const [eyebrow, heading, intro, localSections] = data as [string, string, string, string[][]];
+const sections = localSections.map(([title, text]) => ({ title, text }));
+const editable = await getSitePage(Astro.params.page ?? "", "en", {
+  eyebrow,
+  heading,
+  intro,
+  sections
+});
+---
+<BaseLayout title={`${editable.heading} | Vialterna`} description={editable.intro} lang="en">
+  <Header lang="en" />
+  <main>
+    <section class:list={["editorial-hero", ["company","empresa"].includes(Astro.params.page ?? "") && "company-hero"]}><div class="shell"><div class="eyebrow">{editable.eyebrow}</div><h1 class="detail-title">{editable.heading}</h1><p class="detail-lead">{editable.intro}</p></div></section>
+    {isContact && <ContactForm lang="en" />}
+    {Astro.params.page === "aviso-de-privacidad" && (
+      <section class="section legal-documents">
+        <div class="shell">
+          <div class="kicker">Legal documents</div>
+          <h2>Legal documents published by Vialterna</h2>
+          <div class="legal-downloads">
+            <a href="/legal/carta-derechos-minimos.pdf" target="_blank"><span>PDF</span><strong>Minimum rights charter</strong><i>Download ↗</i></a>
+            <a href="/legal/registro-contrato-adhesion-profeco.pdf" target="_blank"><span>PDF</span><strong>PROFECO adhesion contract registration</strong><i>Download ↗</i></a>
+            <a href="/legal/vialterna-codigo-practicas-comerciales.pdf" target="_blank"><span>PDF</span><strong>Commercial practices code</strong><i>Download ↗</i></a>
+            <a href="/legal/vialterna-colaboracion-seguridad-justicia.pdf" target="_blank"><span>PDF</span><strong>Security and justice cooperation</strong><i>Download ↗</i></a>
+          </div>
+        </div>
+      </section>
+    )}
+    <section class="section"><div class="shell editorial-list">{editable.sections.map((section, index) => <article><span>{String(index+1).padStart(2,"0")}</span><h2>{section.title}</h2><p>{section.text}</p></article>)}</div></section>
+    {Astro.params.page === "aviso-de-privacidad" && <section class="section"><article class="shell legal-content" set:html={privacyHtml} /></section>}
+  </main>
+  <Footer lang="en" />
+</BaseLayout>

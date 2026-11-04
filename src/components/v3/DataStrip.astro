@@ -1,0 +1,5 @@
+---
+import { split } from '../../lib/v3';
+interface Props { text: string }
+---
+<div class="v3-data-strip">{split(Astro.props.text).map(text => <p>{text}</p>)}</div>

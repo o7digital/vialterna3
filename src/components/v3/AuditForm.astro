@@ -1,0 +1,44 @@
+---
+import { industryLinks, type Lang } from '../../lib/v3';
+interface Props { lang: Lang }
+const { lang }=Astro.props,en=lang==='en';
+const c=en?{heading:'Request your free Telco audit',name:'Name',job:'Job title',company:'Company',email:'Email',phone:'Phone',sites:'Number of sites',industry:'Industry',message:'What is your biggest connectivity problem today?',choose:'Select an option',ranges:['Under 20','20 to 50','50 to 200','200+'],other:'Other',consent:'I agree to share my data to be contacted by Vialterna.',privacy:'Privacy Notice',submit:'Request my Telco audit',sending:'Sending…',success:'Your request has been sent. We respond within one business day.',error:'We could not send your request. Please try again or email atencionaclientes@vialterna.com.'}:{heading:'Solicita tu auditoría Telco gratuita',name:'Nombre',job:'Puesto',company:'Empresa',email:'Email',phone:'Teléfono',sites:'Número de sitios',industry:'Industria',message:'¿Cuál es tu principal problema de conectividad hoy?',choose:'Selecciona una opción',ranges:['Menos de 20','20 a 50','50 a 200','Más de 200'],other:'Otra',consent:'Acepto compartir mis datos para recibir atención de Vialterna.',privacy:'Aviso de privacidad',submit:'Solicitar mi auditoría Telco',sending:'Enviando…',success:'Tu solicitud fue enviada. Respondemos en un día hábil.',error:'No pudimos enviar tu solicitud. Inténtalo de nuevo o escribe a atencionaclientes@vialterna.com.'};
+---
+<section class="section contact-form-section" id="audit-form"><div class="shell"><div class="contact-form-panel"><div class="contact-form-header"><div class="kicker">{en?'Free. No commitment.':'Gratis. Sin compromiso.'}</div><h2 id="audit-form-title">{c.heading}</h2><p>{en?'We respond within one business day.':'Respondemos en un día hábil.'}</p></div>
+ <form class="v3-audit-form" aria-labelledby="audit-form-title" data-audit-form data-sending={c.sending} data-success={c.success} data-error={c.error}>
+  <input type="hidden" name="language" value={lang}/>
+  <div class="v3-form-grid">
+   <label>{c.name}<input name="name" autocomplete="name" maxlength="120" required/></label>
+   <label>{c.job}<input name="jobtitle" autocomplete="organization-title" maxlength="120" required/></label>
+   <label>{c.company}<input name="company" autocomplete="organization" maxlength="160" required/></label>
+   <label>{c.email}<input name="email" type="email" autocomplete="email" maxlength="254" required/></label>
+   <label>{c.phone}<input name="phone" type="tel" autocomplete="tel" maxlength="50" required/></label>
+   <label>{c.sites}<select name="sites" required><option value="">{c.choose}</option>{c.ranges.map((range,i)=><option value={['under-20','20-50','50-200','200-plus'][i]}>{range}</option>)}</select></label>
+  </div>
+  <label>{c.industry}<select name="industry" required><option value="">{c.choose}</option>{industryLinks(lang).map(link=><option>{link.label}</option>)}<option>{c.other}</option></select></label>
+  <label>{c.message}<textarea name="message" rows="5" maxlength="5000" required></textarea></label>
+  <label class="v3-honeypot" aria-hidden="true">Website<input name="website_check" tabindex="-1" autocomplete="off"/></label>
+  <label class="v3-consent"><input type="checkbox" name="consent" value="yes" required/><span>{c.consent} <a href={en?'/en/aviso-de-privacidad/':'/aviso-de-privacidad/'} target="_blank" rel="noopener noreferrer">{c.privacy} ↗</a></span></label>
+  <button class="button primary" type="submit">{c.submit}</button><p class="v3-form-status" role="status" aria-live="polite"></p>
+  <noscript><p>{en?'To request your audit, email':'Para solicitar tu auditoría, escribe a'} <a href="mailto:atencionaclientes@vialterna.com">atencionaclientes@vialterna.com</a>.</p></noscript>
+ </form>
+</div></div></section>
+<script>
+ document.querySelectorAll<HTMLFormElement>('[data-audit-form]').forEach(form=>{
+  form.addEventListener('submit',async event=>{
+   event.preventDefault();
+   if(!form.reportValidity())return;
+   const button=form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+   const status=form.querySelector<HTMLParagraphElement>('[role="status"]')!;
+   const original=button.textContent;
+   button.disabled=true;button.textContent=form.dataset.sending!;status.textContent='';
+   try {
+    const result=await fetch('/api/audit',{method:'POST',body:new FormData(form)});
+    const body=await result.json();
+    if(!result.ok||!body.ok)throw new Error('Submission failed');
+    status.textContent=form.dataset.success!;form.reset();
+   } catch { status.textContent=form.dataset.error!; }
+   finally {button.disabled=false;button.textContent=original;}
+  });
+ });
+</script>

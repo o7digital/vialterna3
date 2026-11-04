@@ -1,0 +1,15 @@
+---
+import Actions from './Actions.astro';
+import { t, type Lang } from '../../lib/v3';
+interface Props { lang: Lang; home?: boolean }
+const { lang, home = false } = Astro.props;
+const en = lang === 'en';
+---
+<section class="cta-section" id="contacto"><div class="shell">
+ <div class="kicker">{t('home', 'Final CTA eyebrow', lang)}</div>
+ <h2>{home ? t('home', 'Final CTA headline', lang) : en ? 'Start with a diagnostic.' : 'Empieza con un diagnóstico.'}</h2>
+ {home && <p>{t('home', 'Final CTA body', lang)}</p>}
+ <Actions lang={lang} />
+ <p>{en ? 'We respond within one business day. Free. No commitment.' : 'Respondemos en un día hábil. Gratis. Sin compromiso.'}</p>
+ <div class="direct-contact"><a href="mailto:atencionaclientes@vialterna.com">atencionaclientes@vialterna.com</a><a href="https://wa.me/525580626884">+52 55 8062 6884</a></div>
+</div></section>

@@ -1,0 +1,56 @@
+---
+import { solutionLinks, industryLinks } from "../lib/v3";
+import { getSeoRoute } from "../lib/seo";
+interface Props { lang?: "es" | "en" }
+const { lang = "es" } = Astro.props;
+const isEnglish = lang === "en";
+const currentPath = Astro.url.pathname;
+const { alternates } = getSeoRoute(currentPath);
+const languageHref = isEnglish ? alternates?.es ?? "/" : alternates?.en ?? "/en/";
+const items = [
+ { label: isEnglish ? 'Solutions' : 'Soluciones', href: isEnglish ? '/en/#solutions' : '/#soluciones' },
+ { label: isEnglish ? 'Industries' : 'Industrias', href: isEnglish ? '/en/industries/' : '/industrias/' },
+ { label: isEnglish ? 'Company' : 'Empresa', href: isEnglish ? '/en/company/' : '/empresa/' },
+ { label: 'Insights', href: isEnglish ? '/en/insights/' : '/insights/' },
+ { label: 'FAQ', href: isEnglish ? '/en/faq/' : '/faq/' },
+ { label: isEnglish ? 'Contact' : 'Contacto', href: isEnglish ? '/en/contact/' : '/contacto/' }
+];
+const dropdowns: Record<string, { label: string; href: string }[]> = {
+ [isEnglish ? 'Solutions' : 'Soluciones']: solutionLinks(lang),
+ [isEnglish ? 'Industries' : 'Industrias']: industryLinks(lang)
+};
+---
+<header class="header" data-header>
+  <div class="shell header-inner">
+    <a class="brand" href={isEnglish ? "/en/" : "/"} aria-label={isEnglish ? "Vialterna home" : "Vialterna inicio"}>
+      <img class="brand-logo" src="/brand/vialterna-logo-white.svg" alt="Vialterna" width="168" height="50" />
+    </a>
+    <button class="menu-button" type="button" aria-label={isEnglish ? "Open menu" : "Abrir menú"} aria-expanded="false" data-menu-button>
+      <span></span><span></span>
+    </button>
+    <nav class="nav-links" aria-label={isEnglish ? "Main navigation" : "Navegación principal"} data-menu>
+      {items.map((item) => {
+        const dropdown = dropdowns[item.label];
+        return (
+          <div class:list={["nav-item", { "has-dropdown": dropdown }]}>
+            <a
+              href={item.href}
+              aria-haspopup={dropdown ? "true" : undefined}
+              aria-expanded={dropdown ? "false" : undefined}
+              data-dropdown-trigger={dropdown ? true : undefined}
+            >{item.label}</a>
+            {dropdown && (
+              <div class="nav-dropdown">
+                <div class="nav-dropdown-panel">
+                  {dropdown.map((child) => <a href={child.href}>{child.label}</a>)}
+                </div>
+              </div>
+            )}
+          </div>
+        );
+      })}
+      <a class="language-link" href={languageHref} lang={isEnglish ? "es" : "en"}>{isEnglish ? "ES" : "EN"}</a>
+    </nav>
+    <a class="button primary header-cta" href={isEnglish ? "/en/telco-audit/" : "/auditoria-telco/"}>{isEnglish ? "Start here: Telco audit" : "Empieza aquí: Auditoría Telco"} <span aria-hidden="true">↗</span></a>
+  </div>
+</header>

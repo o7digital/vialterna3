@@ -1,0 +1,28 @@
+{
+  "name": "vialterna3",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && node scripts/check-languages.mjs",
+    "preview": "astro preview",
+    "check": "astro check",
+    "check:languages": "npm run build",
+    "check:insights": "npm run build && node scripts/check-insights-i18n.mjs",
+    "check:seo": "npm run build && node scripts/check-seo.mjs",
+    "test": "node scripts/check-v3.mjs"
+  },
+  "dependencies": {
+    "@astrojs/vercel": "^11.0.3",
+    "astro": "^7.0.3",
+    "marked": "^16.4.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}

@@ -1,0 +1,1106 @@
+{
+  "home": {
+    "SEO title": {
+      "es": "Conectividad empresarial en México | Vialterna",
+      "en": "Enterprise connectivity in Mexico | Vialterna"
+    },
+    "Meta description": {
+      "es": "Conectividad empresarial administrada en México: SD-WAN, SASE, conectividad multicloud, bonding y failover con fibra, LTE/4G/5G y LEO (Starlink). NOC 24/7 y SLAs bajo contrato.",
+      "en": "Managed enterprise connectivity in Mexico: SD-WAN, SASE, multi-cloud connectivity, bonding and failover over fiber, 5G and Starlink. 24/7 NOC and SLA."
+    },
+    "Hero eyebrow": {
+      "es": "Conectividad empresarial administrada · Edge, Core y Cloud",
+      "en": "Managed enterprise connectivity · Edge, Core and Cloud"
+    },
+    "Hero headline": {
+      "es": "Las redes se caen. Tu operación sigue.",
+      "en": "Networks fail. Your operation keeps running."
+    },
+    "Hero subhead": {
+      "es": "Un solo socio desde cada sitio hasta la nube. Diseñamos, contratamos y operamos tu red con los enlaces y el equipo adecuados para cada sitio, sin depender de un solo operador. Monitoreada 24/7 y respaldada por un SLA.",
+      "en": "One partner from every site to the cloud. We design, source and operate your network with the right links and equipment for each site, without depending on a single carrier. Monitored 24/7 and backed by SLA."
+    },
+    "Hero buttons": {
+      "es": "Solicita tu auditoría Telco gratuita · Habla con un experto",
+      "en": "Get your free Telco audit · Talk to an expert"
+    },
+    "Hero badges": {
+      "es": "NOC 24/7 · Multioperador · Respaldo automático · SLA gestionado · Cobertura nacional · Monitoreo 24/7. Plataforma AIrConnect® con visibilidad de datos en tiempo real.",
+      "en": "24/7 NOC · Multi-carrier · Automatic backup · Managed SLA · Nationwide coverage · 24/7 monitoring. AIrConnect platform with real-time data visibility."
+    },
+    "Proof bar": {
+      "es": "**La conectividad en la que confía la banca en México.** La mayoría de los principales bancos e instituciones financieras del país, y cadenas de retail y franquicias a nivel nacional, operan con Vialterna · +3,000 sitios · +2,500 cajeros automáticos · 99.95% de disponibilidad por contrato (hasta 99.99% en algunas soluciones) · 15+ años operando infraestructura crítica en México",
+      "en": "**The connectivity Mexico's banks trust.** Most of the country's leading banks and financial institutions, and retail and franchise chains nationwide, run on Vialterna · +3,000 sites · +2,500 ATMs · 99.95% availability by contract (up to 99.99% on some solutions) · 15+ years operating critical infrastructure in Mexico"
+    },
+    "Path headline": {
+      "es": "¿Qué necesitas resolver?",
+      "en": "What do you need to solve?"
+    },
+    "Path A card (Edge)": {
+      "es": "**Conectividad resiliente en cada sitio de última milla, a escala nacional.** Cajeros, sucursales, tiendas y sitios remotos: cientos o miles de puntos donde cada minuto fuera de línea es una venta o una transacción perdida. Casi todos ya tienen un respaldo, pero no se aprovecha. Lo hacemos funcionar con failover automático, sumamos los enlaces celulares y satelitales que son difíciles de conseguir y operar, y te damos visibilidad de toda tu red, sitio por sitio, con NOC 24/7 y técnicos en todo el país. Grado empresarial a un costo por sitio competitivo: 99.95% por SLA. Botón: Ver Edge ↗",
+      "en": "**Resilient connectivity at every last-mile site, nationwide.** ATMs, branches, stores and remote sites: hundreds or thousands of locations where every minute offline is a lost sale or transaction. Almost all of them already have a backup, but it isn't used well. We make it work with automatic failover, add the cellular and satellite links that are hard to source and run, and give you visibility of your whole network, site by site, with a 24/7 NOC and technicians nationwide. Enterprise grade at a competitive cost per site: 99.95% by SLA. Button: See Edge ↗"
+    },
+    "Path C card (Core)": {
+      "es": "**Resiliencia, gobierno y control para mis sitios críticos.** Tu corporativo, centros de datos, CEDIS y sitios de procesamiento sostienen toda la operación: si uno cae, se detiene todo. Les damos redundancia real (varios ISP, Starlink y celular, unidos con bonding para cumplir el ancho de banda y la latencia que exigen) y tomamos el control de tus proveedores: un solo responsable, cada ISP medido contra su SLA, con reportes, tickets y visibilidad de su desempeño y consumo. 99.99% por SLA. Botón: Ver Core ↗",
+      "en": "**Resilience, governance and control for my critical sites.** Your headquarters, data centers, distribution centers and processing sites carry the whole operation: if one goes down, everything stops. We give them real redundancy (several ISPs, Starlink and cellular, bonded to meet the bandwidth and latency they need) and take control of your providers: one accountable partner, every ISP measured against its SLA, with reports, tickets and visibility of its performance and usage. 99.99% by SLA. Button: See Core ↗"
+    },
+    "Path B card": {
+      "es": "**Unificar y modernizar toda mi red.** Una sola red administrada que conecta tus sitios, centros de datos, nubes, usuarios remotos y socios, con seguridad integrada: reemplaza MPLS, integra tus SD-WAN y lleva cada aplicación a su nube, con un solo responsable. Botón: Ver Edge to Cloud ↗",
+      "en": "**Unify and modernize my whole network.** One managed network that connects your sites, data centers, clouds, remote users and partners, with security built in: it replaces MPLS, joins your SD-WANs and takes each application to its cloud, with one accountable partner. Button: See Edge to Cloud ↗"
+    },
+    "Shared line under the three cards": {
+      "es": "**En todos los casos:** visibilidad de todos tus operadores, enlaces e ISP en AIrConnect, reportes automáticos, gestión proactiva y manejo de tickets con cada proveedor. Si lo necesitas, contratamos los enlaces por ti, como celular y Starlink, o podemos administrar tus contratos actuales.",
+      "en": "**In every case:** visibility of all your carriers, links and ISPs in AIrConnect, automatic reports, proactive management and ticket handling with each provider. If you need it, we source the links for you, such as cellular and Starlink, or we can take over your current contracts."
+    },
+    "Risk eyebrow": {
+      "es": "El riesgo operativo de tu red actual",
+      "en": "The risk of a vulnerable network"
+    },
+    "Risk headline": {
+      "es": "La conectividad no debe tratarse como un servicio básico. Es infraestructura crítica con un riesgo de negocio estratégico y operativo.",
+      "en": "Connectivity shouldn't be treated as a basic utility. It's infrastructure that carries operational risk."
+    },
+    "Risk body": {
+      "es": "Cuando uno de tus sitios se desconecta, ¿qué pasa? Los ingresos se detienen. Las transacciones fallan. Tus sistemas dejan de operar. Tus equipos regresan a procesos manuales. Si operas sitios distribuidos donde cualquier ubicación desconectada tiene un costo operativo o de ingresos medible, cada minuto desconectado es una exposición para tu negocio y modelo operativo.",
+      "en": "When one of your sites goes offline, what happens? Revenue stops. Transactions fail. Your teams go back to manual processes. If you run distributed sites where any offline location has a measurable operating or revenue cost, every minute offline is exposure for your business and your operating model."
+    },
+    "Risk callout": {
+      "es": "El tiempo de inactividad impacta directamente a tu negocio. La mayoría de las empresas nunca lo ha cuantificado porque no sabe cómo o no tiene la información para hacerlo. La auditoría Telco gratuita lo cuantifica por ti.",
+      "en": "Downtime hits your P&L directly. Most companies have never quantified it because they don't know how or don't have the data to do it. The free Telco audit quantifies it for you."
+    },
+    "Modernization eyebrow": {
+      "es": "Modernización de red",
+      "en": "Network modernization"
+    },
+    "Modernization headline": {
+      "es": "Tu operación ya es digital. Tu red, no.",
+      "en": "Your operation is already digital. Your network isn't."
+    },
+    "Modernization body": {
+      "es": "En veinte años, la conectividad empresarial ha evolucionado desde las líneas dedicadas, microondas, MPLS, internet y ahora tecnologías más robustas como VPNs y SD-WAN. Tus sitios y aplicativos ya necesitan de alguna manera conectarse a la nube, pero muchas redes en México siguen limitadas por diseño: un operador por sitio, un firewall en cada ubicación y todo el tráfico hacia la nube pasando por el centro de datos. Eso suma latencia, costo y puntos únicos de falla.",
+      "en": "In twenty years, enterprise connectivity went from leased lines to MPLS, VPN and SD-WAN. Your POS, ATMs, ERP and applications already live in the cloud, but many networks in Mexico are still designed for one data center and one carrier: one carrier per site, a firewall at every location, and all cloud traffic routed through the data center. That adds latency, cost and single points of failure."
+    },
+    "Data strip": {
+      "es": "12,118.9 millones de pagos con tarjeta en 2025 (+22.6%, Banxico) · 69,126 cajeros y 18,295 sucursales que deben estar en línea (CNBV) · +50,000 tiendas de autoservicio y departamentales, con 1,700 aperturas en 2025 (ANTAD) · Las cuatro grandes nubes ya todas tienen región en México",
+      "en": "12,118.9 million card payments in 2025 (+22.6%, Banxico) · 69,126 ATMs and 18,295 branches that must stay online (CNBV) · +50,000 supermarket and department stores, with 1,700 openings in 2025 (ANTAD) · All four major cloud providers now run regions in Mexico"
+    },
+    "Setups headline": {
+      "es": "Tu red probablemente opera bajo uno de estos dos modelos. Ambos te están dejando expuesto.",
+      "en": "You likely run one of two setups. Both leave you exposed."
+    },
+    "Setup 01": {
+      "es": "**SD-WAN con respaldo manual.** El tráfico se gestiona, pero la red subyacente sigue siendo un punto único de falla y los firewalls por sitio elevan el costo. Los respaldos son costosos y no se usan de manera automática e inteligente. Una solución poco eficiente y manual.",
+      "en": "**SD-WAN with manual backup.** Traffic is managed, but the underlying network remains a single point of failure and per-site firewalls inflate cost. Backup services are expensive and aren't used automatically or intelligently."
+    },
+    "Setup 02": {
+      "es": "**Servicios de internet básicos sin capa administrada.** Sin SLA, monitoreo ni failover, el downtime se absorbe silenciosamente a través de toda tu operación. Nadie te apoya cuando tu enlace se cae. No tienes visibilidad de tus gastos ni del uso de tu red. Estás solo y sin las herramientas para poder alistar tu red para las necesidades del futuro.",
+      "en": "**Basic internet with no managed layer.** No SLA, monitoring or failover means downtime is absorbed silently across the operation. Nobody backs you up when your link goes down, and you have no visibility of your spend or network usage."
+    },
+    "Promise headline": {
+      "es": "En Vialterna lo simplificamos todo: un socio de negocio, una solución para tu negocio, un SLA, una factura.",
+      "en": "Vialterna makes it simple: one partner, one SLA, one invoice."
+    },
+    "Promise body": {
+      "es": "Modernizamos, integramos, simplificamos y operamos tu red, contigo o por ti, con tus operadores actuales dentro de la arquitectura. Tu equipo de TI no debería pasar el día preguntando qué le pasó a la red: nosotros lo vemos, lo resolvemos y te lo reportamos.",
+      "en": "We modernize, integrate, simplify and operate your network, with you or for you, with your current carriers kept inside the architecture. Your IT team shouldn't spend the day asking what's wrong with the network: we see it, fix it and report it to you."
+    },
+    "Proof box (6 items): how we operate": {
+      "es": "NOC propio 24/7 y plataforma AIrConnect · Independientes de operador y tecnología · Gestión completa o cogestión con tu equipo de TI · Contratamos los enlaces por ti o asumimos tus contratos actuales · Piloto de 1 a 5 sitios, sin compromiso · 99.95% de disponibilidad por SLA, y 99.99% en soluciones Core",
+      "en": "Owned 24/7 NOC and AIrConnect platform · Carrier and technology independent · Full management or co-management with your IT team · We source the links for you or take over your current contracts · 1 to 5 site pilot, no commitment · 99.95% availability SLA, and 99.99% on Core solutions"
+    },
+    "Questions headline": {
+      "es": "Las preguntas que nos hacen primero",
+      "en": "The questions we hear first"
+    },
+    "Questions": {
+      "es": "¿Qué pasa si se cae mi proveedor? · ¿Cuánto me cuesta una hora sin sistema? · ¿Cómo hago que mis proveedores cumplan su SLA? · ¿Cómo conecto mis sitios a la nube sin pasar todo por mi centro de datos? · ¿Cómo lo sostengo con mi equipo actual? · ¿Cómo migro sin detener la operación?",
+      "en": "What happens if my provider goes down? · What does an hour offline cost me? · How do I get my providers to meet their SLA? · How do I connect my sites to the cloud without routing everything through my data center? · How do I support this with the team I have? · How do I migrate without stopping operations?"
+    },
+    "Questions close + button": {
+      "es": "Te ayudamos a responder cada una y a encontrar las áreas de mejora de tu red con nuestra auditoría Telco completamente gratuita y sin compromiso. Botón: Solicita tu auditoría Telco gratuita",
+      "en": "We answer each one in the free Telco audit. Button: Get your free Telco audit"
+    },
+    "Stack diagram headline": {
+      "es": "Una sola arquitectura, del sitio a la nube.",
+      "en": "One architecture, from site to cloud."
+    },
+    "Stack: platform (top bar)": {
+      "es": "AIrConnect®: visibilidad en tiempo real de cada sitio, enlace y dispositivo, con reportes por proveedor e inteligencia sobre tu red.",
+      "en": "AIrConnect: real-time visibility of every site, link and device, with per-provider reporting"
+    },
+    "Stack: managed services (5 blocks)": {
+      "es": "Edge SuperWAN (respaldo inteligente de bajo costo, ideal para conectar tu última milla) · Core SD-WAN (bonding y orquestación multioperador, visibilidad de toda tu red y SLAs para tus nodos centrales de red) · Cloud: red en la nube y multicloud (Alkira Cloud Exchange Point® (CXP)) · Seguridad SASE (acceso zero trust y firewall en la nube) · IoT y SIM/eSIM provisioning (operador móvil en México - OMV)",
+      "en": "Edge SuperWAN (smart, low-cost backup with automatic failover, ideal for your last mile) · Core SD-WAN (bonding and multi-carrier orchestration, full network visibility and SLAs) · Cloud: cloud network and multi-cloud (Alkira Cloud Exchange Point® (CXP)) · SASE security (zero-trust access and cloud firewall) · IoT and SIM/eSIM provisioning (own MVNO)"
+    },
+    "Stack: connection sources (4 blocks)": {
+      "es": "Fibra y enlaces de tus operadores actuales (podemos empezar y mejorar lo que ya tienes contratado) · Celular 4G/5G · Satélite LEO (Starlink) · Agregación de ancho de banda y respaldo automático (bonding, hot failover, WAN smoothing)",
+      "en": "Fiber and your current carriers' links (we can start from and improve what you already have) · 4G/5G cellular · LEO satellite (Starlink) · Bandwidth aggregation and automatic backup"
+    },
+    "Stack: foundation (bottom bar)": {
+      "es": "NOC propio 24/7 · Red nacional de técnicos · SLA por contrato · Gestión completa o gestión en conjunto.",
+      "en": "Owned 24/7 NOC · Nationwide technician network · Contractual SLA · Full management or co-management"
+    },
+    "Stack: entry arrow": {
+      "es": "Empieza con la auditoría Telco gratuita",
+      "en": "Start with the free Telco audit"
+    },
+    "Model eyebrow": {
+      "es": "El modelo Vialterna",
+      "en": "The Vialterna way"
+    },
+    "Model headline": {
+      "es": "Más que conectividad: diseñamos uptime.",
+      "en": "More than connectivity: we engineer uptime."
+    },
+    "Model body": {
+      "es": "Vialterna es tu socio de conectividad y redes en México. Todo entregado como servicio administrado, respaldado por SLA.",
+      "en": "Vialterna is the network and technology independent infrastructure partner for enterprises in Mexico. Everything is delivered as a managed service, backed by SLA."
+    },
+    "Pillars intro": {
+      "es": "Tres pilares son la base de nuestro servicio. Juntos, son la forma en que diseñamos soluciones con la más alta disponibilidad y nos comprometemos a cumplirla bajo contrato.",
+      "en": "Three pillars form the foundation of our service. Together, they are how we design solutions for the highest availability, and we commit to delivering it under contract."
+    },
+    "Pillar 01": {
+      "es": "**Siempre activos por diseño.** La resiliencia multirred elimina puntos únicos de falla. Nuestra arquitectura combina fibra, celular, satélite y otras fuentes en una conectividad de alta disponibilidad.",
+      "en": "**Always on by design.** Multi-network resilience removes single points of failure. Our architecture combines fiber, cellular, satellite and other sources into high-availability connectivity."
+    },
+    "Pillar 02": {
+      "es": "**Gestión proactiva 24/7 y con visibilidad total.** Nuestro NOC 24/7 monitorea cada sitio en tiempo real en todo el país. Detectamos y resolvemos problemas antes de que los notes. Nuestra plataforma AIrConnect te da visibilidad y reportes automáticos con hallazgos y áreas de mejora para tu red.",
+      "en": "**Proactive 24/7 management with full visibility.** Our 24/7 NOC monitors every site in real time across the country. We detect and fix problems before you notice them. Our AIrConnect platform gives you visibility and automatic reports with findings and areas to improve in your network."
+    },
+    "Pillar 03": {
+      "es": "**Independientes de red y tecnología.** Siendo expertos en redes y sin compromiso con ningún operador, diseñamos una solución adecuada para las necesidades de tu negocio. El enlace adecuado, la tecnología correcta para la operación de tu negocio.",
+      "en": "**Network and technology independent.** As network experts with no ties to any carrier, we design the right solution for your business needs. The right link, the right technology for your operation."
+    },
+    "Solutions eyebrow": {
+      "es": "Soluciones",
+      "en": "Our offerings"
+    },
+    "Solutions headline": {
+      "es": "Cuatro soluciones. Una plataforma.",
+      "en": "Four solutions. One platform."
+    },
+    "Solutions intro": {
+      "es": "Lo que necesites para mantener tus operaciones en línea, diseñado y gestionado bajo una misma disciplina de la más alta disponibilidad.",
+      "en": "Whatever you need to keep your operations online, designed and managed under a single discipline of maximum availability."
+    },
+    "Card 01 Edge": {
+      "es": "**01 — Edge Administrado · SuperWAN.** Conectividad de grado empresarial (99.95% por SLA) a un precio competitivo. Arquitectura multioperador, failover automático, monitoreo y visibilidad en tiempo real y NOC 24/7 para tu red de última milla en todo el país. Disponibilidad diseñada para operaciones críticas en el Edge. Botón: Ver más ↗",
+      "en": "**01 — Managed Edge · SuperWAN.** Enterprise-grade connectivity (99.95% SLA) at a competitive price. Multi-carrier architecture, automatic failover, real-time monitoring and visibility, and a 24/7 NOC for your nationwide network of sites. Availability designed for critical operations at the edge. Button: Learn more ↗"
+    },
+    "Card 02 Core": {
+      "es": "**02 — Core · Red administrada para sitios críticos.** Diseño, gestión y operación de conectividad para sitios con los más altos requerimientos. Integración de múltiples ISPs, failover automático, agregación de ancho de banda y ruteo inteligente. Solución para tus nodos centrales. Monitoreo y control de consumo por ISP. Seguridad integrada con acceso zero trust (ZTNA), y SASE desde Cloud. Botón: Ver más ↗",
+      "en": "**02 — Core · Managed network for critical sites.** Design, management and operation of connectivity for sites with the highest requirements. Multiple ISPs integrated, automatic failover, bandwidth aggregation and intelligent routing. Monitoring and usage control per ISP. Integrated zero-trust security (ZTNA), with SASE from Cloud. Button: Learn more ↗"
+    },
+    "Card 03 Cloud": {
+      "es": "**03 — Cloud · Multicloud y SASE.** Una red en la nube como servicio, con Alkira CXP, que une sitios, centros de datos, nubes, usuarios remotos y socios, con firewall y segmentación integrados. Reemplaza MPLS sin hardware nuevo. Botón: Ver más ↗",
+      "en": "**03 — Cloud · Multi-cloud and SASE.** A cloud network as a service, with Alkira CXP, that joins sites, data centers, clouds, remote users and partners, with firewall and segmentation built in. Replaces MPLS with no new hardware. Button: Learn more ↗"
+    },
+    "Card 04 IoT and SIM": {
+      "es": "**04 — IoT y SIM.** SIM, eSIM y sensores administrados a escala, con provisioning, monitoreo, alertas, optimización de planes y control del ciclo de vida. Botón: Ver más ↗",
+      "en": "**04 — IoT and SIM.** Managed SIM, eSIM and sensors at scale, with provisioning, monitoring, alerts, plan optimization and lifecycle control. Button: Learn more ↗"
+    },
+    "How we work eyebrow": {
+      "es": "Nuestra manera de trabajar",
+      "en": "How we work"
+    },
+    "How we work headline": {
+      "es": "Una plataforma. Un solo modelo de interacción. Cuatro fases.",
+      "en": "One platform. One engagement. Four phases."
+    },
+    "Phase 01": {
+      "es": "**Entrada.** Comenzamos con un diagnóstico del estado actual de tu red y de tus proveedores de telecomunicaciones. También podemos empezar con algún problema específico que necesitas resolver.",
+      "en": "**Enter.** We start with a diagnostic of the current state of your network and your telecom providers. We can also start with a specific problem you need to solve on your network."
+    },
+    "Phase 02": {
+      "es": "**Diseño.** Diseñamos la arquitectura de red para cada sitio utilizando la combinación óptima de enlaces y tecnologías. Todo con las necesidades de tu negocio como base.",
+      "en": "**Design.** We design the network architecture for each site using the optimal mix of links and technologies, all built around your business needs."
+    },
+    "Phase 03": {
+      "es": "**Despliegue.** Validamos con un piloto de 1 a 5 sitios durante 15 a 30 días. Después coordinamos y configuramos hardware, operadores y monitoreo para poner la solución en operación, sin interrumpirla. Esta prueba es sin compromiso.",
+      "en": "**Deploy.** We validate with a 1 to 5 site pilot over 15 to 30 days. Then we coordinate and configure hardware, carriers and monitoring to put the solution into operation, without interrupting yours."
+    },
+    "Phase 04": {
+      "es": "**Gestión y expansión.** Optimizamos y expandimos la arquitectura a medida que crece tu red o cambian tus necesidades de negocio.",
+      "en": "**Manage and expand.** We optimize and expand the architecture as your network grows or your business needs change."
+    },
+    "Management model": {
+      "es": "**Tú decides el alcance.** Gestión completa por Vialterna o con tu equipo de TI: definimos juntos quién hace qué y ambos tienen la misma visibilidad de la red a través de AIrConnect®.",
+      "en": "**You choose the scope.** Full management by Vialterna, or co-management with your IT team: we agree who does what, and both teams see the same view in AIrConnect."
+    },
+    "Partner strip": {
+      "es": "Tecnologías en las que nos especializamos: logos de Peplink y Alkira. Debajo, en texto: Integramos fibra, celular 4G/5G, satélite LEO como Starlink y los enlaces de tus operadores actuales.",
+      "en": "Technology from our partners: Peplink and Alkira logos. Below, as text: We integrate fiber, 4G/5G cellular, LEO satellite such as Starlink, and your current carriers' links."
+    },
+    "Industries eyebrow": {
+      "es": "Industrias",
+      "en": "Who it is for"
+    },
+    "Industries headline": {
+      "es": "Vialterna. Diseñado para operaciones distribuidas donde el tiempo de inactividad tiene precio o un impacto con tu cliente.",
+      "en": "Built for distributed operations where downtime has a price tag."
+    },
+    "Industry cards 01–05": {
+      "es": "**Servicios financieros.** Conectividad resiliente para cajeros, sucursales, terminales y procesamiento transaccional. · **Retail y franquicias.** Continuidad para tiendas, POS, inventarios, pedidos en línea y centros de distribución. · **Energía e industria.** Conectividad para sitios remotos, telemetría, seguridad, sistemas industriales y operación crítica. · **Pagos y punto de venta móvil (mPOS).** Gestión de conectividad para terminales, SIMs, sitios de procesamiento y operación transaccional. · **Logística y cadena de frío.** Conectividad para centros de distribución, última milla, cámaras frías y monitoreo de variables críticas.",
+      "en": "**Financial services.** Resilient connectivity for ATMs, branches, terminals and transaction processing. · **Retail and franchise.** Continuity for stores, POS, inventory, online orders and distribution centers. · **Energy and industrial.** Connectivity for remote sites, telemetry, security, industrial systems and critical operations. · **Payments and mobile point-of-sale (mPOS).** Connectivity management for terminals, SIMs, processing sites and transaction operations. · **Logistics and cold chain.** Connectivity for distribution centers, last mile, cold rooms and critical-variable monitoring."
+    },
+    "Final CTA eyebrow": {
+      "es": "Diagnóstico",
+      "en": "Start with a diagnostic"
+    },
+    "Final CTA headline": {
+      "es": "Empieza con una auditoría Telco.",
+      "en": "Find the risk and cost hidden in your telecom stack."
+    },
+    "Final CTA body": {
+      "es": "Analizamos contratos, gasto, infraestructura y SLA para construir un caso TCO y una arquitectura específica.",
+      "en": "Receive a written report, quantified TCO comparison, and a specific architecture recommendation."
+    },
+    "Final CTA buttons + microcopy": {
+      "es": "Solicita tu auditoría Telco gratuita · Habla con un experto · Respondemos en un día hábil. Gratis. Sin compromiso.",
+      "en": "Get your free Telco audit · Talk to an expert · We respond within one business day. Free. No commitment."
+    },
+    "Final CTA contact": {
+      "es": "atencionaclientes@vialterna.com · +52 55 8062 6884",
+      "en": "atencionaclientes@vialterna.com · +52 55 8062 6884"
+    }
+  },
+  "edge-to-cloud": {
+    "SEO title": {
+      "es": "Red administrada del sitio a la nube en México | Vialterna",
+      "en": "Managed edge-to-cloud network in Mexico | Vialterna"
+    },
+    "Meta description": {
+      "es": "SD-WAN en cada sitio, orquestación multioperador, conectividad multicloud con Alkira CXP y seguridad SASE, administrados 24/7 por un solo socio en México.",
+      "en": "SD-WAN at every site, multi-carrier orchestration, Alkira CXP multi-cloud connectivity and SASE security, managed 24/7 by one partner in Mexico."
+    },
+    "Hero eyebrow": {
+      "es": "Edge to Cloud · Red administrada de extremo a extremo",
+      "en": "Edge to Cloud · End-to-end managed network"
+    },
+    "Hero headline": {
+      "es": "Una red completa, del sitio a la nube.",
+      "en": "One complete network, from site to cloud."
+    },
+    "Hero subhead": {
+      "es": "Segura, resiliente y administrada 24/7: SD-WAN en cada sitio, orquestación de todos tus operadores y conexión directa a tus nubes, con un solo responsable.",
+      "en": "Secure, resilient and managed 24/7: SD-WAN at every site, orchestration of all your carriers and direct connections to your clouds, with one accountable partner."
+    },
+    "Hero buttons": {
+      "es": "Solicita tu auditoría Telco gratuita · Habla con un experto",
+      "en": "Get your free Telco audit · Talk to an expert"
+    },
+    "Gap headline": {
+      "es": "La nube cambió cómo trabaja tu empresa. Tu red sigue igual.",
+      "en": "The cloud changed how your company works. Your network didn't."
+    },
+    "Gap body": {
+      "es": "Cada sitio tiene su operador, su contrato y su firewall. El tráfico hacia la nube da la vuelta por el centro de datos. Nadie ve la red completa y nadie responde por ella de punta a punta.",
+      "en": "Every site has its own carrier, contract and firewall. Cloud traffic detours through the data center. Nobody sees the whole network, and nobody answers for it end to end."
+    },
+    "Data strip": {
+      "es": "Las cuatro grandes nubes ya tienen región en México: AWS, Microsoft, Google Cloud y Oracle · 58.1 mil millones de intentos de ciberataque en México en 2025 (Fortinet)",
+      "en": "All four major cloud providers now run regions in Mexico: AWS, Microsoft, Google Cloud and Oracle · 58.1 billion attempted cyberattacks in Mexico in 2025 (Fortinet)"
+    },
+    "Promise": {
+      "es": "**Vialterna lo hace simple.** Modernizamos, integramos, simplificamos y operamos tu red del sitio a la nube, contigo o por ti.",
+      "en": "**Vialterna makes it simple.** We modernize, integrate, simplify and operate your network from site to cloud, with you or for you."
+    },
+    "Three layers": {
+      "es": "**Edge:** cada sitio en línea con SuperWAN. · **Core:** tus sitios críticos y todos tus operadores orquestados bajo un SLA. · **Cloud:** conexión directa y segura a tus nubes con Alkira Cloud Exchange Point® (CXP) y SASE.",
+      "en": "**Edge:** every site online with SuperWAN. · **Core:** your critical sites and all your carriers orchestrated under one SLA. · **Cloud:** direct, secure connections to your clouds with Alkira Cloud Exchange Point® (CXP) and SASE."
+    },
+    "Proof box": {
+      "es": "99.99% de SLA en Core · Reportes mensuales por proveedor · Partner oficial de Alkira, de los primeros en México con CXP · Independientes de operador y tecnología · Gestión completa o cogestión con tu equipo · NOC propio 24/7 y AIrConnect",
+      "en": "99.99% Core SLA · Monthly per-provider reports · Official Alkira partner, among the first in Mexico with CXP · Carrier and technology independent · Full management or co-management · Owned 24/7 NOC and AIrConnect"
+    },
+    "IT-team line": {
+      "es": "Tu equipo de TI no debería pasar el día preguntando qué le pasa a la red. Nosotros lo vemos, lo resolvemos y te lo reportamos.",
+      "en": "Your IT team shouldn't spend the day asking what's wrong with the network. We see it, fix it and report it to you."
+    },
+    "Questions headline": {
+      "es": "Las preguntas de todo responsable de una red antes de mover su operación a la nube",
+      "en": "The questions every CIO asks before moving the network to the cloud"
+    },
+    "Questions": {
+      "es": "¿Cómo adapto mi red a la nube sin rehacerla? · ¿Cómo protejo usuarios y sitios sin un firewall en cada sucursal? · ¿Cómo lo sostengo con mi equipo actual? · ¿Cómo migro sin afectar a mis clientes?",
+      "en": "How do I adapt my network to the cloud without rebuilding it? · How do I protect users and sites without a firewall at every branch? · How do I support this with the team I have? · How do I migrate without affecting my customers?"
+    },
+    "Questions close + button": {
+      "es": "Respondemos cada una en la auditoría Telco gratuita. Botón: Solicita tu auditoría Telco gratuita",
+      "en": "We answer each one in the free Telco audit. Button: Get your free Telco audit"
+    },
+    "Stack diagram": {
+      "es": "Same graphic and text as on the homepage",
+      "en": "Same graphic and text as on the homepage"
+    },
+    "How we work + management model + partner strip": {
+      "es": "Same blocks as on the homepage",
+      "en": "Same blocks as on the homepage"
+    },
+    "Final CTA": {
+      "es": "Empieza con un diagnóstico. Respondemos en un día hábil. Gratis. Sin compromiso. Botones: Solicita tu auditoría Telco gratuita · Habla con un experto",
+      "en": "Start with a diagnostic. We respond within one business day. Free. No commitment. Buttons: Get your free Telco audit · Talk to an expert"
+    }
+  },
+  "edge": {
+    "SEO title": {
+      "es": "Edge SuperWAN: respaldo de internet y failover automático en México | Vialterna",
+      "en": "Edge SuperWAN: internet backup and automatic failover in Mexico | Vialterna"
+    },
+    "Meta description": {
+      "es": "Respaldo de internet empresarial en México con failover automático, monitoreo 24/7 y visibilidad de cada enlace sobre 4G, 5G y satélite LEO Starlink, con equipos Peplink.",
+      "en": "Enterprise internet backup in Mexico with automatic failover, 24/7 monitoring and visibility of every link over 4G, 5G and Starlink LEO satellite, on Peplink equipment."
+    },
+    "Hero eyebrow": {
+      "es": "Edge · SuperWAN · Conectividad en el Edge de grado empresarial",
+      "en": "Edge · SuperWAN · Enterprise-grade edge connectivity"
+    },
+    "Hero headline": {
+      "es": "Cada sitio en línea. Siempre.",
+      "en": "Every site online. Always."
+    },
+    "Hero subhead": {
+      "es": "Conectividad de grado empresarial para cajeros, sucursales, tiendas y sitios remotos: 99.95% de disponibilidad por SLA, a un precio competitivo.",
+      "en": "Enterprise-grade connectivity for ATMs, branches, stores and remote sites: 99.95% availability by SLA, at a competitive price."
+    },
+    "Problem headline": {
+      "es": "Tus sitios dependen de un solo enlace. Tu negocio no debería.",
+      "en": "Your sites depend on a single link. Your business shouldn't."
+    },
+    "Problem body": {
+      "es": "Un operador por sitio, respaldo manual o ninguno, y tu equipo persiguiendo incidentes cuando algo falla. La factura no es el costo real. El costo real es el tiempo fuera de línea.",
+      "en": "One carrier per site, manual backup or none, and your team chasing incidents when something fails. The bill isn't the real cost. The downtime is."
+    },
+    "Data strip": {
+      "es": "12,118.9 millones de pagos con tarjeta en 2025 (Banxico) · 69,126 cajeros y 18,295 sucursales (CNBV) · Global: los problemas de red son la causa más común de caídas de TI (Uptime Institute)",
+      "en": "12,118.9 million card payments in 2025 (Banxico) · 69,126 ATMs and 18,295 branches (CNBV) · Global: network problems are the most common cause of IT outages (Uptime Institute)"
+    },
+    "Cost of standing still": {
+      "es": "Cada minuto fuera de línea es una venta, una transacción o un cliente que se va.",
+      "en": "Every minute offline is a sale, a transaction or a customer walking away."
+    },
+    "Promise": {
+      "es": "**Vialterna lo hace simple.** Hacemos trabajar el respaldo que ya tienes: failover automático, visibilidad y monitoreo 24/7 en cada sitio, con un solo responsable.",
+      "en": "**Vialterna makes it simple.** We make the backup you already have work: automatic failover, visibility and 24/7 monitoring at every site, with one accountable partner."
+    },
+    "How it works (3 layers)": {
+      "es": "**1. Lo que ya tienes.** Tu enlace actual y tu respaldo siguen como base, sin cambiar tu configuración. · **2. Respaldo independiente.** Donde falta, sumamos celular 4G/5G o satélite LEO como Starlink, sobre infraestructura distinta, y lo contratamos por ti. · **3. SuperWAN.** Gestionamos todos los enlaces con failover automático y visibilidad en AIrConnect; cuando el sitio lo requiere, también los unimos en una sola conexión (bonding). Si nuestra capa fallara, tu enlace original sigue funcionando.",
+      "en": "**1. What you already have.** Your current link and backup stay as the base, with no change to your configuration. · **2. Independent backup.** Where it's missing, we add 4G/5G cellular or LEO satellite such as Starlink, on separate infrastructure, and source it for you. · **3. SuperWAN.** We manage every link with automatic failover and visibility in AIrConnect; where the site needs it, we also bond them into one connection. If our layer ever failed, your original link keeps working."
+    },
+    "Proof box": {
+      "es": "99.95% de disponibilidad por SLA · +3,000 sitios y +2,500 cajeros monitoreados · Tecnología Peplink · Equipo en comodato sin inversión inicial, o esquema CapEx si lo prefieres · Piloto de 1 a 5 sitios · NOC 24/7 y red nacional de técnicos",
+      "en": "99.95% availability by SLA · +3,000 sites and +2,500 ATMs monitored · Peplink technology · Hardware on loan with no upfront investment, or a CapEx model if you prefer · 1 to 5 site pilot · 24/7 NOC and nationwide technician network"
+    },
+    "Features headline": {
+      "es": "Qué incluye Edge",
+      "en": "What Edge includes"
+    },
+    "Features 01–04": {
+      "es": "**Failover automático.** Cambio automático entre enlaces cuando una conexión falla. · **Arquitectura multioperador.** Combinamos fibra, LTE, 5G, satélite u otras tecnologías según cada sitio. · **Monitoreo NOC 24/7.** Supervisión continua del estado de cada ubicación. · **Gestión administrada.** Un solo responsable para operación, soporte y continuidad.",
+      "en": "**Automatic failover.** Automatic switching between links when a connection fails. · **Multi-carrier architecture.** We combine fiber, LTE, 5G, satellite and other technologies according to each site's needs. · **24/7 NOC monitoring.** Continuous monitoring of every location. · **Managed service.** One accountable partner for operation, support and continuity."
+    },
+    "Benefits headline": {
+      "es": "Disponibilidad diseñada alrededor de tu operación.",
+      "en": "Availability designed around your operation."
+    },
+    "Benefits list": {
+      "es": "Menos downtime por sitio · Reducción de puntos únicos de falla · Mayor visibilidad operativa · Continuidad para ubicaciones críticas",
+      "en": "Less downtime per site · Fewer single points of failure · Greater operational visibility · Continuity for critical locations"
+    },
+    "Reference case": {
+      "es": "Una institución financiera líder conectó su red nacional de cajeros en menos de un mes, donde otros proponían más de cuatro meses de obra de fibra, con 99.97% de disponibilidad y alrededor de 25% de ahorro.",
+      "en": "A leading financial institution connected its national ATM network in under a month, where others proposed more than four months of fiber work, with 99.97% availability and around 25% savings."
+    },
+    "Questions headline": {
+      "es": "Lo que nos preguntan antes de empezar",
+      "en": "What we're asked before we start"
+    },
+    "Questions": {
+      "es": "¿Qué pasa si se cae mi proveedor? · ¿Tengo que cambiar de operador? · ¿Cuánto me cuesta una hora sin sistema? · ¿Puedo probarlo antes de decidir? · ¿Cuánto tarda en estar listo un sitio?",
+      "en": "What happens if my provider goes down? · Do I have to switch carriers? · What does an hour offline cost me? · Can I try it before deciding? · How long until a site is live?"
+    },
+    "Questions close + button": {
+      "es": "Respondemos cada una en la auditoría Telco gratuita, o con un piloto en tus sitios. Botón: Solicita tu auditoría Telco gratuita",
+      "en": "We answer each one in the free Telco audit, or with a pilot at your sites. Button: Get your free Telco audit"
+    }
+  },
+  "core": {
+    "SEO title": {
+      "es": "SD-WAN multioperador para sitios críticos en México | Vialterna",
+      "en": "Multi-carrier SD-WAN for critical sites in Mexico | Vialterna"
+    },
+    "Meta description": {
+      "es": "Red administrada para corporativos, centros de datos y sitios críticos en México: todos tus ISP en una sola red SD-WAN, failover automático, reportes por proveedor y NOC 24/7 con SLA de 99.99%.",
+      "en": "Managed network for headquarters, data centers and critical sites in Mexico: all your ISPs in one SD-WAN network, automatic failover, per-provider reports and a 24/7 NOC with a 99.99% SLA."
+    },
+    "Hero eyebrow": {
+      "es": "Core · Resiliencia, gobierno y control para tus sitios más críticos",
+      "en": "Core · Resilience, governance, and control for your most critical sites"
+    },
+    "Hero headline": {
+      "es": "Tus sitios críticos, siempre en línea y bajo control.",
+      "en": "Your critical sites, always online and under control."
+    },
+    "Hero subhead": {
+      "es": "Diseñamos, gestionamos y operamos la conectividad de los sitios con los más altos requerimientos: corporativos, centros de datos, centros de distribución y sitios de procesamiento. Todos tus ISP, bajo un solo SLA.",
+      "en": "We design, manage and operate connectivity for the sites with the highest requirements: headquarters, data centers, distribution centers and processing sites. All your ISPs, under one SLA."
+    },
+    "Problem headline": {
+      "es": "La red crece, pero el control se fragmenta.",
+      "en": "The network grows, but control becomes fragmented."
+    },
+    "Problem body": {
+      "es": "Cada proveedor tiene su contrato, su soporte y su propio reporte. Cuando algo falla, tu equipo coordina a operadores que no se coordinan entre sí, y nadie responde por la red completa. A veces la redundancia existe solo en papel: dos enlaces del mismo proveedor por la misma ruta, y un solo corte tira ambos.",
+      "en": "Every provider has its own contract, its own support and its own report. When something fails, your team coordinates carriers that don't coordinate with each other, and nobody answers for the whole network. Sometimes redundancy exists only on paper: two links from the same provider over the same path, and one cut takes both down."
+    },
+    "Data strip": {
+      "es": "Global: 57% de las caídas graves cuestan más de US$100,000 y 1 de cada 5 supera US$1 millón (Uptime Institute, 2026) · Los problemas de red son la causa más común de caídas de TI (Uptime Institute)",
+      "en": "Global: 57% of significant outages cost more than US$100,000, and 1 in 5 exceeds US$1 million (Uptime Institute, 2026) · Network problems are the most common cause of IT outages (Uptime Institute)"
+    },
+    "Cost of standing still": {
+      "es": "Cuando se cae un sitio crítico no se detiene una sucursal: se detiene toda la operación que depende de él.",
+      "en": "When a critical site goes down, it isn't one branch that stops: everything that depends on it stops too."
+    },
+    "Promise": {
+      "es": "**Vialterna lo hace simple.** Todos tus ISP en una sola red administrada, con un SLA de 99.99%, reportes por proveedor y un solo responsable.",
+      "en": "**Vialterna makes it simple.** All your ISPs in one managed network, with a 99.99% SLA, per-provider reports and one accountable partner."
+    },
+    "How it works (3 layers)": {
+      "es": "**1. Tus proveedores actuales.** Conservas tus contratos con ISP o los asumimos por ti. Revisamos que tu redundancia sea real y sumamos diversidad: otro ISP, Starlink cuando se necesita ancho de banda, y celular como respaldo. · **2. Orquestación SD-WAN.** Unimos todos los enlaces en una sola conexión (bonding), con ruteo inteligente y failover automático, para cumplir los requisitos de ancho de banda y latencia de cada sitio. · **3. Gobierno con datos.** Cada mes ves en AIrConnect el desempeño de cada proveedor, para exigir sus SLA con evidencia.",
+      "en": "**1. Your current providers.** You keep your ISP contracts, or we take them over for you. We check that your redundancy is real and add diversity: another ISP, Starlink where bandwidth is needed, and cellular as backup. · **2. SD-WAN orchestration.** We bond every link into one connection, with intelligent routing and automatic failover, to meet each site's bandwidth and latency requirements. · **3. Governance with data.** Every month AIrConnect shows each provider's performance, so you can enforce their SLAs with evidence."
+    },
+    "Proof box": {
+      "es": "99.99% de disponibilidad por SLA en Core · Reportes mensuales por proveedor en AIrConnect · Independientes de operador y tecnología · Gestión completa o cogestión con tu equipo de TI · NOC propio 24/7 y red nacional de técnicos · 15+ años operando infraestructura crítica",
+      "en": "99.99% availability by SLA on Core · Monthly per-provider reports in AIrConnect · Carrier and technology independent · Full management or co-management with your IT team · Owned 24/7 NOC and nationwide technician network · 15+ years operating critical infrastructure"
+    },
+    "Features headline": {
+      "es": "Qué incluye Core",
+      "en": "What Core includes"
+    },
+    "Feature 01": {
+      "es": "**Integración de múltiples ISP.** Todos tus proveedores en una sola red, con bonding (agregación de ancho de banda) y ruteo inteligente.",
+      "en": "**Multiple ISPs, one network.** All your providers in a single network, with bonding (bandwidth aggregation) and intelligent routing."
+    },
+    "Feature 02": {
+      "es": "**Failover automático.** Si un proveedor falla, el tráfico sigue por los demás sin intervención manual.",
+      "en": "**Automatic failover.** If one provider fails, traffic keeps flowing over the others with no manual intervention."
+    },
+    "Feature 03": {
+      "es": "**Visibilidad y control por ISP.** Monitoreo, consumo, reportes mensuales y manejo de tickets con cada proveedor en AIrConnect, para exigir los SLA con datos.",
+      "en": "**Visibility and control per ISP.** Monitoring, usage, monthly reports and ticket handling with each provider in AIrConnect, so you can enforce SLAs with data."
+    },
+    "Feature 04": {
+      "es": "**Seguridad integrada.** Acceso zero trust (ZTNA) sobre la misma red de tus sitios críticos. Para proteger a usuarios y sucursales en su camino a la nube, lo extendemos con SASE (ver Cloud).",
+      "en": "**Integrated security.** Zero-trust access (ZTNA) on the same network as your critical sites. To protect users and branches on their way to the cloud, we extend it with SASE (see Cloud)."
+    },
+    "Benefits headline": {
+      "es": "Control total de tus sitios críticos.",
+      "en": "Full control of your critical sites."
+    },
+    "Benefits list": {
+      "es": "Mayor control sobre proveedores · Mejor visibilidad de desempeño · Gestión centralizada de incidencias · Red preparada para crecimiento",
+      "en": "Greater control over providers · Better performance visibility · Centralized incident management · A network ready to scale"
+    },
+    "Reference case": {
+      "es": "Un retailer de gran formato con varios proveedores en su red nacional de tiendas pasó de una gestión sitio por sitio a una sola red orquestada. Hoy exige a sus proveedores con nuestros reportes mensuales y penaliza a los que no cumplen su SLA.",
+      "en": "A large-format retailer with several providers across its national store network moved from site-by-site management to one orchestrated network. It now holds providers to account with our monthly reports and penalizes those that miss their SLA."
+    },
+    "Questions headline": {
+      "es": "Lo que nos preguntan antes de empezar",
+      "en": "What we're asked before we start"
+    },
+    "Questions": {
+      "es": "¿Cómo hago que mis proveedores cumplan su SLA? · ¿Puedo conservar mis contratos actuales con ISP? · ¿Mi redundancia es real o solo está en papel? · ¿Qué pasa si se cae el enlace de mi corporativo o centro de datos? · ¿Cómo migro sin detener la operación?",
+      "en": "How do I get my providers to meet their SLA? · Can I keep my current ISP contracts? · Is my redundancy real, or only on paper? · What happens if my headquarters or data center link goes down? · How do I migrate without stopping operations?"
+    },
+    "Questions close + button": {
+      "es": "Respondemos cada una en la auditoría Telco gratuita: revisamos tus proveedores, contratos y rutas para encontrar los puntos únicos de falla. Botón: Solicita tu auditoría Telco gratuita",
+      "en": "We answer each one in the free Telco audit: we review your providers, contracts and paths to find the single points of failure. Button: Get your free Telco audit"
+    }
+  },
+  "cloud": {
+    "SEO title": {
+      "es": "Conectividad multicloud y SASE en México | Vialterna",
+      "en": "Multi-cloud connectivity and SASE in Mexico | Vialterna"
+    },
+    "Meta description": {
+      "es": "Conecta cada sitio a tus nubes con Alkira CXP y seguridad SASE administrada, sobre una red SD-WAN con NOC 24/7 y SLA. Partner oficial de Alkira en México.",
+      "en": "Connect every site to your clouds with Alkira CXP and managed SASE security, over an SD-WAN network with a 24/7 NOC and SLA. Official Alkira partner in Mexico."
+    },
+    "Hero eyebrow": {
+      "es": "Cloud · Multicloud y SASE",
+      "en": "Cloud · Multi-cloud and SASE"
+    },
+    "Hero headline": {
+      "es": "Una sola red para tus sitios, centros de datos y nubes.",
+      "en": "One network for your sites, data centers and clouds."
+    },
+    "Hero subhead": {
+      "es": "Conectamos sucursales, centros de datos, nubes públicas y privadas, usuarios remotos y socios en una sola red administrada en la nube, con seguridad en cada punto y un solo responsable de todo el recorrido.",
+      "en": "We connect branches, data centers, public and private clouds, remote users and partners in one managed cloud network, with security at every point and one partner accountable for the whole path."
+    },
+    "Problem headline": {
+      "es": "Tu red no fue diseñada para la nube.",
+      "en": "Your network wasn't designed for the cloud."
+    },
+    "Problem body": {
+      "es": "Cuando todo el tráfico hacia la nube pasa por el firewall del centro de datos, las aplicaciones se vuelven lentas y el centro de datos se convierte en un punto único de falla. Conectar varias nubes con túneles y VPN hechos a mano multiplica la complejidad y los huecos de seguridad.",
+      "en": "When all cloud traffic passes through the data center firewall, applications slow down and the data center becomes a single point of failure. Connecting several clouds with hand-built tunnels and VPNs multiplies complexity and security gaps."
+    },
+    "Data strip": {
+      "es": "Las cuatro grandes nubes ya tienen región en México: AWS, Microsoft, Google Cloud y Oracle · 58.1 mil millones de intentos de ciberataque en México en 2025 (Fortinet) · 96% menos tiempo para conectar una nueva nube (clientes de Alkira, Nemertes 2024)",
+      "en": "All four major cloud providers now run regions in Mexico: AWS, Microsoft, Google Cloud and Oracle · 58.1 billion attempted cyberattacks in Mexico in 2025 (Fortinet) · 96% less time to connect a new cloud (Alkira customers, Nemertes 2024)"
+    },
+    "Cost of standing still": {
+      "es": "Cada mes que tu tráfico da la vuelta por el centro de datos, pagas en latencia, en firewalls y en horas de tu equipo.",
+      "en": "Every month your traffic detours through the data center, you pay in latency, in firewalls and in your team's hours."
+    },
+    "Promise": {
+      "es": "**Vialterna lo hace simple.** Tus sitios conectados directo a tus nubes, con seguridad SASE y un solo responsable de todo el recorrido.",
+      "en": "**Vialterna makes it simple.** Your sites connected straight to your clouds, with SASE security and one partner accountable for the whole path."
+    },
+    "How it works (3 layers)": {
+      "es": "**1. Tu red actual.** Tus sitios siguen sobre su SD-WAN (Edge y Core) o la que ya tienes: no hay que rehacer la red. · **2. La red en la nube.** Alkira Cloud Exchange Point® (CXP) une tus sitios, centros de datos y nubes (AWS, Azure, Google Cloud, Oracle y privadas) en un backbone global, desde un solo punto de control, y da acceso zero trust a usuarios remotos y socios. Es un servicio: sin hardware, sin software que instalar y sin colocations, y reemplaza los circuitos MPLS hacia cada nube. · **3. Seguridad SASE.** Acceso zero trust para usuarios y sitios, firewall en la nube y políticas unificadas en toda la red.",
+      "en": "**1. Your current network.** Your sites stay on their SD-WAN (Edge and Core) or the one you already have: no rebuild. · **2. The cloud network.** Alkira Cloud Exchange Point® (CXP) joins your sites, data centers and clouds (AWS, Azure, Google Cloud, Oracle and private) on a global backbone, from a single point of control, and gives remote users and partners zero-trust access. It's a service: no hardware, no software to install and no colocations, and it replaces the MPLS circuits to each cloud. · **3. SASE security.** Zero-trust access for users and sites, cloud firewall and unified policies across the network."
+    },
+    "Proof box": {
+      "es": "Partner oficial de Alkira, de los primeros en México con CXP · Red en la nube como servicio, sin hardware · Hasta 73% menos firewalls entre y dentro de tus nubes (clientes de Alkira, Nemertes 2024) · 47% menos horas de personal para operar redes en la nube (clientes de Alkira, Nemertes 2024) · SASE administrado desde nuestro NOC 24/7 · Gestión completa o cogestión con tu equipo de TI",
+      "en": "Official Alkira partner, among the first in Mexico with CXP · Cloud network as a service, no hardware · Up to 73% fewer firewalls between and within your clouds (Alkira customers, Nemertes 2024) · 47% less staff time to run cloud networks (Alkira customers, Nemertes 2024) · SASE managed from our 24/7 NOC · Full management or co-management with your IT team"
+    },
+    "Features headline": {
+      "es": "Qué incluye Cloud",
+      "en": "What Cloud includes"
+    },
+    "Feature 01": {
+      "es": "**Conectividad multicloud con Alkira CXP.** Una red en la nube que conecta tus sitios, centros de datos y nubes públicas y privadas desde un solo punto de control, sin hardware y lista en minutos. Somos partner oficial de Alkira y de los primeros en México con CXP.",
+      "en": "**Multi-cloud connectivity with Alkira CXP.** A cloud network that connects your sites, data centers and public and private clouds from a single point of control, with no hardware and ready in minutes. We are an official Alkira partner and among the first in Mexico with CXP."
+    },
+    "Feature 02": {
+      "es": "**Seguridad SASE.** Acceso zero trust para usuarios y sitios, firewall en la nube y políticas unificadas en toda la red, sin un firewall en cada sucursal. Agregar un nuevo servicio de seguridad toma una fracción del tiempo.",
+      "en": "**SASE security.** Zero-trust access for users and sites, cloud firewall and unified policies across the network, without a firewall at every branch. Adding a new security service takes a fraction of the time."
+    },
+    "Feature 03": {
+      "es": "**Sobre tu red Edge y Core.** Cloud no reemplaza tu red: se conecta a la SD-WAN que ya opera en tus sitios (Edge) y en tus sitios críticos (Core), y lleva cada aplicación a su nube por la mejor ruta disponible.",
+      "en": "**On top of your Edge and Core network.** Cloud doesn't replace your network: it connects to the SD-WAN already running at your sites (Edge) and critical sites (Core), and carries each application to its cloud over the best available path."
+    },
+    "Feature 04": {
+      "es": "**Visibilidad y gestión 24/7.** Monitoreo de extremo a extremo en AIrConnect, gestionado por nuestro NOC, con gestión completa o co-gestión con tu equipo.",
+      "en": "**24/7 visibility and management.** End-to-end monitoring in AIrConnect, run by our NOC, with full management or co-management with your team."
+    },
+    "Benefits headline": {
+      "es": "Aplicaciones rápidas, red segura, un solo responsable.",
+      "en": "Fast applications, a secure network, one accountable partner."
+    },
+    "Benefits list": {
+      "es": "Menor latencia hacia tus aplicaciones en la nube · Menos firewalls que comprar y mantener · Políticas de seguridad unificadas · Conexión a la nube que necesite tu negocio en días, no meses",
+      "en": "Lower latency to your cloud applications · Fewer firewalls to buy and maintain · Unified security policies · The cloud connections your business needs, in days, not months"
+    },
+    "Reference case": {
+      "es": "Caso de Alkira: un retailer en EE.UU. conectó 1,400 tiendas en 3 semanas, cerró un centro de datos en 45 días y eliminó MPLS por completo.",
+      "en": "Alkira case: a US retailer connected 1,400 stores in 3 weeks, closed a data center in 45 days and eliminated MPLS entirely."
+    },
+    "Questions headline": {
+      "es": "Lo que nos preguntan antes de empezar",
+      "en": "What we're asked before we start"
+    },
+    "Questions": {
+      "es": "¿Cómo adapto mi red a la nube sin rehacerla? · ¿Tengo que quitar mi SD-WAN o mi MPLS actual? · ¿Cómo protejo a usuarios y sucursales sin un firewall en cada sitio? · ¿Cuánto tarda en conectarse una nueva nube? · ¿Cómo lo opero con mi equipo actual?",
+      "en": "How do I adapt my network to the cloud without rebuilding it? · Do I have to remove my current SD-WAN or MPLS? · How do I protect users and branches without a firewall at every site? · How long does it take to connect a new cloud? · How do I run it with the team I have?"
+    },
+    "Questions close + button": {
+      "es": "Respondemos cada una en la auditoría Telco gratuita: revisamos cómo llega hoy tu tráfico a la nube y dónde se pierde tiempo, seguridad y dinero. Botón: Solicita tu auditoría Telco gratuita",
+      "en": "We answer each one in the free Telco audit: we review how your traffic reaches the cloud today and where it loses time, security and money. Button: Get your free Telco audit"
+    }
+  },
+  "audit": {
+    "SEO title": {
+      "es": "Auditoría Telco en México y CDMX | Vialterna",
+      "en": "Telco audit in Mexico and Mexico City | Vialterna"
+    },
+    "Meta description": {
+      "es": "Auditoría Telco gratuita para empresas en México: revisamos contratos, gasto, enlaces y SLA de todos tus sitios y entregamos un reporte escrito con caso TCO en dos semanas.",
+      "en": "Free Telco audit for enterprises in Mexico: we review contracts, spend, links and SLAs across all your sites and deliver a written report with a TCO case in two weeks."
+    },
+    "Hero eyebrow": {
+      "es": "Auditoría Telco · Gratis y sin compromiso",
+      "en": "Telco audit · Free, no commitment"
+    },
+    "Hero headline": {
+      "es": "Descubre dónde tu conectividad te está costando dinero.",
+      "en": "Find out where your connectivity is costing you money."
+    },
+    "Hero subhead": {
+      "es": "Analizamos tu infraestructura, cuantificamos el costo de tu tiempo fuera de línea y te recomendamos una arquitectura específica. Así empieza cada proyecto con Vialterna.",
+      "en": "We analyze your infrastructure, quantify what downtime costs you and recommend a specific architecture. That's how every Vialterna project starts."
+    },
+    "Hero button": {
+      "es": "Solicita tu auditoría Telco gratuita",
+      "en": "Get your free Telco audit"
+    },
+    "Problem headline": {
+      "es": "Probablemente no sabes cuánto te cuesta realmente tu conectividad.",
+      "en": "You probably don't know what your connectivity really costs."
+    },
+    "Problem body": {
+      "es": "Contratos, enlaces, operadores, SLA y facturas se acumulan con el tiempo. La factura mensual es solo una parte: el costo real incluye el tiempo fuera de línea, los SLA que nadie exige y los servicios que ya no necesitas.",
+      "en": "Contracts, links, carriers, SLAs and invoices pile up over time. The monthly bill is only part of it: the real cost includes downtime, SLAs nobody enforces and services you no longer need."
+    },
+    "Proof line": {
+      "es": "En nuestras auditorías, el gasto total en conectividad baja típicamente entre 15% y 30%. Global: para más de 90% de las empresas medianas y grandes, una hora sin sistemas cuesta más de 300,000 dólares (ITIC 2024).",
+      "en": "In our audits, total connectivity spend typically drops 15% to 30%. Global: for over 90% of mid-size and large enterprises, one hour of downtime costs more than US$300,000 (ITIC 2024)."
+    },
+    "What we analyze (5 items)": {
+      "es": "**Contratos:** cada sitio, operador y plazo. · **Gasto mensual:** lo que pagas contra lo que paga el mercado. · **Brechas de redundancia:** dónde un solo corte te deja fuera de línea. · **Desempeño de SLA:** lo que pagas contra lo que recibes. · **Equipos:** qué tienes, qué edad tiene y qué inversión puedes evitar.",
+      "en": "**Contracts:** every site, carrier and term. · **Monthly spend:** what you pay versus the market. · **Redundancy gaps:** where a single cut takes you offline. · **SLA performance:** what you pay for versus what you get. · **Equipment:** what you have, how old it is and what investment you can avoid."
+    },
+    "What you get (4 items)": {
+      "es": "**Mapa de vulnerabilidades** por sitio. · **Modelo de costo de downtime** por hora y por día. · **Recomendación de arquitectura** para tus sitios de mayor riesgo. · **Caso de negocio TCO:** tu red actual contra la propuesta.",
+      "en": "**Vulnerability map** by site. · **Downtime cost model** per hour and per day. · **Architecture recommendation** for your highest-risk sites. · **TCO business case:** your current network versus the proposal."
+    },
+    "Timing and cost": {
+      "es": "Una conversación inicial y un reporte escrito en dos semanas. Sin costo y sin compromiso.",
+      "en": "An initial conversation and a written report within two weeks. No cost and no commitment."
+    },
+    "Request form": {
+      "es": "Nombre · Puesto · Empresa · Email · Teléfono · Número de sitios (menos de 20 · 20 a 50 · 50 a 200 · más de 200) · Industria · ¿Cuál es tu principal problema de conectividad hoy? · Botón: Solicitar mi auditoría Telco · Respondemos en un día hábil.",
+      "en": "Name · Job title · Company · Email · Phone · Number of sites (under 20 · 20 to 50 · 50 to 200 · 200+) · Industry · What is your biggest connectivity problem today? · Button: Request my Telco audit · We respond within one business day."
+    }
+  },
+  "iot-sim": {
+    "SEO title and meta description": {
+      "es": "SIM IoT administradas en México | Vialterna · SIM y eSIM IoT administradas en México para flotas, terminales y sensores, con conectividad multioperador, monitoreo y control centralizado.",
+      "en": "Managed IoT SIMs in Mexico | Vialterna · Managed SIM and eSIM connectivity in Mexico for IoT devices, fleets, terminals and sensors, with multi-carrier coverage and centralized control."
+    },
+    "Hero eyebrow": {
+      "es": "Soluciones IoT y SIM administradas",
+      "en": "Managed IoT and SIM solutions"
+    },
+    "Hero headline": {
+      "es": "Gestionamos SIM, eSIM, sensores y conectividad celular a escala para operaciones distribuidas, dispositivos críticos y despliegues IoT.",
+      "en": "We manage SIMs, eSIMs, sensors and cellular connectivity at scale for distributed operations, critical devices and IoT deployments."
+    },
+    "Hero subhead": {
+      "es": "Provisioning, monitoreo, alertas y optimización de planes para miles de dispositivos, desde una sola plataforma y con nuestro propio MVNO.",
+      "en": "Provisioning, monitoring, alerts and plan optimization for thousands of devices, from one platform and through our own MVNO."
+    },
+    "Problem headline and body": {
+      "es": "Miles de dispositivos conectados pueden volverse invisibles. Sin gestión centralizada, las SIMs, consumos, activaciones, bajas, fallas y planes se vuelven difíciles de controlar.",
+      "en": "Thousands of connected devices can become invisible. Without centralized management, SIMs, data usage, activations, deactivations, failures and plans become hard to control."
+    },
+    "Data strip": {
+      "es": "Más de 6 millones de terminales punto de venta instaladas en comercios en México (Banxico, dic. 2025)",
+      "en": "More than 6 million POS terminals installed at merchants in Mexico (Banxico, Dec 2025)"
+    },
+    "Features headline": {
+      "es": "Qué incluye IoT y SIM",
+      "en": "What IoT and SIM includes"
+    },
+    "Feature 01": {
+      "es": "**Gestión y provisioning de SIM y eSIM.** Altas, bajas, consumo, planes y ciclo de vida, a través de nuestro MVNO.",
+      "en": "**SIM and eSIM management and provisioning.** Activations, deactivations, usage, plans and lifecycle, through our own MVNO."
+    },
+    "Features 02–04": {
+      "es": "**Monitoreo de conectividad.** Visibilidad sobre estado, consumo y comportamiento de dispositivos. · **Optimización de planes.** Ajuste continuo para evitar sobrecostos o capacidad desperdiciada. · **Soporte para sensores IoT.** Conectividad administrada para telemetría, rastreo y monitoreo operativo.",
+      "en": "**Connectivity monitoring.** Visibility into device status, usage and behavior. · **Plan optimization.** Continuous tuning to avoid overcharges or wasted capacity. · **IoT sensor support.** Managed connectivity for telemetry, tracking and operational monitoring."
+    },
+    "Benefits headline": {
+      "es": "Cada dispositivo visible y bajo control.",
+      "en": "Every device visible and under control."
+    },
+    "Benefits list": {
+      "es": "Control centralizado de SIMs · Menos sobrecostos por consumo · Mayor visibilidad de dispositivos · Operación IoT más escalable",
+      "en": "Centralized SIM control · Fewer usage overcharges · Greater device visibility · More scalable IoT operations"
+    }
+  },
+  "financial": {
+    "SEO title and meta description": {
+      "es": "Conectividad financiera en México | Vialterna · Conectividad resiliente para bancos, cajeros, sucursales e infraestructura financiera en México y CDMX, con respaldo y failover automático.",
+      "en": "Financial services connectivity in Mexico | Vialterna · Resilient connectivity for banks, ATMs, branches and financial infrastructure in Mexico and Mexico City, with backup and automatic failover."
+    },
+    "Hero eyebrow": {
+      "es": "Industria · Servicios financieros",
+      "en": "Industry · Financial services"
+    },
+    "Hero headline": {
+      "es": "Servicios financieros: conectividad resiliente para cajeros, sucursales e infraestructura transaccional",
+      "en": "Financial services: resilient connectivity for ATMs, branches and transaction infrastructure"
+    },
+    "Hero subhead": {
+      "es": "En servicios financieros, una interrupción de conectividad puede traducirse en transacciones perdidas, afectación al usuario y presión operativa.",
+      "en": "In financial services, a connectivity outage can mean lost transactions, affected customers and operational pressure."
+    },
+    "Problem headline": {
+      "es": "Cada caída impacta transacciones, clientes y operación.",
+      "en": "Every outage impacts transactions, customers and operations."
+    },
+    "Problem body": {
+      "es": "Bancos, fintech y redes financieras dependen de conectividad estable para procesar pagos, operar cajeros, atender sucursales y mantener la continuidad del negocio.",
+      "en": "Banks, fintechs and financial networks depend on stable connectivity to process payments, run ATMs, serve branches and keep the business running."
+    },
+    "Data strip": {
+      "es": "69,126 cajeros automáticos y 18,295 sucursales bancarias en México (CNBV, cierre de 2024)",
+      "en": "69,126 ATMs and 18,295 bank branches in Mexico (CNBV, end of 2024)"
+    },
+    "Use cases headline": {
+      "es": "Qué hace Vialterna",
+      "en": "What Vialterna does"
+    },
+    "Use cases": {
+      "es": "**Soluciones Edge para cajeros automáticos:** Arquitectura por sitio, CPE, SIMs celulares y respaldo. · **Respaldo para sucursales bancarias:** Failover celular o satelital para mantener la sucursal operando ante fallas. · **Visibilidad y reportes:** Gestión de incidentes y visibilidad de desempeño.",
+      "en": "**Edge solutions for ATMs:** Per-site architecture, CPE, cellular SIMs and backup. · **Backup for bank branches:** Cellular or satellite failover to keep core operations running during outages. · **Visibility and reporting:** Incident management and performance visibility."
+    },
+    "Reference case": {
+      "es": "Una institución financiera líder conectó su red nacional de cajeros en menos de un mes, con 99.97% de disponibilidad y alrededor de 25% de ahorro.",
+      "en": "A leading financial institution connected its national ATM network in under a month, with 99.97% availability and around 25% savings."
+    },
+    "Related solutions": {
+      "es": "Edge · SuperWAN para cajeros y sucursales · Core y Cloud para corporativo, centros de datos y banca en la nube",
+      "en": "Edge · SuperWAN for ATMs and branches · Core and Cloud for headquarters, data centers and cloud banking"
+    },
+    "Benefits list": {
+      "es": "Mayor disponibilidad para cajeros y sucursales · Menor exposición a un solo operador · Failover automático · Supervisión de conectividad · Reportes de desempeño",
+      "en": "Higher availability for ATMs and branches · Less exposure to a single carrier · Automatic failover · Connectivity monitoring · Performance reports"
+    }
+  },
+  "retail": {
+    "SEO title and meta description": {
+      "es": "Conectividad para retail en México | Vialterna · Conectividad empresarial para tiendas, franquicias y puntos de venta en México y CDMX, con SD-WAN, respaldo y visibilidad centralizada.",
+      "en": "Retail and franchise connectivity in Mexico | Vialterna · Enterprise connectivity for stores, franchises and POS networks in Mexico, with managed SD-WAN, internet backup and centralized visibility."
+    },
+    "Hero eyebrow": {
+      "es": "Industria · Retail y franquicias",
+      "en": "Industry · Retail and franchise"
+    },
+    "Hero headline": {
+      "es": "Retail y franquicias: conectividad resiliente para redes de tiendas",
+      "en": "Retail and franchise: resilient connectivity for store networks"
+    },
+    "Hero subhead": {
+      "es": "Cada tienda desconectada puede significar ventas perdidas, procesos manuales, quejas de clientes y presión sobre el corporativo.",
+      "en": "Every offline store can mean lost sales, manual processes, customer complaints and pressure on headquarters."
+    },
+    "Problem headline": {
+      "es": "Cuando una tienda pierde conectividad, las ventas se detienen.",
+      "en": "When a store loses connectivity, sales stop."
+    },
+    "Problem body": {
+      "es": "Si la conectividad falla, los pagos se detienen, los inventarios dejan de sincronizarse y los equipos regresan a procesos manuales.",
+      "en": "When connectivity fails, payments stop, inventory stops syncing and teams go back to manual processes."
+    },
+    "Data strip": {
+      "es": "El comercio electrónico ya es 17.7% de las ventas minoristas en México (AMVO, 2025) · 5,333 millones de operaciones en terminales punto de venta en 2024 (CNBV)",
+      "en": "E-commerce is now 17.7% of retail sales in Mexico (AMVO, 2025) · 5,333 million transactions at POS terminals in 2024 (CNBV)"
+    },
+    "Use cases headline": {
+      "es": "Qué hace Vialterna",
+      "en": "What Vialterna does"
+    },
+    "Use cases": {
+      "es": "**Gestión WAN:** Centralización de conectividad, desempeño y soporte. · **Soluciones Edge para tiendas y POS:** Arquitectura de sitio con enlaces principales y respaldo. · **Centros de distribución y hubs:** Conectividad para logística, inventario y coordinación operativa.",
+      "en": "**WAN management:** Centralized connectivity, performance and support. · **Edge solutions for stores and POS:** Site architecture with primary links and backup. · **Distribution centers and hubs:** Connectivity for logistics, inventory and operational coordination."
+    },
+    "Related solutions": {
+      "es": "Edge · SuperWAN para tiendas · Core para centros de distribución y corporativo · Cloud para POS, e-commerce e inventario en la nube",
+      "en": "Edge · SuperWAN for stores · Core for distribution centers and headquarters · Cloud for cloud-based POS, e-commerce and inventory"
+    },
+    "Benefits list": {
+      "es": "Menos ventas perdidas · Mayor continuidad para POS · Visibilidad centralizada · Respaldo para tiendas críticas · Supervisión de conectividad",
+      "en": "Fewer lost sales · More POS continuity · Centralized visibility · Backup for critical stores · Connectivity monitoring"
+    }
+  },
+  "energy": {
+    "SEO title": {
+      "es": "Conectividad industrial en México | Vialterna",
+      "en": "Industrial connectivity in Mexico | Vialterna"
+    },
+    "Meta description": {
+      "es": "Conectividad industrial e IoT para energía, plantas y sitios remotos en México, con Starlink LEO, redes celulares, bonding y monitoreo 24/7.",
+      "en": "Industrial and IoT connectivity for energy, plants and remote sites in Mexico, with Starlink LEO, cellular networks, bonding and 24/7 monitoring."
+    },
+    "Hero eyebrow": {
+      "es": "Industria · Energía e industria",
+      "en": "Industry · Energy and industrial"
+    },
+    "Hero headline": {
+      "es": "Energía e industria: conectividad resiliente para sitios remotos y operación crítica",
+      "en": "Energy and industrial: resilient connectivity for remote sites and critical operations"
+    },
+    "Hero subhead": {
+      "es": "Los sitios operativos remotos dependen de conectividad para telemetría, seguridad, sistemas industriales y control operativo.",
+      "en": "Remote operating sites depend on connectivity for telemetry, security, industrial systems and operational control."
+    },
+    "Problem headline": {
+      "es": "Un sitio remoto no puede depender de un solo camino de conexión.",
+      "en": "A remote site can't depend on a single connection path."
+    },
+    "Problem body": {
+      "es": "La operación industrial y energética necesita conectividad para monitoreo, seguridad, control y continuidad, incluso en ubicaciones con cobertura limitada.",
+      "en": "Industrial and energy operations need connectivity for monitoring, security, control and continuity, even where coverage is limited."
+    },
+    "Use cases headline": {
+      "es": "Qué hace Vialterna",
+      "en": "What Vialterna does"
+    },
+    "Use cases": {
+      "es": "**Conectividad para sitios remotos:** Diseño de rutas y tecnologías disponibles por ubicación. · **Arquitectura híbrida y satelital:** Combinación de enlaces terrestres, celulares y satelitales. · **IoT / SIM para sensores:** Conectividad para telemetría, sensores y activos industriales.",
+      "en": "**Connectivity for remote sites:** Routes and technologies designed around what each location offers. · **Hybrid and satellite architecture:** Terrestrial, cellular and satellite links combined. · **IoT / SIM for sensors:** Connectivity for telemetry, sensors and industrial assets."
+    },
+    "Related solutions": {
+      "es": "Edge · SuperWAN con celular y satélite LEO · IoT y SIM para sensores y telemetría",
+      "en": "Edge · SuperWAN with cellular and LEO satellite · IoT and SIM for sensors and telemetry"
+    },
+    "Benefits list": {
+      "es": "Conectividad para sitios remotos · Mayor visibilidad operativa · Respaldo satelital o celular · Conectividad IoT industrial · Supervisión de conectividad",
+      "en": "Connectivity for remote sites · Greater operational visibility · Satellite or cellular backup · Industrial IoT connectivity · Connectivity monitoring"
+    }
+  },
+  "payments": {
+    "SEO title and meta description": {
+      "es": "Conectividad para pagos en México | Vialterna · Conectividad administrada para terminales e infraestructura de pagos en México, con SIM IoT, redundancia multioperador y failover automático.",
+      "en": "Payments infrastructure connectivity in Mexico | Vialterna · Managed connectivity for payment terminals and processing infrastructure in Mexico, with IoT SIMs, multi-carrier redundancy and failover."
+    },
+    "Hero eyebrow": {
+      "es": "Industria · Pagos y mPOS",
+      "en": "Industry · Payments and mPOS"
+    },
+    "Hero headline": {
+      "es": "Pagos y punto de venta móvil (mPOS): conectividad siempre disponible",
+      "en": "Payments and mobile point-of-sale (mPOS): always-available connectivity"
+    },
+    "Hero subhead": {
+      "es": "Gestionamos conectividad para terminales, SIMs, sitios de procesamiento y operaciones transaccionales distribuidas.",
+      "en": "We manage connectivity for terminals, SIMs, processing sites and distributed transaction operations."
+    },
+    "Problem headline and body": {
+      "es": "La infraestructura de pagos necesita estar siempre disponible. Terminales desconectadas, SIMs sin control o sitios de procesamiento sin respaldo pueden afectar ingresos, experiencia de cliente y operación financiera.",
+      "en": "Payments infrastructure must always be available. Disconnected terminals, unmanaged SIMs or processing sites without backup can hit revenue, customer experience and financial operations."
+    },
+    "Data strip": {
+      "es": "12,118.9 millones de pagos con tarjeta en 2025, +22.6% (Banxico) · Más de 6 millones de terminales punto de venta (Banxico, dic. 2025)",
+      "en": "12,118.9 million card payments in 2025, up 22.6% (Banxico) · More than 6 million POS terminals (Banxico, Dec 2025)"
+    },
+    "Use cases": {
+      "es": "**Terminales de pago:** Conectividad celular administrada para puntos de pago distribuidos. · **SIMs empresariales:** Gestión de altas, bajas, consumo, planes y ciclo de vida. · **Sitios de procesamiento:** Respaldo y continuidad para infraestructura transaccional. · **Alertas y monitoreo:** Visibilidad sobre estado de dispositivos, consumo y conectividad.",
+      "en": "**Payment terminals:** Managed cellular connectivity for distributed payment points. · **Enterprise SIMs:** Activations, deactivations, usage, plans and full lifecycle. · **Processing sites:** Backup and continuity for transaction infrastructure. · **Alerts and monitoring:** Visibility into device status, usage and connectivity."
+    },
+    "Related solutions": {
+      "es": "IoT y SIM para terminales · Core para sitios de procesamiento",
+      "en": "IoT and SIM for terminals · Core for processing sites"
+    },
+    "Benefits list": {
+      "es": "Mayor continuidad transaccional · Control centralizado de SIMs · Menos terminales desconectadas · Mejor gestión de consumo",
+      "en": "Greater transaction continuity · Centralized SIM control · Fewer disconnected terminals · Better usage management"
+    }
+  },
+  "logistics": {
+    "SEO title and meta description": {
+      "es": "Conectividad para logística en México | Vialterna · Conectividad resiliente e IoT para logística, almacenes y cadena de frío en México, con monitoreo de sensores y respaldo de internet.",
+      "en": "Logistics connectivity in Mexico | Vialterna · Resilient connectivity and IoT for logistics, warehouses and cold-chain operations in Mexico, with sensor monitoring and internet backup."
+    },
+    "Hero eyebrow": {
+      "es": "Industria · Logística y cadena de frío",
+      "en": "Industry · Logistics and cold chain"
+    },
+    "Hero headline": {
+      "es": "Logística y cadena de frío: conectividad que no se detiene",
+      "en": "Logistics and cold chain: connectivity that doesn't stop"
+    },
+    "Hero subhead": {
+      "es": "Conectividad resiliente para centros de distribución, cross docks, hubs de última milla y cámaras frías.",
+      "en": "Resilient connectivity for distribution centers, cross-docks, last-mile hubs and cold rooms."
+    },
+    "Problem headline": {
+      "es": "Cuando un hub pierde conectividad, la cadena se detiene. Cuando el frío queda sin visibilidad, el inventario se pierde.",
+      "en": "When a hub loses connectivity, the supply chain stops. When cold storage goes unseen, inventory is lost."
+    },
+    "Problem body": {
+      "es": "WMS, TMS, escáneres, despacho y refrigeración dependen de infraestructura siempre activa. Las fallas de red se convierten en retrasos, merma y riesgo operativo.",
+      "en": "WMS, TMS, scanners, dispatch and refrigeration depend on always-on infrastructure. Network failures turn into delays, spoilage and operational risk."
+    },
+    "Use cases headline": {
+      "es": "Casos de uso",
+      "en": "Use cases"
+    },
+    "Use cases": {
+      "es": "**Hubs y almacenes → Edge:** SuperWAN y enlaces independientes mantienen WMS, TMS y despacho en línea. · **Monitoreo de frío → IoT y SIM:** Sensores administrados reportan temperatura y estado de refrigeración de forma continua. · **Última milla → Edge e IoT:** Conectividad para hubs de última milla y terminales de entrega.",
+      "en": "**Hubs and warehouses → Edge:** SuperWAN and independent links keep WMS, TMS and dispatch online. · **Cold monitoring → IoT and SIM:** Managed sensors report temperature and refrigeration status continuously. · **Last mile → Edge and IoT:** Connectivity for last-mile hubs and delivery handhelds."
+    },
+    "Benefits list": {
+      "es": "Continuidad WMS/TMS · Monitoreo de cadena de frío · Conectividad desde el primer día",
+      "en": "WMS/TMS continuity · Cold-chain monitoring · Connectivity from day one"
+    }
+  },
+  "company": {
+    "SEO title": {
+      "es": "Vialterna | Conectividad empresarial en México",
+      "en": "Vialterna | Enterprise connectivity in Mexico"
+    },
+    "Meta description": {
+      "es": "Empresa mexicana de conectividad administrada: SD-WAN, SASE, multicloud e IoT. Partner oficial de Alkira y Peplink, con NOC 24/7.",
+      "en": "Mexican managed connectivity provider: SD-WAN, SASE, multi-cloud and IoT. Official Alkira and Peplink partner, with a 24/7 NOC."
+    },
+    "Hero eyebrow": {
+      "es": "Empresa mexicana, con cobertura nacional",
+      "en": "Mexican company with nationwide coverage"
+    },
+    "Hero headline": {
+      "es": "Diseñamos continuidad operativa para empresas distribuidas en México",
+      "en": "We engineer business continuity for distributed enterprises across Mexico."
+    },
+    "Hero subhead": {
+      "es": "Más de 15 años operando infraestructura crítica. Un solo socio de conectividad para tu negocio, del sitio a la nube, para empresas con operaciones distribuidas en México.",
+      "en": "More than 15 years operating critical infrastructure. One connectivity partner for your business, from site to cloud, for enterprises with distributed operations in Mexico."
+    },
+    "01 Who we are": {
+      "es": "**Quiénes somos.** Entregamos continuidad operativa mediante conectividad siempre activa, con NOC propio 24/7, nuestra plataforma AIrConnect®, cobertura para soporte e instalación a nivel nacional mediante nuestra red de técnicos, operador virtual (OMV / MVNO) y conexión satelital LEO, incluido Starlink. Somos Gold Partner de Peplink y partner oficial de Alkira, de los primeros en México con su solución multicloud Alkira Cloud Exchange Point® (CXP).",
+      "en": "**Who we are.** We deliver business continuity through always-on connectivity, with an owned 24/7 NOC, our AIrConnect® platform, nationwide support and installation coverage through our technician network, our own mobile virtual network operator (MVNO) and LEO satellite connectivity including Starlink. We are a Peplink Gold Partner and an official Alkira partner, among the first in Mexico with its Alkira Cloud Exchange Point® (CXP) multi-cloud solution."
+    },
+    "02 What makes us different": {
+      "es": "**Qué nos hace diferentes.** Vendemos uptime porque somos independientes de red y tecnología, diseñando la mejor solución con base en lo que tu negocio necesita.  Auditamos todo tu stack, administramos proactivamente más de 3,000 sitios (incluidos más de 2,500 cajeros), y trabajamos en gestión completa o co-gestión con tu equipo.",
+      "en": "**What makes us different.** We sell uptime because we are network and technology independent, designing the best solution around what your business needs. We audit your entire stack, proactively manage more than 3,000 sites, including more than 2,500 ATMs, and work in full management or co-management with your team."
+    },
+    "03 Market position": {
+      "es": "**Dónde estamos en el mercado.** Los telcos venden capacidad y los integradores proyectos. Nosotros diseñamos y operamos conectividad resiliente como servicio administrado. 100% auditable. Nosotros vendemos resultados.",
+      "en": "**Where we sit in the market.** Telcos sell capacity and integrators sell projects. We design and operate resilient connectivity as a 100% auditable managed service. We sell results."
+    },
+    "04 Proof": {
+      "es": "**Prueba.** +3,000 sitios. +2,500 cajeros. 15+ años. 99.95% de disponibilidad por contrato y 99.99% en algunas soluciones. Cobertura nacional.",
+      "en": "**Proof.** +3,000 managed sites. +2,500 ATMs. 15+ years. 99.95% availability by contract, 99.99% on some solutions. Nationwide coverage."
+    },
+    "05 Reference clients": {
+      "es": "**Clientes de referencia.** Bancos nacionales, cadenas de retail y franquicias, procesadores de pagos, logística y cadena de frío. Referencias específicas disponibles bajo NDA.",
+      "en": "**Reference clients.** National banks, retail and franchise chains, payment processors, logistics and cold chain. Specific references available under NDA."
+    },
+    "06 Closing CTA": {
+      "es": "**Empieza con una auditoría.** Conoce cómo trabajamos con un diagnóstico escrito, gratuito y sin compromiso.",
+      "en": "**Start with an audit.** See how we work with a free written diagnostic and no commitment."
+    }
+  },
+  "faq": {
+    "SEO title, meta, hero": {
+      "es": "FAQ de conectividad empresarial en México | Vialterna · Preguntas frecuentes sobre conectividad empresarial · Información esencial para entender cómo Vialterna diseña, despliega y opera redes y soluciones de conectividad gestionada en México.",
+      "en": "Enterprise connectivity FAQ in Mexico | Vialterna · Frequently asked questions about enterprise connectivity · Essential information about how Vialterna designs, deploys and operates managed networks and connectivity solutions in Mexico."
+    },
+    "Q01": {
+      "es": "**¿Qué hace Vialterna?** Vialterna diseña, despliega y opera conectividad empresarial resiliente para empresas con redes distribuidas en México. En nuestras soluciones, integramos diferentes operadores y tecnologías para dar la mejor solución en telecomunicaciones a las necesidades de tu negocio.",
+      "en": "**What does Vialterna do?** Vialterna designs, deploys and operates resilient enterprise connectivity for companies with distributed networks in Mexico. In our solutions, we integrate different carriers and technologies to deliver the best telecom solution for your business needs."
+    },
+    "Q02": {
+      "es": "**¿Vialterna es un operador tradicional?** No. Vialterna es independiente de red y tecnología. Diseñamos la arquitectura alrededor de la operación del cliente, no alrededor de una red propia. Podemos combinar fibra, LTE, 5G, satélite y otras tecnologías según cada ubicación.",
+      "en": "**Is Vialterna a traditional carrier?** No. Vialterna is network and technology independent. We design the architecture around the customer's operation, not around a network of our own, combining fiber, LTE, 5G, satellite and other technologies for each location."
+    },
+    "Q03": {
+      "es": "**¿Qué tipo de empresas atiende Vialterna?** Trabajamos con empresas que operan múltiples sitios, sucursales, cajeros automáticos, tiendas, franquicias, centros de distribución, sitios industriales, dispositivos IoT o infraestructura transaccional.",
+      "en": "**What types of companies does Vialterna support?** Companies operating multiple sites, branches, ATMs, stores, franchises, distribution centers, industrial sites, IoT devices or transaction infrastructure."
+    },
+    "Q04": {
+      "es": "**¿Qué significa uptime como servicio?** Nosotros no entregamos solamente enlaces. Diseñamos, implementamos, monitoreamos y gestionamos una arquitectura orientada a mantener la operación disponible, con visibilidad, soporte y continuidad.",
+      "en": "**What does uptime as a service mean?** We don't just deliver links. We design, implement, monitor and manage an architecture built to keep your operation available, with visibility, support and continuity."
+    },
+    "Q05": {
+      "es": "**¿Pueden trabajar con mis operadores actuales?** Sí. Evaluamos enlaces existentes, identificamos riesgos y redundancias, proponemos mejoras y complementamos la arquitectura cuando es necesario.",
+      "en": "**Can you work with our current carriers?** Yes. We assess existing links, identify risks and redundancies, propose improvements and complement the architecture where needed."
+    },
+    "Q06": {
+      "es": "**¿Vialterna ofrece respaldo satelital o celular?** Sí. Somos un operador virtual en México (OMV, MVNO por sus siglas en inglés) y diseñamos soluciones de conectividad primaria o respaldo con LTE, 5G, satélite LEO u otras rutas inalámbricas para reducir la dependencia de un solo enlace o tecnología.",
+      "en": "**Does Vialterna provide satellite or cellular backup?** Yes. We are a mobile virtual network operator (MVNO) in Mexico, and we design primary or backup connectivity over LTE, 5G, LEO satellite or other wireless routes to reduce dependence on a single link or technology."
+    },
+    "Q07": {
+      "es": "**¿Qué incluye un diagnóstico de conectividad?** Revisa cobertura, operadores, enlaces, puntos únicos de falla, criticidad por sitio, gasto, desempeño, riesgos de desconexión y oportunidades de optimización.",
+      "en": "**What does a connectivity assessment include?** Coverage, carriers, links, single points of failure, site criticality, spend, performance, disconnection risks and optimization opportunities."
+    },
+    "Q08": {
+      "es": "**¿Pueden iniciar con un piloto?** Sí. Empezamos con 1 a 5 sitios durante 15 a 30 días para validar cobertura, desempeño, failover y operación antes de escalar y poder servir toda tu red.",
+      "en": "**Can we start with a pilot?** Yes. We start with 1 to 5 sites over 15 to 30 days to validate coverage, performance, failover and operations before scaling to serve your entire network."
+    },
+    "Q09": {
+      "es": "**¿Vialterna gestiona SIMs empresariales e IoT?** Sí. Administramos SIMs, conectividad celular, consumo, activaciones, alertas, optimización de planes y ciclo de vida.",
+      "en": "**Does Vialterna manage enterprise SIMs and IoT?** Yes. We manage SIMs, cellular connectivity, usage, activations, alerts, plan optimization and lifecycle."
+    },
+    "Q10": {
+      "es": "**¿Vialterna ofrece SASE?** Sí. Integramos seguridad SASE a la red SD-WAN para proteger el acceso de cada sitio y usuario a aplicaciones y nubes, administrada desde nuestro NOC 24/7.",
+      "en": "**Does Vialterna offer SASE?** Yes. We integrate SASE security with the SD-WAN to protect every site's and user's access to applications and clouds, managed from our 24/7 NOC."
+    },
+    "Q11": {
+      "es": "**¿Pueden conectar mis sitios a la nube o a varias nubes?** Sí. Somos partner oficial de Alkira, de los primeros en México con su solución multicloud Alkira Cloud Exchange Point® (CXP). Diseñamos conectividad segura y redundante desde cada sitio hacia tus nubes públicas y privadas.",
+      "en": "**Can you connect our sites to the cloud or to multiple clouds?** Yes. We are an official Alkira partner, among the first in Mexico with its Alkira Cloud Exchange Point® (CXP) multi-cloud solution. We design secure, redundant connectivity from every site to your public and private clouds."
+    },
+    "Q12": {
+      "es": "**¿Vialterna es partner de Peplink?** Sí. Diseñamos, desplegamos y operamos soluciones Peplink con bonding, hot failover y conectividad a la nube, administradas desde nuestro NOC 24/7.",
+      "en": "**Is Vialterna a Peplink partner?** Yes. We design, deploy and operate Peplink solutions with bonding, hot failover and cloud connectivity, managed from our 24/7 NOC."
+    },
+    "Q13": {
+      "es": "**¿Qué es el bonding o agregación de ancho de banda?** Combina varios enlaces (fibra, 4G, 5G, Starlink) en una sola conexión. Si uno falla, el tráfico sigue sin cortes y hay suma real de ancho de banda.",
+      "en": "**What is bonding or bandwidth aggregation?** It combines several links (fiber, 4G, 5G, Starlink) into one connection. If one fails, traffic continues without interruption, and you get the real combined bandwidth of all links."
+    },
+    "Q14": {
+      "es": "**¿Tengo que comprar el equipo?** No. El equipo se entrega en comodato, sin inversión inicial. Si tu empresa lo prefiere, también ofrecemos esquemas con CapEx.",
+      "en": "**Do I have to buy the equipment?** No. Hardware is provided on loan with no upfront investment. If your company prefers, we also offer CapEx models."
+    },
+    "Q15 (was Q10)": {
+      "es": "**¿Cómo puedo contactar a Vialterna?** Escribe a atencionaclientes@vialterna.com o comunícate por WhatsApp al +52 55 8062 6884.",
+      "en": "**How can I contact Vialterna?** Email atencionaclientes@vialterna.com or WhatsApp +52 55 8062 6884."
+    }
+  },
+  "contact": {
+    "SEO title and meta description": {
+      "es": "Contacto Vialterna México | Conectividad empresarial · Contacta a Vialterna para una auditoría de tu red y gasto en telecomunicaciones o una solución de conectividad empresarial y respaldo de internet en México.",
+      "en": "Contact Vialterna Mexico | Enterprise connectivity · Contact Vialterna for an audit of your network and telecom spend, or an enterprise connectivity and internet backup solution in Mexico."
+    },
+    "Hero eyebrow": {
+      "es": "Dos caminos",
+      "en": "Two paths forward"
+    },
+    "Hero headline": {
+      "es": "Hablemos.",
+      "en": "Let's talk."
+    },
+    "Hero subhead": {
+      "es": "La auditoría que Vialterna hace es la manera más rápida de evaluar dónde podemos ayudarte. El formulario es la forma más rápida de que nos platiques sobre las necesidades de tu red.",
+      "en": "The Vialterna audit is the fastest way to see where we can help. The form is the fastest way to tell us about your network needs."
+    },
+    "Form block, 01–04": {
+      "es": "Formulario de contacto · Empieza con un diagnóstico · Analizamos tu infraestructura de conectividad, contratos con operadores, gasto, redundancias y desempeño para identificar riesgos de desconexión y oportunidades de optimización en tu red. · 01 Solicita tu auditoría gratuita · 02 Habla con un experto · 03 Contacto · 04 Qué sucede después (as live today)",
+      "en": "Contact form · Start with a diagnostic · We analyze your connectivity infrastructure, carrier contracts, spend, redundancy and performance to identify disconnection risks and optimization opportunities in your network. · 01 Request your free audit · 02 Talk to an expert · 03 Contact · 04 What happens next (as live today)"
+    }
+  },
+  "global": {
+    "Header menu and button": {
+      "es": "See \"Site structure after the restructure\" at the top of this doc",
+      "en": "See \"Site structure after the restructure\" at the top of this doc"
+    },
+    "Footer tagline": {
+      "es": "Conectividad resiliente",
+      "en": "Resilient connectivity"
+    },
+    "Footer links": {
+      "es": "Soluciones: Edge to Cloud · Edge · SuperWAN · Core · Cloud · IoT y SIM · Auditoría Telco · Industrias: las cinco páginas · Empresa · Insights · FAQ · Aviso de privacidad · Contacto",
+      "en": "Solutions: Edge to Cloud · Edge · SuperWAN · Core · Cloud · IoT and SIM · Telco audit · Industries: the five pages · Company · Insights · FAQ · Privacy notice · Contact"
+    },
+    "Footer contact": {
+      "es": "atencionaclientes@vialterna.com · +52 55 8062 6884 · LinkedIn · Instagram · C. Montes Urales 720-PB, Lomas - Virreyes, Lomas de Chapultepec, Miguel Hidalgo, 11000 CDMX",
+      "en": "Same"
+    },
+    "Footer legal": {
+      "es": "© 2026 Vialterna · Sitio realizado por o7digital · Volver arriba ↑",
+      "en": "© 2026 Vialterna · Site by o7digital · Back to top ↑"
+    },
+    "Footer SEO keyword line": {
+      "es": "SASE administrado Mexico CDMX · conectividad multicloud Mexico CDMX · partner Alkira Mexico · Alkira CXP Mexico · conectividad en la nube Mexico CDMX · bonding de enlaces Mexico CDMX · agregacion de ancho de banda Mexico CDMX · hot failover Mexico CDMX · Starlink empresarial Mexico CDMX · internet satelital LEO Mexico CDMX · partner Peplink México · respaldo de internet para empresas México · observabilidad de red México · bolsa de datos empresarial México · conectividad mPOS México",
+      "en": "managed SASE Mexico CDMX · multi-cloud connectivity Mexico CDMX · Alkira partner Mexico · Alkira CXP Mexico · cloud connectivity Mexico CDMX · link bonding Mexico CDMX · bandwidth aggregation Mexico CDMX · hot failover Mexico CDMX · Starlink for business Mexico CDMX · LEO satellite internet Mexico CDMX · Peplink partner Mexico · business internet backup Mexico · network observability Mexico · enterprise data pool Mexico · mPOS connectivity Mexico"
+    },
+    "Chat widget header": {
+      "es": "Olivia · Asistente Vialterna · En línea",
+      "en": "Olivia · Vialterna assistant · Online"
+    },
+    "Chat widget greeting": {
+      "es": "Hola, soy Olivia. ¿Cómo puedo ayudarte con la conectividad de tu empresa?",
+      "en": "Hi, I'm Olivia. How can I help with your company's connectivity?"
+    },
+    "Chat widget form": {
+      "es": "Nombre · Empresa · Email · Teléfono · Necesidad · Escribe tu pregunta… · Acepto compartir mis datos para recibir atención de Vialterna. Aviso de Privacidad · Enviar",
+      "en": "Name · Company · Email · Phone · What you need · Type your question… · I agree to share my data to be contacted by Vialterna. Privacy Notice · Send"
+    }
+  }
+}

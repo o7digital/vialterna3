@@ -1,0 +1,41 @@
+---
+import SectionHeading from "./SectionHeading.astro";
+import { solutions } from "../data/site";
+import { homeSolutionsEn } from "../data/siteEn";
+import type { EditableSection } from "../lib/dato";
+
+interface Props {
+  content?: EditableSection;
+  lang?: "es" | "en";
+}
+
+const { content, lang = "es" } = Astro.props;
+const en = lang === "en";
+const cards = content?.items?.length ? content.items : en ? homeSolutionsEn : solutions;
+---
+<section class="section solutions-section" id={en ? "solutions" : "soluciones"}>
+  <div class="shell">
+    <SectionHeading kicker={content?.eyebrow ?? (en ? "Solutions" : "Soluciones")} title={content?.title ?? (en ? "Four solutions. One platform." : "Cuatro soluciones. Una plataforma.")} intro={content?.intro ?? (en ? "Whatever it takes to keep your operations online." : "Lo que necesites para mantener tus operaciones en línea, diseñado y gestionado bajo una misma lógica de disponibilidad.")} />
+    <div class="solutions">
+      {cards.map((solution, index) => (
+        <article class="solution">
+          <div class="solution-copy reveal">
+            <div>
+              <div class="number">{String(index + 1).padStart(2, "0")} — {solution.eyebrow}</div>
+              <h3>{solution.title}</h3>
+              <p>{solution.text}</p>
+            </div>
+            {solution.href && <a href={solution.href}>{en ? "Learn more" : "Ver más"} <span aria-hidden="true">↗</span></a>}
+          </div>
+          <div class:list={["solution-visual", solution.type ?? "rings", "reveal"]} aria-hidden="true">
+            {solution.type === "rings" && <><i></i><i></i><i></i></>}
+            {solution.type === "signal" && <div class="signal-waves"></div>}
+            {solution.type === "cells" && <div class="cell-grid">{Array.from({ length: 35 }, () => <i></i>)}</div>}
+            {solution.type === "backup" && <div class="backup-lines"><i></i><i></i><i></i></div>}
+            <span class="visual-label">{solution.label}</span>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

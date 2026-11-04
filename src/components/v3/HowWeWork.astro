@@ -1,0 +1,12 @@
+---
+import { t, item, type Lang } from '../../lib/v3';
+import Rich from './Rich.astro';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+---
+<section class="section phases-section"><div class="shell">
+ <div class="kicker">{t('home', 'How we work eyebrow', lang)}</div><h2 class="detail-section-title">{t('home', 'How we work headline', lang)}</h2>
+ <div class="phases">{[1,2,3,4].map(i => { const phase = item(t('home', `Phase 0${i}`, lang)); return <article class="phase"><span>0{i}</span><h3>{phase.title}</h3><p>{phase.text}</p></article> })}</div>
+ <div class="v3-callout"><Rich text={t('home', 'Management model', lang)} /></div>
+ <div class="v3-partners"><p>{lang === 'en' ? 'Technology from our partners' : 'Tecnologías en las que nos especializamos'}</p><div class="v3-partner-logos"><img src="/brand/peplink.svg" width="170" height="48" alt="Peplink" loading="lazy" /><img src="/brand/alkira.png" width="155" height="48" alt="Alkira" loading="lazy" /></div><p>{lang === 'en' ? "We integrate fiber, 4G/5G cellular, LEO satellite such as Starlink, and your current carriers' links." : 'Integramos fibra, celular 4G/5G, satélite LEO como Starlink y los enlaces de tus operadores actuales.'}</p></div>
+</div></section>

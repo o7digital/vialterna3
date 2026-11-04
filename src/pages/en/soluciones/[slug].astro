@@ -1,0 +1,7 @@
+---
+import DetailPage from "../../../components/DetailPage.astro";
+import { solutionPagesEn } from "../../../data/detailPagesEn";
+export function getStaticPaths(){ return solutionPagesEn.map(page=>({params:{slug:page.slug},props:{page}})); }
+const { page } = Astro.props;
+---
+<DetailPage page={page} lang="en" />
