@@ -65,7 +65,7 @@ def test_specific_question_gets_generated_answer_and_keeps_history(client, monke
 
 def test_explicit_quote_and_advisor_keep_v2_handoff(client, monkeypatch):
     monkeypatch.setattr(demo, 'generate', lambda *args, **kwargs: pytest.fail('Commercial handoff must not invent a quote'))
-    for message in ['Quiero una cotización', 'I want to talk to an expert', 'Je voudrais un devis']:
+    for message in ['Quiero una cotización', 'I want to talk to an expert', 'Je voudrais un devis', 'How much does Core cost?']:
         reply = post(client, message).json()
         assert reply['phase'] == 'human_handoff'
         assert reply['action'] == 'show_lead_form'
@@ -78,6 +78,8 @@ def test_sla_explanations_are_not_blanket_handoffs(client, monkeypatch):
     assert reply['language'] == 'en'
     assert reply['action'] is None
     assert '99.99%' in reply['reply']
+    assert post(client, 'How much downtime does a 99.99% SLA allow?', language='en').json()['action'] is None
+    assert post(client, 'How is the cost of downtime calculated?', language='en').json()['action'] is None
 
 
 def test_sessions_do_not_share_history(client, monkeypatch):

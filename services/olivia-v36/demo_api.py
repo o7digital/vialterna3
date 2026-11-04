@@ -79,11 +79,11 @@ def normalize(text):
 
 def detect_language(message, hint):
     text = normalize(message)
-    if re.search(r"\b(bonjour|bonsoir|pourquoi|pouvez|explique|quelle|quelles|combien|je voudrais|je veux|en francais)\b", text):
+    if re.search(r"\b(bonjour|bonsoir|pourquoi|comment|pouvez|explique|quelle|quelles|combien|que signifie|je voudrais|je veux|en francais)\b", text):
         return "fr"
     if re.search(r"\b(hello|how|what|why|could you|can you|i want|please|in english)\b", text):
         return "en"
-    if re.search(r"\b(hola|buenas|quiero|quisiera|como|cual|explicame|en espanol)\b", text):
+    if '¿' in message or re.search(r"\b(hola|buenas|quiero|quisiera|como|cual|que es|que significa|explicame|en espanol)\b", text):
         return "es"
     return hint
 
@@ -92,7 +92,8 @@ def classify(message, prior_phase=""):
     text = normalize(message).strip(" .!?¡¿")
     if re.fullmatch(r"(?:hola|buenas|buenos dias|buenas tardes|buenas noches|hello|hi|hey|bonjour|bonsoir|good morning|good afternoon|good evening)[!,. ]*", text):
         return "greeting"
-    if re.search(r"\b(precio|precios|cotiz\w*|presupuesto|pricing|price|quote|quotation|devis|tarif\w*)\b|cuanto cuesta|how much|combien coute|hablar con|hablarle a|talk to|speak to|call me|contact me|llamenme|contactenme|me contacte|parler a|etre rappele|contactez.moi|quiero (?:una? )?auditoria|solicitar (?:una? )?auditoria|request (?:an? )?audit|book (?:an? )?audit", text):
+    commercial_cost = re.search(r"\b(core|edge|cloud|vialterna|your (?:services?|plans?|solutions?))\b.{0,40}\bcost\b", text)
+    if commercial_cost or re.search(r"\b(precio|precios|cotiz\w*|presupuesto|pricing|price|quote|quotation|devis|tarif\w*)\b|cuanto cuesta|how much (?:for|is (?:core|edge|cloud|the service|your service))|combien coute|hablar con|hablarle a|talk to|speak to|call me|contact me|llamenme|contactenme|me contacte|parler a|etre rappele|contactez.moi|quiero (?:una? )?auditoria|solicitar (?:una? )?auditoria|request (?:an? )?audit|book (?:an? )?audit", text):
         return "handoff"
     if prior_phase == "handoff_offer" and text in {"si", "yes", "oui", "por favor", "please"}:
         return "handoff"
