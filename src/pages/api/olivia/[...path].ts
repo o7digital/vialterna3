@@ -35,6 +35,7 @@ export const ALL: APIRoute = async ({ request, params, cookies, clientAddress })
     if (text.length > 24000) return json({ ok: false, error: 'Request too large' }, 413);
     payload = JSON.parse(text);
   } catch { return json({ ok: false, error: 'Invalid JSON' }, 400); }
+  if (!payload || typeof payload !== 'object' || Array.isArray(payload)) return json({ ok: false, error: 'Invalid payload' }, 400);
   const message = typeof payload.message === 'string' ? payload.message.trim() : '';
   const visitorId = typeof payload.visitorId === 'string' ? payload.visitorId : '';
   const metadata = payload.metadata as Record<string, unknown> | undefined;

@@ -5,7 +5,7 @@ Dépôt : https://github.com/o7digital/vialterna3/tree/feat/v3-restructure
 
 ## Contrôles réussis
 
-- `npm run check` : aucune erreur, deux indications de variables inutilisées héritées d'Olivia.
+- `npm run check` : aucune erreur, aucun avertissement, aucune indication restante après nettoyage du widget Olivia.
 - `npm run build` : compilation Astro/Vercel et contrôle de langue réussis.
 - `npm test` : structure V3, champs d'audit, FAQ, assets, alternances, noindex et isolation du projet.
 - `node scripts/check-seo.mjs` : 101 routes canoniques, 66 articles ES/EN, 44 alias et 14 redirections HTML de compatibilité. Le site V3 est volontairement noindex.
@@ -28,6 +28,8 @@ L'ancien endpoint V2 refuse V3 en HTTP 403. Ce blocage est contourné par une in
 - Huit tests backend réussis : authentification, consentement, accueil/qualification, réponse IA et suivi, transfert commercial, SLA, isolation, corpus et limitation de débit.
 - Essais réels réussis : différences Edge/Core/Cloud ; failover et bonding fibre/Starlink ; SASE et absence de statut partenaire Starlink ; calcul du SLA Core sur 30 jours (4,32 minutes) ; demande de devis orientée vers le formulaire. Réponses en espagnol, anglais et français.
 - Service et PostgreSQL distincts ; ajout d'un préfixe proxy dédié après sauvegarde et `nginx -t`. Aucun redéploiement du bot V2 ou de l'instance Olivia privée existante.
+- Recette navigateur en ligne : consentement, accueil sans formulaire, réponses IA ES/EN, suivi contextuel Edge/Core, formulaire sur demande de devis et envoi simulé réussi. Origine étrangère refusée (403), identité forgée refusée (401), absence de consentement refusée (400). Six routes principales contrôlées ; aucun appel à l'ancienne API V2, aucune exception navigateur, aucun débordement mobile après stabilisation de la mise en page.
+- Le conteneur V2 conserve son identifiant, son image et sa date de démarrage ; son endpoint d'identité retourne toujours HTTP 200 depuis le domaine actuel.
 
 Les destinataires réels Formspree/HubSpot, les emails et les automatisations CRM n'ont pas été testés par création de leads. Ils nécessitent un essai commercial autorisé. Aucun token CRM de production n'a été copié vers V3. Les secrets IA restent côté serveur, hors du dépôt et du navigateur. Le contenu V3 ne modifie pas les modèles ou contenus du CMS de production.
 
