@@ -88,6 +88,8 @@ Le site V3 est destiné à la revue, sur son propre domaine Vercel. Il porte `no
 
 Les formulaires conservent les services de réception existants ; les tests ne créent pas de vrais leads. La réception réelle des emails et le routage CRM doivent faire l'objet d'une recette commerciale avec un contact d'essai autorisé. Le formulaire Contact conserve le formulaire HubSpot existant. Le nouveau formulaire d'audit utilise le relais Formspree existant ; la copie supplémentaire vers HubSpot dépend d'un token serveur configuré séparément dans V3. Aucun secret n'est copié du projet actuel.
 
+Le contrôle de `/api/widget/identity` du service Olivia avec les en-têtes Origin et Referer donne HTTP 200 pour `https://www.vialterna.com` et HTTP 403 pour `https://vialterna3.vercel.app`. **Blocage identifié : le domaine V3 est refusé par le service distant.** Son autorisation doit être traitée séparément sur le backend Olivia ; aucun changement n'a été fait à ce service de production.
+
 Olivia conserve son service externe existant. La copie du widget est traduite, mais le moteur distant et ses éventuelles règles CORS / base de connaissances ne sont pas reconfigurés. Un changement de site ne met pas automatiquement à jour les réponses de ce moteur.
 
 Avant une future bascule du domaine client : validation du cas Core par l'équipe commerciale (signalée dans le document), validation client des chiffres et promesses publiés, essai réel des destinataires des formulaires et d'Olivia depuis le nouveau domaine, éventuelle configuration du CMS V3. Ces points n'empêchent pas une revue sur le site V3 indépendant.

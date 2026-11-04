@@ -50,7 +50,7 @@ assert.ok(!sitemap.includes('/telco-as-a-service/'));
 assert.match(sitemap,/\/insights\/costo-downtime-retail-mexico\//);
 assert.match(sitemap,/\/en\/insights\/retail-downtime-cost-mexico\//);
 const config=JSON.parse(readFileSync('vercel.json','utf8'));
-for(const source of ['/en/industries','/soluciones/telco-as-a-service','/en/solutions/telco-as-a-service'])assert.ok(config.redirects.some(r=>r.source===source&&r.statusCode===301));
+for(const source of ['/en/industries','/soluciones/telco-as-a-service','/en/solutions/telco-as-a-service']) for(const suffix of ['', '/']) assert.ok(config.redirects.some(r=>r.source===source+suffix&&r.statusCode===301));
 assert.ok(config.headers[0].headers.some(h=>h.key==='X-Robots-Tag'&&h.value.includes('noindex')));
 if(existsSync('.vercel/project.json')) assert.equal(JSON.parse(readFileSync('.vercel/project.json','utf8')).projectName,'vialterna3');
 console.log(`V3 regression checks passed: structure, audit fields, bilingual routes, 15 FAQs per language, assets, staging isolation (${pages.length} generated pages).`);
