@@ -35,26 +35,36 @@ Cela représente **15 pages principales par langue, soit 30 versions de pages**.
 
 Hypothèses : textes fournis, design existant conservé, accès Git/Vercel disponibles, un cycle de retour client consolidé, aucune refonte du CMS ni du moteur conversationnel Olivia. Les temps incluent les deux langues. Les délais d'attente des réponses du client sont exclus.
 
-| Lot | Réalisation humaine sans assistant de code | Travail assisté par Codex, opérateur compris |
-| --- | ---: | ---: |
-| Analyse et inventaire | 3–4 h | 1–1.5 h |
-| Navigation et composants globaux | 2–3 h | 0.5–1 h |
-| Accueil et schéma d'architecture | 7–10 h | 2–3 h |
-| Deux nouvelles pages | 6–9 h | 1.5–2 h |
-| Edge, Core, IoT | 4–6 h | 1–1.5 h |
-| Audit et formulaire | 4–6 h | 1–2 h |
-| Cinq pages secteurs | 4–6 h | 1–1.5 h |
-| Entreprise, FAQ, Contact et copie Olivia | 3–4 h | 0.5–1 h |
-| Métadonnées, langues et redirections | 3–5 h | 0.5–1 h |
-| Recette responsive, corrections et livraison | 4–6 h | 2–3 h |
-| Pilotage et un retour client consolidé | 5–6 h | 1–2 h |
-| **Total à prévoir** | **45–65 h** | **12–20 h environ, arrondi** |
+| Lot | Réalisation humaine sans assistant de code |
+| --- | ---: |
+| Analyse et inventaire | 3–4 h |
+| Navigation et composants globaux | 2–3 h |
+| Accueil et schéma d'architecture | 7–10 h |
+| Deux nouvelles pages | 6–9 h |
+| Edge, Core, IoT | 4–6 h |
+| Audit et formulaire | 4–6 h |
+| Cinq pages secteurs | 4–6 h |
+| Entreprise, FAQ, Contact et copie Olivia | 3–4 h |
+| Métadonnées, langues et redirections | 3–5 h |
+| Recette responsive, corrections et livraison | 4–6 h |
+| Pilotage et un retour client consolidé | 5–6 h |
+| **Total à prévoir** | **45–65 h** |
 
-Le total assisté est d'environ 12–19.5 h avant arrondi. C'est une enveloppe pour un projet livré et relu avec retours client, pas une durée garantie d'exécution de l'agent. Un premier résultat consultable peut être obtenu bien plus vite. Le temps réel de cette session ne doit pas être présenté comme 12–20 heures consommées.
+Pour Codex, il faut distinguer l'exécution technique et le temps complet de livraison :
 
-En calendrier de travail à sept heures par jour, cela correspond approximativement à 7–10 jours sans assistant, et 2–3 jours avec Codex et recette humaine, hors attentes de validation.
+| Étape assistée | Enveloppe de travail |
+| --- | ---: |
+| Reprise, intégration et vérifications automatisées | 0.5–1 h ; première V3 réalisée dans cette session en moins d'une heure |
+| Relecture humaine approfondie ES/EN et recette visuelle | 2–4 h |
+| Recette commerciale des formulaires et autorisation du domaine Olivia | 1–2 h, sous réserve d'accès et d'autorisation distincte pour le service externe |
+| Pilotage et un retour client consolidé | 2–3 h |
+| **Budget projet avec Codex, arrondi** | **6–10 h** |
 
-« Codex Pro » n'est pas une unité de vitesse garantie : modèle, contexte, outils, attente des builds et validations influencent la durée. La [documentation officielle OpenAI sur la vitesse](https://learn.chatgpt.com/docs/agent-configuration/speed) décrit les réglages de vitesse ; elle ne donne pas de délai contractuel pour ce projet. L'estimation ci-dessus est celle d'o7digital à partir du périmètre.
+Le total assisté brut est de 5.5–10 h. Les 6–10 h sont une enveloppe de projet incluant le travail humain restant et les retours, **pas des heures déjà consommées dans cette session**. L'exécution initiale de Codex a été bien plus rapide grâce à la récupération de la base existante. Le temps écoulé de la session n'est pas un relevé de temps facturable.
+
+En calendrier de travail à sept heures par jour, prévoir approximativement 7–10 jours sans assistant, et 1–2 jours avec Codex et recette humaine, hors attentes de validation.
+
+« Codex Pro » n'est pas une unité de vitesse garantie : modèle, contexte, outils, attente des builds et validations influencent la durée. La [documentation officielle OpenAI sur la vitesse](https://learn.chatgpt.com/docs/agent-configuration/speed) décrit les réglages de vitesse ; elle ne donne pas de délai contractuel pour ce projet. L'estimation ci-dessus est celle d'o7digital à partir du périmètre et de cette première intégration.
 
 ## Aide au prix
 
