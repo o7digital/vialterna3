@@ -1,18 +1,19 @@
 ---
-interface Props { lang?: "es" | "en" }
-const { lang = "es" } = Astro.props;
+interface Props { lang?: "es" | "en"; embedded?: boolean }
+const { lang = "es", embedded = false } = Astro.props;
 const en = lang === "en";
+const Wrapper = embedded ? 'div' : 'section';
 ---
-<section class="section operations">
-  <div class="shell">
-    <div class="section-head">
+<Wrapper class={embedded ? 'v3-noc-visual' : 'section operations'}>
+  <div class={embedded ? undefined : 'shell'}>
+    {!embedded && <div class="section-head">
       <div class="kicker reveal">{en ? "Nationwide operations" : "Operación nacional"}</div>
       <div>
         <h2 class="reveal">{en ? "24/7 NOC, SLA and multi-carrier management in one service model." : "NOC 24/7, SLA y gestión multioperador en un solo modelo de servicio."}</h2>
         <p class="section-intro reveal">{en ? "We combine fiber, LTE, 5G, satellite and wireless links in a managed architecture with automatic failover, link aggregation and centralized monitoring." : "Combinamos fibra, LTE, 5G, satélite y enlaces inalámbricos en una arquitectura administrada con failover automático, agregación de enlaces y monitoreo centralizado."}</p>
       </div>
-    </div>
-    <div class="operations-visual reveal" aria-label={en ? "Conceptual view of nationwide operations" : "Visualización conceptual de la operación nacional"}>
+    </div>}
+    <div class:list={['operations-visual', { reveal: !embedded }]} aria-label={en ? "Conceptual view of nationwide operations" : "Visualización conceptual de la operación nacional"}>
       <div class="visual-grid"></div>
       <svg class="mexico" viewBox="0 0 760 430" role="img" aria-label={en ? "Conceptual illustration of coverage in Mexico" : "Representación conceptual de la cobertura en México"}>
         <path d="M83 69c42 10 68 46 87 79 18 32 31 69 57 96 15 15 33 27 45 45 10 15 14 34 25 49 14 19 39 28 61 25 18-3 33-13 49-22 27-16 58-28 90-27 42 2 81 28 122 22 21-3 41-15 55-31 16-19 25-43 21-67-5-29-28-51-52-67-38-25-82-39-126-41-40-2-81 5-120-4-41-10-76-37-116-51-53-19-112-18-164-6-18 4-36 10-53 8-8-1-15-5-21-11-8-10-12-26-25-29-19-4-33 20-31 38 3 24 19 45 35 62 17 18 36 34 48 56 9 17 12 38 3 54-7 12-21 18-34 15-16-4-27-19-35-33-24-42-39-91-48-139-4-22-7-45-18-65-12-22-32-40-56-46-20-5-42-1-57 13-9 8-15 20-13 32 2 14 15 23 28 27Z"/>
@@ -24,4 +25,4 @@ const en = lang === "en";
       <div class="metric metric-4"><strong>MX</strong><span>{en ? "Distributed operations" : "Operaciones distribuidas"}</span></div>
     </div>
   </div>
-</section>
+</Wrapper>

@@ -35,8 +35,17 @@ Les destinataires réels Formspree/HubSpot, les emails et les automatisations CR
 
 ## Révision visuelle après les neuf captures du Bureau
 
-- Titres ramenés à une échelle de lecture : H1 de l'accueil limité à 64 px, H1 intérieurs à 52 px, H2 à 40 px sur ordinateur, avec des tailles adaptées au mobile. Interlettrage et interlignage corrigés.
+- Révision initiale du 3 novembre : H1 de l'accueil limité à 64 px, H1 intérieurs à 52 px et H2 à 40 px sur ordinateur. Le titre d'accueil a ensuite été rétabli à l'échelle du site actuel le 4 novembre, comme décrit ci-dessous.
 - Parcours Edge/Core/Edge to Cloud présentés en lignes avec descriptions alignées ; grille des deux modèles corrigée à deux colonnes ; schéma des services réorganisé en lignes ; cartes secteurs et étapes compactées.
 - Mode « Cambios V3 / V3 changes » : jaune sur les blocs ajoutés ou modifiés selon le document de copie V3, avec prise en compte des changements propres à l'anglais. Les blocs indiqués « Same » restent dans les couleurs normales. Il s'agit d'un repérage des blocs éditoriaux, pas d'un diff mot à mot.
 - Activé par défaut pour la revue, désactivable en bas à gauche ; préférence conservée à la navigation. `?review=1` force l'affichage des changements et `?review=0` permet une consultation sans surlignage.
 - Recette navigateur : contrôle des marqueurs ES/EN, du bouton et de sa persistance, de l'alignement des colonnes et des tailles de titres, avec vérification à 1920, 1440, 1024, 768, 390 et 320 px.
+
+## Correction après les captures du 4 novembre 2026
+
+- Accueil : taille, graisse 700, interlettrage, interlignage et proportions du hero rétablis d'après les styles calculés de `www.vialterna.com`. À 1628 px, le H1 retrouve 126,984 px, contre 64 px dans la première révision V3. Les nouveaux textes du client sont conservés. Les autres titres et les tableaux gardent les corrections de lisibilité précédentes.
+- Couleurs normales : blanc et turquoise ; le mode de revue continue à colorer les textes modifiés en jaune, désactivable avec `?review=0`.
+- Le document client marque explicitement « National ops block (eyebrow, headline, body, tiles) » comme « Removed » : son contenu est réparti dans le pilier 02, les preuves et le socle du nouveau schéma. Le NOC n'était donc pas supprimé de l'offre ; son ancien bloc autonome et sa carte avaient été retirés de la page.
+- À la suite du retour d'Olivier, le visuel existant de la carte du Mexique et ses quatre repères 24/7, Multi, SLA et MX sont réintégrés dans le socle NOC du schéma V3. Le bloc autonome avec ses anciens textes n'est pas dupliqué. Le composant conserve la possibilité de son affichage autonome.
+- Accès direct : `/#noc` et `/en/#noc`, également disponibles dans les pages Edge to Cloud. Aucun changement au contenu, au bot, au domaine ou au déploiement du site actuel.
+- Recette de cette correction : accueil ES/EN à 1920, 1628, 1440, 1280, 1080, 1024, 900, 768, 620, 390 et 320 px ; tailles comparées aux règles du site actuel, absence de débordement et de chevauchement des quatre repères NOC ; présence de la carte sur les quatre routes concernées, fonctionnement du mode jaune et positionnement de l'ancre sous le menu fixe. Compilation et contrôles de régression, SEO et articles réussis.
