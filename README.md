@@ -21,6 +21,8 @@ Vérifier `.vercel/project.json` : `projectName` doit être `vialterna3`. Exécu
 
 Le site de revue est volontairement `noindex`, via HTML et `X-Robots-Tag`. L'analytics GTM de production est désactivé par défaut. Une future migration nécessite une décision distincte : retirer l'en-tête Vercel de revue, configurer `PUBLIC_SITE_INDEXABLE=true`, décider de l'analytics et valider les intégrations et le domaine.
 
-Le nouveau formulaire d'audit est bilingue, validé par `/api/audit`, et transmis par le relais `/api/contact` au service Formspree existant. La duplication CRM nécessite `HUBSPOT_PRIVATE_APP_TOKEN` si souhaitée. Le formulaire Contact et le service distant Olivia sont ceux de V2. Aucun test automatique ne doit envoyer un vrai lead.
+Le nouveau formulaire d'audit est bilingue, validé par `/api/audit`, et transmis par le relais `/api/contact` au service Formspree existant. La duplication CRM nécessite `HUBSPOT_PRIVATE_APP_TOKEN` si souhaitée. Le formulaire Contact conserve son intégration existante. Aucun test automatique ne doit envoyer un vrai lead.
+
+Olivia v3.6 utilise désormais une instance et une base de connaissances dédiées à V3. Elle conserve l'accueil et la mise en relation de V2, et répond aux questions précises avec le moteur IA. Le site appelle le relais serveur `/api/olivia` ; aucune clé fournisseur n'est exposée au navigateur. Voir [le service et sa procédure de maintenance](services/olivia-v36/README.md). Le bot du site actuel est inchangé.
 
 Les canoniques restent sur `https://www.vialterna.com` pour préparer les routes finales ; V3 ne modifie ni les domaines, ni le DNS, ni les données CMS de production.

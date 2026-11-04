@@ -1,0 +1,6 @@
+import { readFileSync, writeFileSync } from 'node:fs';
+const tables=JSON.parse(readFileSync('src/data/v3/copy.json','utf8'));
+const paths={home:'/',edge:'/soluciones/edge/',core:'/soluciones/core/',cloud:'/soluciones/cloud/','edge-to-cloud':'/soluciones/edge-to-cloud/',audit:'/auditoria-telco/','iot-sim':'/soluciones/iot-sim/',financial:'/industrias/servicios-financieros/',retail:'/industrias/retail-franquicias/',energy:'/industrias/energia-industria/',payments:'/industrias/infraestructura-pagos/',logistics:'/industrias/logistica-cadena-frio/',company:'/empresa/',faq:'/faq/',contact:'/contacto/'};
+const documents=Object.entries(paths).map(([page,path])=>({title:`Vialterna V3 — ${page}`,source:`https://vialterna3.vercel.app${path}`,metadata:{revision:'copy-v3',site:'vialterna3',scope:'demo-only'},content:Object.entries(tables[page]).filter(([key])=>!/^SEO|Meta description|Stack diagram$|How we work \+|Final CTA$/.test(key)).map(([key,value])=>`${key}\nES: ${value.es.replaceAll('**','')}\nEN: ${value.en.replaceAll('**','')}`).join('\n\n')}));
+writeFileSync('services/olivia-v36/knowledge/documents.json',JSON.stringify(documents,null,2)+'\n');
+console.log(`Prepared ${documents.length} Vialterna3 knowledge documents.`);

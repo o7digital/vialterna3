@@ -19,11 +19,17 @@ Dépôt : https://github.com/o7digital/vialterna3/tree/feat/v3-restructure
 - `node scripts/check-languages.mjs https://vialterna3.vercel.app` : 51 pages canoniques anglaises vérifiées en ligne.
 - Le site actuel reste accessible et conserve le H1 « Las redes se caen. Tu negocio no. ». Le dossier Vialterna2 conserve son état Git initial ; aucun domaine existant n'a été attaché à V3.
 
-## Point externe restant
+## Olivia v3.6 — extension demandée pour la démonstration
 
-Olivia : l'endpoint distant `/api/widget/identity` accepte le domaine actuel (HTTP 200) et refuse V3 (HTTP 403) avec les en-têtes Origin et Referer correspondants. L'autorisation du nouveau domaine doit être faite sur le service Olivia externe ; aucun changement n'a été apporté à ce service de production.
+L'ancien endpoint V2 refuse V3 en HTTP 403. Ce blocage est contourné par une instance v3.6 dédiée à la démonstration, sans modifier les autorisations ou les règles du bot de production.
 
-Les destinataires réels Formspree/HubSpot, les emails et les automatisations CRM n'ont pas été testés par création de leads. Ils nécessitent un essai commercial autorisé. Aucun token de production n'a été copié vers V3. Le nouveau contenu V3 est local au dépôt et ne modifie pas les modèles ou contenus du CMS de production.
+- Base isolée : 15 documents ES/EN issus de `copy.json`, indexés avec recherche sémantique et lexicale, sans corpus privé d'autres clients.
+- Cœur Olivia v3.6 repris de la révision `3453702`, avec consignes Vialterna V3 et historique serveur isolé par conversation. Génération réelle via le fournisseur OpenAI déjà configuré sur le VPS.
+- Huit tests backend réussis : authentification, consentement, accueil/qualification, réponse IA et suivi, transfert commercial, SLA, isolation, corpus et limitation de débit.
+- Essais réels réussis : différences Edge/Core/Cloud ; failover et bonding fibre/Starlink ; SASE et absence de statut partenaire Starlink ; calcul du SLA Core sur 30 jours (4,32 minutes) ; demande de devis orientée vers le formulaire. Réponses en espagnol, anglais et français.
+- Service et PostgreSQL distincts ; ajout d'un préfixe proxy dédié après sauvegarde et `nginx -t`. Aucun redéploiement du bot V2 ou de l'instance Olivia privée existante.
+
+Les destinataires réels Formspree/HubSpot, les emails et les automatisations CRM n'ont pas été testés par création de leads. Ils nécessitent un essai commercial autorisé. Aucun token CRM de production n'a été copié vers V3. Les secrets IA restent côté serveur, hors du dépôt et du navigateur. Le contenu V3 ne modifie pas les modèles ou contenus du CMS de production.
 
 ## Révision visuelle après les neuf captures du Bureau
 

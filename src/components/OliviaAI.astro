@@ -7,7 +7,7 @@ const copy = oliviaCopy[english ? "en" : "es"];
   <section class="olivia__panel" hidden aria-hidden="true">
     <header>
       <div>
-        <strong>Olivia</strong>
+        <strong>Olivia v3.6</strong>
         <small data-subtitle>{copy.subtitle}</small>
       </div>
       <span class="olivia__status"><i></i><b data-status>{copy.status}</b></span>
@@ -70,17 +70,17 @@ const copy = oliviaCopy[english ? "en" : "es"];
   const scrollUp = root?.querySelector("[data-scroll-up]");
   const scrollDown = root?.querySelector("[data-scroll-down]");
   const formTyping = root?.querySelector<HTMLElement>("[data-form-typing]");
-  const api = "https://olivia-ai.o7digital.com/api";
+  const api = "/api/olivia";
   // Each page visit starts a clean conversation so previous tests cannot skip the greeting.
   const visitorId = crypto.randomUUID();
   let identityPromise: Promise<string> | null = null;
   const getWidgetIdentity = (refresh = false): Promise<string> => {
     if (refresh) identityPromise = null;
     if (!identityPromise) {
-      identityPromise = fetch(`${api}/widget/identity`, { cache: "no-store" })
+      identityPromise = fetch(`${api}/session`, { cache: "no-store" })
         .then(async (response) => {
           const data = await response.json().catch(() => ({}));
-          if (!response.ok || data.clientCode !== "vialterna" || !data.identity) {
+          if (!response.ok || data.clientCode !== "vialterna3-demo" || !data.identity) {
             throw new Error(`Widget identity failed: ${response.status}`);
           }
           return data.identity as string;
@@ -107,8 +107,6 @@ const copy = oliviaCopy[english ? "en" : "es"];
   let hubspotLeadSubmitted = false;
   let leadFormVisible = false;
   let pendingContactMessage = "";
-  let handoffQualificationPending = false;
-  let awaitingClarificationChoice = false;
   const chatHistory: Array<{ role: "user" | "assistant"; content: string }> = [];
   const english = document.documentElement.lang.toLowerCase().startsWith("en");
   const copy = oliviaCopy[english ? "en" : "es"];
@@ -242,17 +240,6 @@ const copy = oliviaCopy[english ? "en" : "es"];
     }
     messages?.scrollTo({ top: messages.scrollHeight });
   };
-  const pageContext = () => {
-    const source = document.querySelector("main") || document.body;
-    return (source?.innerText || "").replace(/\s+/g, " ").slice(0, 5000);
-  };
-  const appendMessage = (content: string, role: "bot" | "user") => {
-    const element = document.createElement("p");
-    element.className = role;
-    element.textContent = content;
-    messages?.append(element);
-    messages?.scrollTo({ top: messages.scrollHeight });
-  };
   const openPanel = () => {
     if (!panel || !open) return;
     getWidgetIdentity().catch(() => undefined);
@@ -329,8 +316,6 @@ const copy = oliviaCopy[english ? "en" : "es"];
       return;
     }
     const apiMessage = message;
-    const lead = leadDetails();
-    const history = chatHistory.slice(-10);
     chatHistory.push({ role: "user", content: message });
     messages.insertAdjacentHTML("beforeend", `<p class="user">${message.replaceAll("<", "&lt;")}</p>`);
     input.value = "";
@@ -344,60 +329,27 @@ const copy = oliviaCopy[english ? "en" : "es"];
     try {
       const submittingLead = leadFormVisible;
       if (submittingLead) await submitHubSpotLead(message);
-      const saveVisitorMessage = oliviaFetch(`${api}/widget/conversations`, {
-        method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          clientCode: "vialterna", visitorId, content: pendingContactMessage || apiMessage,
-          visitorName: lead.name,
-          email: lead.email,
-          phone: lead.phone,
-          source: "website", language: english ? "en" : "es",
-          metadata: {
-            page: location.pathname,
-            pageUrl: location.href,
-            pageTitle: document.title,
-            pageContent: pageContext(),
-            site: "vialterna2.vercel.app",
-            lead,
-            handoffStage: handoffQualificationPending ? "qualified" : undefined,
-            dataConsent: consentInput?.checked === true,
-            dataConsentAt: localStorage.getItem("oliviaConsentAt:vialterna") || undefined,
-            consentVersion: "vialterna-privacy-chat-2026-09-01"
-          }
-        })
-      });
       if (submittingLead) {
-        void saveVisitorMessage.catch(() => undefined);
         chatHistory.push({ role: "assistant", content: copy.leadThanks });
         await revealReply(pending, copy.leadThanks);
         return;
       }
-      const chatRequest = oliviaFetch(`${api}/olivia/chat`, {
+      const chatRequest = oliviaFetch(`${api}/chat`, {
         method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          message: pendingContactMessage || apiMessage, language: english ? "en" : "es", clientCode: "vialterna",
+          message: apiMessage, language: english ? "en" : "es",
           visitorId,
-          history,
           metadata: {
-            page: location.pathname,
-            pageUrl: location.href,
-            pageTitle: document.title,
-            pageContent: pageContext(),
-            lead,
-            handoffStage: handoffQualificationPending ? "qualified" : undefined,
             dataConsent: consentInput?.checked === true,
-            dataConsentAt: localStorage.getItem("oliviaConsentAt:vialterna") || undefined,
-            consentVersion: "vialterna-privacy-chat-2026-09-01"
           }
         })
       });
-      const [, response] = await Promise.all([saveVisitorMessage, chatRequest]);
+      const response = await chatRequest;
       if (!response.ok) throw new Error("Chat request failed");
       const data = await response.json();
       const reply = data.reply || "Un asesor Vialterna continuará contigo.";
       chatHistory.push({ role: "assistant", content: reply });
       await revealReply(pending, reply);
-      if (data.nextAction === "qualify_business_need") handoffQualificationPending = true;
       const normalized = message.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       const requestsCommercialFollowUp = /\b(hablar con (?:un |una )?(?:persona|asesor|experto)|quiero (?:un |una )?(?:llamada|asesor|experto)|me contacte(?:n)?|llamenme|contactenme|contactarme|talk to (?:a )?(?:person|advisor|expert)|speak to (?:a )?(?:person|advisor|expert)|call me|contact me)\b/i.test(normalized);
       const requiresHumanHandoff = data.handoffRecommended === true
@@ -406,19 +358,12 @@ const copy = oliviaCopy[english ? "en" : "es"];
         || data.nextAction === "offer_human_operator"
         || data.action === "show_lead_form";
       if ((requestsCommercialFollowUp || requiresHumanHandoff) && !hubspotLeadSubmitted && !leadFormVisible) {
-        handoffQualificationPending = true;
         formTyping?.removeAttribute("hidden");
         await new Promise((resolve) => window.setTimeout(resolve, 3500));
         formTyping?.setAttribute("hidden", "");
         showLeadForm(message, false);
       }
-      void oliviaFetch(`${api}/widget/conversations`, {
-        method: "PATCH", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          clientCode: "vialterna", visitorId, content: reply,
-          model: data.mode || "o7-olivia-ai"
-        })
-      });
+
     } catch {
       pending.classList.remove("olivia__typing");
       pending.textContent = copy.fallback;

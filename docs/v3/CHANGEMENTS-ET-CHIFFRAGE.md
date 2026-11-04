@@ -89,17 +89,17 @@ Libellé réutilisable : « Restructuration bilingue du site Vialterna : nouvell
 - Recherche de volumes et difficulté des mots-clés, GSC sur douze mois et Keyword Planner : 4–8 h humaines / 2–4 h assistées, sous réserve d'accès. Le document fournit une ébauche de clusters, pas les données nécessaires à cette étude.
 - Nouveaux articles, nouvelle identité graphique, illustrations sur mesure ou animations complexes.
 - Modification des modèles, des droits ou des contenus dans le CMS de production ; V3 n'écrit pas dans le CMS V2.
-- Modification du moteur Olivia ou de sa base de connaissances, configuration CRM supplémentaire et automatisations commerciales nouvelles.
+- Extension Olivia v3.6 et base de connaissances V3 : ajoutées ensuite à la demande explicite d'Olivier, hors estimation initiale ci-dessus. Configuration CRM supplémentaire et automatisations commerciales nouvelles à chiffrer séparément.
 - Bascule de `www.vialterna.com` sur V3 et suivi après mise en production : nouvelle intervention à autoriser, 2–4 h humaines / 1–2 h assistées selon les accès et les contrôles.
 
 ## Limites de la livraison de démonstration
 
 Le site V3 est destiné à la revue, sur son propre domaine Vercel. Il porte `noindex` et l'analytics de production est désactivé. Les canoniques et le sitemap conservent les URL finales prévues par le document pour une future migration ; aucune soumission aux moteurs n'est effectuée.
 
-Les formulaires conservent les services de réception existants ; les tests ne créent pas de vrais leads. La réception réelle des emails et le routage CRM doivent faire l'objet d'une recette commerciale avec un contact d'essai autorisé. Le formulaire Contact conserve le formulaire HubSpot existant. Le nouveau formulaire d'audit utilise le relais Formspree existant ; la copie supplémentaire vers HubSpot dépend d'un token serveur configuré séparément dans V3. Aucun secret n'est copié du projet actuel.
+Les formulaires conservent les services de réception existants ; les tests ne créent pas de vrais leads. La réception réelle des emails et le routage CRM doivent faire l'objet d'une recette commerciale avec un contact d'essai autorisé. Le formulaire Contact conserve le formulaire HubSpot existant. Le nouveau formulaire d'audit utilise le relais Formspree existant ; la copie supplémentaire vers HubSpot dépend d'un token serveur configuré séparément dans V3. Aucun secret CRM n'est copié du projet actuel.
 
-Le contrôle de `/api/widget/identity` du service Olivia avec les en-têtes Origin et Referer donne HTTP 200 pour `https://www.vialterna.com` et HTTP 403 pour `https://vialterna3.vercel.app`. **Blocage identifié : le domaine V3 est refusé par le service distant.** Son autorisation doit être traitée séparément sur le backend Olivia ; aucun changement n'a été fait à ce service de production.
+L'ancien endpoint Olivia V2 accepte le domaine actuel et refuse V3. Suite à la demande explicite d'Olivier, le site démo appelle désormais un service Olivia v3.6 isolé, via un relais serveur authentifié. Les autorisations et le comportement du bot de production restent inchangés.
 
-Olivia conserve son service externe existant. La copie du widget est traduite, mais le moteur distant et ses éventuelles règles CORS / base de connaissances ne sont pas reconfigurés. Un changement de site ne met pas automatiquement à jour les réponses de ce moteur.
+Cette extension conserve l'accueil, la qualification et le transfert commercial de V2, tout en autorisant de vraies réponses IA aux questions précises. Elle dispose de 15 documents V3 et d'un historique par conversation. Ce comportement est une demande complémentaire d'Olivier ; il ne faut pas le présenter comme une exigence du document éditorial du client.
 
 Avant une future bascule du domaine client : validation du cas Core par l'équipe commerciale (signalée dans le document), validation client des chiffres et promesses publiés, essai réel des destinataires des formulaires et d'Olivia depuis le nouveau domaine, éventuelle configuration du CMS V3. Ces points n'empêchent pas une revue sur le site V3 indépendant.
