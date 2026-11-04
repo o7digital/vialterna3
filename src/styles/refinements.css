@@ -102,8 +102,6 @@ h3 { letter-spacing: -.01em; line-height: 1.35; }
 .v3-stack-foundation { padding: 18px; line-height: 1.8; font-size: .85rem; }
 .v3-noc-foundation { margin: 0; }
 .v3-noc-visual { margin-top: 18px; }
-.v3-noc-visual .operations-visual { height: clamp(360px, 37vw, 520px); border-radius: 12px; }
-.v3-noc-visual .mexico { width: min(65%, 760px); }
 /* Review colours describe editorial changes; switching off restores the design. */
 html[data-review-active] [data-v3-change], html[data-review-active] [data-v3-change] :is(.accent,strong,span,p) { color: var(--review-yellow) !important; }
 html[data-review-active] [data-v3-change="new"] { text-decoration-color: rgba(255,224,130,.3); }
@@ -166,15 +164,6 @@ html[data-review-active] [data-v3-change="new"] { text-decoration-color: rgba(25
  .v3-stack-sources div, .v3-stack-sources div:nth-last-child(-n+2) { border-right: 0; border-bottom: 1px solid var(--line); padding: 18px; }
  .v3-stack-sources div:last-child { border: 0; }
  .v3-stack-foundation { text-align: left; }
- .v3-noc-visual .operations-visual { height: 360px; }
- .v3-noc-visual .mexico { width: 92%; }
- .v3-noc-visual .metric { min-width: 0; width: 42%; padding: 12px; }
- .v3-noc-visual .metric strong { font-size: 1.5rem; }
- .v3-noc-visual .metric span { display: block; font-size: .5rem; letter-spacing: .05em; line-height: 1.5; }
- .v3-noc-visual .metric-1 { top: 5%; left: 4%; }
- .v3-noc-visual .metric-2 { top: 5%; right: 4%; }
- .v3-noc-visual .metric-3 { bottom: 5%; left: 4%; }
- .v3-noc-visual .metric-4 { bottom: 5%; right: 4%; }
  .v3-entry-link { font-size: .9rem; padding-block: 20px; }
  .v3-offerings article { padding: 24px; }
  .v3-offerings h3 { font-size: 1.2rem; }

@@ -1,28 +1,95 @@
 ---
-interface Props { lang?: "es" | "en"; embedded?: boolean }
-const { lang = "es", embedded = false } = Astro.props;
-const en = lang === "en";
+import mexico from '../data/mexico-map.json';
+interface Props { lang?: 'es' | 'en'; embedded?: boolean }
+const { lang = 'es', embedded = false } = Astro.props;
+const en = lang === 'en';
 const Wrapper = embedded ? 'div' : 'section';
+const uid = `mexico-network-${lang}`;
+const central = mexico.nodes.find(node => node.id === 'center')!;
+const proofs = en ? [
+  ['24/7 NOC', 'Owned 24/7 NOC and AIrConnect platform.'],
+  ['Independence', 'Carrier and technology independent.'],
+  ['Management', 'Full management or co-management with your IT team.'],
+  ['Contracts', 'We source the links for you or take over your current contracts.'],
+  ['Pilot', '1 to 5 site pilot, no commitment.'],
+  ['SLA', '99.95% availability SLA, and 99.99% on Core solutions.'],
+] : [
+  ['NOC 24/7', 'NOC propio 24/7 y plataforma AIrConnect.'],
+  ['Independencia', 'Independientes de operador y tecnología.'],
+  ['Gestión', 'Gestión completa o cogestión con tu equipo de TI.'],
+  ['Contratos', 'Contratamos los enlaces por ti o asumimos tus contratos actuales.'],
+  ['Piloto', 'Piloto de 1 a 5 sitios, sin compromiso.'],
+  ['SLA', '99.95% de disponibilidad por SLA, y 99.99% en soluciones Core.'],
+];
 ---
-<Wrapper class={embedded ? 'v3-noc-visual' : 'section operations'}>
-  <div class={embedded ? undefined : 'shell'}>
-    {!embedded && <div class="section-head">
-      <div class="kicker reveal">{en ? "Nationwide operations" : "Operación nacional"}</div>
-      <div>
-        <h2 class="reveal">{en ? "24/7 NOC, SLA and multi-carrier management in one service model." : "NOC 24/7, SLA y gestión multioperador en un solo modelo de servicio."}</h2>
-        <p class="section-intro reveal">{en ? "We combine fiber, LTE, 5G, satellite and wireless links in a managed architecture with automatic failover, link aggregation and centralized monitoring." : "Combinamos fibra, LTE, 5G, satélite y enlaces inalámbricos en una arquitectura administrada con failover automático, agregación de enlaces y monitoreo centralizado."}</p>
-      </div>
-    </div>}
-    <div class:list={['operations-visual', { reveal: !embedded }]} aria-label={en ? "Conceptual view of nationwide operations" : "Visualización conceptual de la operación nacional"}>
-      <div class="visual-grid"></div>
-      <svg class="mexico" viewBox="0 0 760 430" role="img" aria-label={en ? "Conceptual illustration of coverage in Mexico" : "Representación conceptual de la cobertura en México"}>
-        <path d="M83 69c42 10 68 46 87 79 18 32 31 69 57 96 15 15 33 27 45 45 10 15 14 34 25 49 14 19 39 28 61 25 18-3 33-13 49-22 27-16 58-28 90-27 42 2 81 28 122 22 21-3 41-15 55-31 16-19 25-43 21-67-5-29-28-51-52-67-38-25-82-39-126-41-40-2-81 5-120-4-41-10-76-37-116-51-53-19-112-18-164-6-18 4-36 10-53 8-8-1-15-5-21-11-8-10-12-26-25-29-19-4-33 20-31 38 3 24 19 45 35 62 17 18 36 34 48 56 9 17 12 38 3 54-7 12-21 18-34 15-16-4-27-19-35-33-24-42-39-91-48-139-4-22-7-45-18-65-12-22-32-40-56-46-20-5-42-1-57 13-9 8-15 20-13 32 2 14 15 23 28 27Z"/>
-        <g><circle cx="239" cy="260" r="5"/><circle cx="383" cy="230" r="5"/><circle cx="530" cy="270" r="5"/><circle cx="630" cy="255" r="5"/><path d="M239 260 383 230 530 270 630 255M383 230 470 145M530 270 470 145"/></g>
-      </svg>
-      <div class="metric metric-1"><strong>24/7</strong><span>{en ? "NOC monitoring" : "Monitoreo NOC"}</span></div>
-      <div class="metric metric-2"><strong>Multi</strong><span>{en ? "Carrier management" : "Gestión de operadores"}</span></div>
-      <div class="metric metric-3"><strong>SLA</strong><span>{en ? "Managed service" : "Servicio administrado"}</span></div>
-      <div class="metric metric-4"><strong>MX</strong><span>{en ? "Distributed operations" : "Operaciones distribuidas"}</span></div>
-    </div>
+<Wrapper id={embedded ? undefined : 'noc'} class={embedded ? 'v3-noc-visual' : 'section operations'}>
+ <div class={embedded ? undefined : 'shell'}>
+  {!embedded && <div class="section-head">
+   <div class="kicker reveal">{en ? 'Nationwide operations' : 'Operación nacional'}</div>
+   <div>
+    <h2 class="reveal">{en ? '24/7 NOC, SLA and multi-carrier management in one service model.' : 'NOC 24/7, SLA y gestión multioperador en un solo modelo de servicio.'}</h2>
+    <p class="section-intro reveal">{en ? 'We combine fiber, LTE, 5G, satellite and wireless links in a managed architecture with automatic failover, link aggregation and centralized monitoring.' : 'Combinamos fibra, LTE, 5G, satélite y enlaces inalámbricos en una arquitectura administrada con failover automático, agregación de enlaces y monitoreo centralizado.'}</p>
+   </div>
+  </div>}
+  <div id="noc-map" class:list={['operations-visual', 'operations-network', { reveal: !embedded }]}>
+   <div class="visual-grid" aria-hidden="true"></div>
+   <div class="network-proofs network-proofs-left">
+    {proofs.slice(0, 3).map(([title, body]) => <article class="network-proof"><span class="network-check" aria-hidden="true">✓</span><div><h3>{title}</h3><p>{body}</p></div></article>)}
+   </div>
+   <div class="mexico-map-panel">
+    <svg class="mexico-map" viewBox={mexico.viewBox} role="img" aria-labelledby={`${uid}-title ${uid}-description`} data-map-source="natural-earth-50m">
+     <title id={`${uid}-title`}>{en ? 'Map of Mexico' : 'Mapa de México'}</title>
+     <desc id={`${uid}-description`}>{en ? 'Geographic outline of Mexico, including Baja California and the Yucatán Peninsula, with illustrative managed-network connections.' : 'Contorno geográfico de México, con Baja California y la península de Yucatán, y conexiones ilustrativas de una red administrada.'}</desc>
+     <defs>
+      <radialGradient id={`${uid}-glow`}><stop offset="0" stop-color="#00e5ff" stop-opacity=".7"/><stop offset=".4" stop-color="#00e5ff" stop-opacity=".15"/><stop offset="1" stop-color="#00e5ff" stop-opacity="0"/></radialGradient>
+     </defs>
+     {mexico.paths.map(path => <path class="mexico-land" d={path} fill-rule="evenodd"/>)}
+     <g class="network-connections" aria-hidden="true">{mexico.links.map(path => <path d={path}/>)}</g>
+     <circle class="central-glow" cx={central.x} cy={central.y} r="38" fill={`url(#${uid}-glow)`}/>
+     <g class="network-nodes" aria-hidden="true">{mexico.nodes.map(node => <circle cx={node.x} cy={node.y} r={node.id === 'center' ? 5 : 3.5}/>)}</g>
+     <text class="noc-map-label" x={central.x} y={central.y + 28} text-anchor="middle">{en ? 'CENTRAL NOC' : 'NOC CENTRAL'}</text>
+    </svg>
+    <p class="network-map-caption">{en ? 'Illustrative network diagram' : 'Esquema ilustrativo de conectividad'}</p>
+   </div>
+   <div class="network-proofs network-proofs-right">
+    {proofs.slice(3).map(([title, body]) => <article class="network-proof"><span class="network-check" aria-hidden="true">✓</span><div><h3>{title}</h3><p>{body}</p></div></article>)}
+   </div>
   </div>
+ </div>
 </Wrapper>
+<style>
+ .operations-network { isolation: isolate; scroll-margin-top: 110px; grid-template-columns: minmax(180px, .85fr) minmax(0, 1.7fr) minmax(180px, .85fr); gap: 24px; align-items: stretch; place-items: stretch; height: auto; min-height: 440px; padding: 32px; border-radius: 20px; background: radial-gradient(ellipse at 50% 50%, #00e5ff08, transparent 60%), #050a0d; }
+ .v3-noc-visual .operations-network { scroll-margin-top: 0; }
+ .operations-network > :not(.visual-grid) { position: relative; z-index: 1; min-width: 0; }
+ .network-proofs { display: flex; flex-direction: column; justify-content: space-between; gap: 22px; }
+ .network-proof { display: grid; grid-template-columns: 18px minmax(0, 1fr); align-items: start; gap: 12px; padding: 18px; border: 1px solid #a1c4d51c; border-radius: 12px; background: #081016eb; box-shadow: 0 8px 24px #0003; }
+ .network-check { display: grid; place-items: center; width: 18px; height: 18px; margin-top: 1px; border-radius: 50%; color: #21cf7e; background: #00c96a21; font: 700 12px/1 Inter, sans-serif; }
+ .network-proof h3 { margin: 0 0 5px; font: 700 .85rem/1.3 Inter, sans-serif; letter-spacing: 0; color: #f0eee9; }
+ .network-proof p { margin: 0; color: #aab4bd; font-size: .75rem; line-height: 1.55; }
+ .mexico-map-panel { align-self: center; }
+ .mexico-map { display: block; width: 100%; height: auto; overflow: visible; }
+ .mexico-land { fill: #00e5ff08; stroke: #32c6d18c; stroke-width: 1.2; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+ .network-connections path { fill: none; stroke: #39b7c16b; stroke-width: 1; stroke-dasharray: 2 5; vector-effect: non-scaling-stroke; }
+ .network-nodes { fill: #00e5ff; filter: drop-shadow(0 0 6px #00e5ff9c); }
+ .noc-map-label { fill: #66efff; font: 600 10px Inter, sans-serif; letter-spacing: 1.8px; }
+ .network-map-caption { margin: 10px 0 0; color: #78929e; text-align: center; font-size: .65rem; line-height: 1.5; }
+ @media (max-width: 1100px) {
+  .operations-network { gap: 16px; padding: 24px; grid-template-columns: minmax(160px, .85fr) minmax(0, 1.6fr) minmax(160px, .85fr); }
+  .network-proof { padding: 14px; gap: 9px; }
+ }
+ @media (max-width: 850px) {
+  .operations-network { min-height: 0; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-areas: 'map map' 'left right'; gap: 24px 16px; }
+  .mexico-map-panel { grid-area: map; width: min(100%, 680px); margin-inline: auto; }
+  .network-proofs-left { grid-area: left; }.network-proofs-right { grid-area: right; }
+  .network-proofs { display: grid; grid-template-rows: repeat(3, 1fr); gap: 12px; }
+ }
+ @media (max-width: 480px) {
+  .operations-network { padding: 14px; gap: 20px 12px; border-radius: 14px; }
+  .network-proof { grid-template-columns: 14px minmax(0, 1fr); padding: 12px 10px; gap: 7px; border-radius: 9px; }
+  .network-check { width: 14px; height: 14px; font-size: 10px; }
+  .network-proof h3 { font-size: .75rem; }
+  .network-proof p { font-size: .68rem; line-height: 1.55; }
+  .network-map-caption { font-size: .6rem; }
+  .noc-map-label { font-size: 14px; letter-spacing: .8px; }
+ }
+</style>

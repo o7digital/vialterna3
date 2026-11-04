@@ -49,3 +49,10 @@ Les destinataires réels Formspree/HubSpot, les emails et les automatisations CR
 - À la suite du retour d'Olivier, le visuel existant de la carte du Mexique et ses quatre repères 24/7, Multi, SLA et MX sont réintégrés dans le socle NOC du schéma V3. Le bloc autonome avec ses anciens textes n'est pas dupliqué. Le composant conserve la possibilité de son affichage autonome.
 - Accès direct : `/#noc` et `/en/#noc`, également disponibles dans les pages Edge to Cloud. Aucun changement au contenu, au bot, au domaine ou au déploiement du site actuel.
 - Recette de cette correction : accueil ES/EN à 1920, 1628, 1440, 1280, 1080, 1024, 900, 768, 620, 390 et 320 px ; tailles comparées aux règles du site actuel, absence de débordement et de chevauchement des quatre repères NOC ; présence de la carte sur les quatre routes concernées, fonctionnement du mode jaune et positionnement de l'ancre sous le menu fixe. Compilation et contrôles de régression, SEO et articles réussis.
+
+## Carte géographique du Mexique — aperçu du 4 novembre 2026
+
+- Remplacement de la silhouette conceptuelle par les 16 polygones Natural Earth du Mexique, avec Baja California, le Yucatán et les îles représentées dans le jeu de données. Contour SVG local, sans service de cartographie distant au chargement de la page.
+- Composition inspirée de la capture WhatsApp : six encadrés NOC, indépendance, gestion, contrats, pilote et SLA, avec les faits ES/EN déjà approuvés dans la copie V3. Sept points et liaisons illustratifs, sans affirmation d'implantations physiques.
+- Vérification sur les versions du site actuel et V3, en ES/EN, à 1628, 1024, 768, 390 et 320 px : six encadrés, carte présente, aucun chevauchement, aucun débordement horizontal et aucune exception navigateur.
+- Livraison sur branches `feat/mexico-map-preview`, en déploiements Vercel Preview uniquement. Le demandeur veut voir l'aperçu avant toute mise en ligne sur `www.vialterna.com` ; aucune publication de cette nouvelle carte sur les domaines publics existants n'est effectuée à ce stade.
