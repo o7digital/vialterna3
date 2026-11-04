@@ -1,0 +1,1 @@
+export const normalizeReviewText=(text:string)=>text.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/<[^>]*>/g,' ').replace(/&(?:amp|#38);/g,'&').replace(/[^\p{L}\p{N}]+/gu,' ').trim().toLowerCase();

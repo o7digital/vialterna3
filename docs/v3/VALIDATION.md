@@ -24,3 +24,11 @@ Dépôt : https://github.com/o7digital/vialterna3/tree/feat/v3-restructure
 Olivia : l'endpoint distant `/api/widget/identity` accepte le domaine actuel (HTTP 200) et refuse V3 (HTTP 403) avec les en-têtes Origin et Referer correspondants. L'autorisation du nouveau domaine doit être faite sur le service Olivia externe ; aucun changement n'a été apporté à ce service de production.
 
 Les destinataires réels Formspree/HubSpot, les emails et les automatisations CRM n'ont pas été testés par création de leads. Ils nécessitent un essai commercial autorisé. Aucun token de production n'a été copié vers V3. Le nouveau contenu V3 est local au dépôt et ne modifie pas les modèles ou contenus du CMS de production.
+
+## Révision visuelle après les neuf captures du Bureau
+
+- Titres ramenés à une échelle de lecture : H1 de l'accueil limité à 64 px, H1 intérieurs à 52 px, H2 à 40 px sur ordinateur, avec des tailles adaptées au mobile. Interlettrage et interlignage corrigés.
+- Parcours Edge/Core/Edge to Cloud présentés en lignes avec descriptions alignées ; grille des deux modèles corrigée à deux colonnes ; schéma des services réorganisé en lignes ; cartes secteurs et étapes compactées.
+- Mode « Cambios V3 / V3 changes » : jaune sur les blocs ajoutés ou modifiés selon le document de copie V3, avec prise en compte des changements propres à l'anglais. Les blocs indiqués « Same » restent dans les couleurs normales. Il s'agit d'un repérage des blocs éditoriaux, pas d'un diff mot à mot.
+- Activé par défaut pour la revue, désactivable en bas à gauche ; préférence conservée à la navigation. `?review=1` force l'affichage des changements et `?review=0` permet une consultation sans surlignage.
+- Recette navigateur : contrôle des marqueurs ES/EN, du bouton et de sa persistance, de l'alignement des colonnes et des tailles de titres, avec vérification à 1920, 1440, 1024, 768, 390 et 320 px.

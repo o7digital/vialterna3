@@ -1,0 +1,1106 @@
+{
+  "home": {
+    "SEO title": {
+      "es": "same",
+      "en": "same"
+    },
+    "Meta description": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero eyebrow": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero headline": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero subhead": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero buttons": {
+      "es": "same",
+      "en": "same"
+    },
+    "Hero badges": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Proof bar": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Path headline": {
+      "es": "new",
+      "en": "new"
+    },
+    "Path A card (Edge)": {
+      "es": "new",
+      "en": "new"
+    },
+    "Path C card (Core)": {
+      "es": "new",
+      "en": "new"
+    },
+    "Path B card": {
+      "es": "new",
+      "en": "new"
+    },
+    "Shared line under the three cards": {
+      "es": "new",
+      "en": "new"
+    },
+    "Risk eyebrow": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Risk headline": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Risk body": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Risk callout": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Modernization eyebrow": {
+      "es": "new",
+      "en": "new"
+    },
+    "Modernization headline": {
+      "es": "new",
+      "en": "new"
+    },
+    "Modernization body": {
+      "es": "new",
+      "en": "new"
+    },
+    "Data strip": {
+      "es": "new",
+      "en": "new"
+    },
+    "Setups headline": {
+      "es": "same",
+      "en": "same"
+    },
+    "Setup 01": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Setup 02": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Promise headline": {
+      "es": "new",
+      "en": "new"
+    },
+    "Promise body": {
+      "es": "new",
+      "en": "new"
+    },
+    "Proof box (6 items): how we operate": {
+      "es": "new",
+      "en": "new"
+    },
+    "Questions headline": {
+      "es": "new",
+      "en": "new"
+    },
+    "Questions": {
+      "es": "new",
+      "en": "new"
+    },
+    "Questions close + button": {
+      "es": "new",
+      "en": "new"
+    },
+    "Stack diagram headline": {
+      "es": "new",
+      "en": "new"
+    },
+    "Stack: platform (top bar)": {
+      "es": "new",
+      "en": "new"
+    },
+    "Stack: managed services (5 blocks)": {
+      "es": "new",
+      "en": "new"
+    },
+    "Stack: connection sources (4 blocks)": {
+      "es": "new",
+      "en": "new"
+    },
+    "Stack: foundation (bottom bar)": {
+      "es": "new",
+      "en": "new"
+    },
+    "Stack: entry arrow": {
+      "es": "new",
+      "en": "new"
+    },
+    "Model eyebrow": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Model headline": {
+      "es": "same",
+      "en": "same"
+    },
+    "Model body": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Pillars intro": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Pillar 01": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Pillar 02": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Pillar 03": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Solutions eyebrow": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Solutions headline": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Solutions intro": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Card 01 Edge": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Card 02 Core": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Card 03 Cloud": {
+      "es": "new",
+      "en": "new"
+    },
+    "Card 04 IoT and SIM": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "How we work eyebrow": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "How we work headline": {
+      "es": "same",
+      "en": "same"
+    },
+    "Phase 01": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Phase 02": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Phase 03": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Phase 04": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Management model": {
+      "es": "new",
+      "en": "new"
+    },
+    "Partner strip": {
+      "es": "new",
+      "en": "new"
+    },
+    "Industries eyebrow": {
+      "es": "same",
+      "en": "same"
+    },
+    "Industries headline": {
+      "es": "same",
+      "en": "same"
+    },
+    "Industry cards 01–05": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Final CTA eyebrow": {
+      "es": "same",
+      "en": "same"
+    },
+    "Final CTA headline": {
+      "es": "same",
+      "en": "same"
+    },
+    "Final CTA body": {
+      "es": "same",
+      "en": "same"
+    },
+    "Final CTA buttons + microcopy": {
+      "es": "same",
+      "en": "same"
+    },
+    "Final CTA contact": {
+      "es": "changed",
+      "en": "changed"
+    }
+  },
+  "edge-to-cloud": {
+    "SEO title": {
+      "es": "new",
+      "en": "new"
+    },
+    "Meta description": {
+      "es": "new",
+      "en": "new"
+    },
+    "Hero eyebrow": {
+      "es": "new",
+      "en": "new"
+    },
+    "Hero headline": {
+      "es": "new",
+      "en": "new"
+    },
+    "Hero subhead": {
+      "es": "new",
+      "en": "new"
+    },
+    "Hero buttons": {
+      "es": "new",
+      "en": "new"
+    },
+    "Gap headline": {
+      "es": "new",
+      "en": "new"
+    },
+    "Gap body": {
+      "es": "new",
+      "en": "new"
+    },
+    "Data strip": {
+      "es": "new",
+      "en": "new"
+    },
+    "Promise": {
+      "es": "new",
+      "en": "new"
+    },
+    "Three layers": {
+      "es": "new",
+      "en": "new"
+    },
+    "Proof box": {
+      "es": "new",
+      "en": "new"
+    },
+    "IT-team line": {
+      "es": "new",
+      "en": "new"
+    },
+    "Questions headline": {
+      "es": "new",
+      "en": "new"
+    },
+    "Questions": {
+      "es": "new",
+      "en": "new"
+    },
+    "Questions close + button": {
+      "es": "new",
+      "en": "new"
+    },
+    "Stack diagram": {
+      "es": "new",
+      "en": "new"
+    },
+    "How we work + management model + partner strip": {
+      "es": "new",
+      "en": "new"
+    },
+    "Final CTA": {
+      "es": "new",
+      "en": "new"
+    }
+  },
+  "edge": {
+    "SEO title": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Meta description": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero eyebrow": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero headline": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero subhead": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Problem headline": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Problem body": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Data strip": {
+      "es": "new",
+      "en": "new"
+    },
+    "Cost of standing still": {
+      "es": "new",
+      "en": "new"
+    },
+    "Promise": {
+      "es": "new",
+      "en": "new"
+    },
+    "How it works (3 layers)": {
+      "es": "new",
+      "en": "new"
+    },
+    "Proof box": {
+      "es": "new",
+      "en": "new"
+    },
+    "Features headline": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Features 01–04": {
+      "es": "same",
+      "en": "same"
+    },
+    "Benefits headline": {
+      "es": "same",
+      "en": "same"
+    },
+    "Benefits list": {
+      "es": "same",
+      "en": "same"
+    },
+    "Reference case": {
+      "es": "new",
+      "en": "new"
+    },
+    "Questions headline": {
+      "es": "new",
+      "en": "new"
+    },
+    "Questions": {
+      "es": "new",
+      "en": "new"
+    },
+    "Questions close + button": {
+      "es": "new",
+      "en": "new"
+    }
+  },
+  "core": {
+    "SEO title": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Meta description": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero eyebrow": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero headline": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero subhead": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Problem headline": {
+      "es": "same",
+      "en": "same"
+    },
+    "Problem body": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Data strip": {
+      "es": "new",
+      "en": "new"
+    },
+    "Cost of standing still": {
+      "es": "new",
+      "en": "new"
+    },
+    "Promise": {
+      "es": "new",
+      "en": "new"
+    },
+    "How it works (3 layers)": {
+      "es": "new",
+      "en": "new"
+    },
+    "Proof box": {
+      "es": "new",
+      "en": "new"
+    },
+    "Features headline": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Feature 01": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Feature 02": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Feature 03": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Feature 04": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Benefits headline": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Benefits list": {
+      "es": "same",
+      "en": "same"
+    },
+    "Reference case": {
+      "es": "new",
+      "en": "new"
+    },
+    "Questions headline": {
+      "es": "new",
+      "en": "new"
+    },
+    "Questions": {
+      "es": "new",
+      "en": "new"
+    },
+    "Questions close + button": {
+      "es": "new",
+      "en": "new"
+    }
+  },
+  "cloud": {
+    "SEO title": {
+      "es": "new",
+      "en": "new"
+    },
+    "Meta description": {
+      "es": "new",
+      "en": "new"
+    },
+    "Hero eyebrow": {
+      "es": "new",
+      "en": "new"
+    },
+    "Hero headline": {
+      "es": "new",
+      "en": "new"
+    },
+    "Hero subhead": {
+      "es": "new",
+      "en": "new"
+    },
+    "Problem headline": {
+      "es": "new",
+      "en": "new"
+    },
+    "Problem body": {
+      "es": "new",
+      "en": "new"
+    },
+    "Data strip": {
+      "es": "new",
+      "en": "new"
+    },
+    "Cost of standing still": {
+      "es": "new",
+      "en": "new"
+    },
+    "Promise": {
+      "es": "new",
+      "en": "new"
+    },
+    "How it works (3 layers)": {
+      "es": "new",
+      "en": "new"
+    },
+    "Proof box": {
+      "es": "new",
+      "en": "new"
+    },
+    "Features headline": {
+      "es": "new",
+      "en": "new"
+    },
+    "Feature 01": {
+      "es": "new",
+      "en": "new"
+    },
+    "Feature 02": {
+      "es": "new",
+      "en": "new"
+    },
+    "Feature 03": {
+      "es": "new",
+      "en": "new"
+    },
+    "Feature 04": {
+      "es": "new",
+      "en": "new"
+    },
+    "Benefits headline": {
+      "es": "new",
+      "en": "new"
+    },
+    "Benefits list": {
+      "es": "new",
+      "en": "new"
+    },
+    "Reference case": {
+      "es": "new",
+      "en": "new"
+    },
+    "Questions headline": {
+      "es": "new",
+      "en": "new"
+    },
+    "Questions": {
+      "es": "new",
+      "en": "new"
+    },
+    "Questions close + button": {
+      "es": "new",
+      "en": "new"
+    }
+  },
+  "audit": {
+    "SEO title": {
+      "es": "same",
+      "en": "same"
+    },
+    "Meta description": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero eyebrow": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero headline": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero subhead": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero button": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Problem headline": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Problem body": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Proof line": {
+      "es": "new",
+      "en": "new"
+    },
+    "What we analyze (5 items)": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "What you get (4 items)": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Timing and cost": {
+      "es": "new",
+      "en": "new"
+    },
+    "Request form": {
+      "es": "changed",
+      "en": "changed"
+    }
+  },
+  "iot-sim": {
+    "SEO title and meta description": {
+      "es": "same",
+      "en": "same"
+    },
+    "Hero eyebrow": {
+      "es": "same",
+      "en": "same"
+    },
+    "Hero headline": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Hero subhead": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Problem headline and body": {
+      "es": "same",
+      "en": "same"
+    },
+    "Data strip": {
+      "es": "new",
+      "en": "new"
+    },
+    "Features headline": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Feature 01": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Features 02–04": {
+      "es": "same",
+      "en": "same"
+    },
+    "Benefits headline": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Benefits list": {
+      "es": "same",
+      "en": "same"
+    }
+  },
+  "financial": {
+    "SEO title and meta description": {
+      "es": "same",
+      "en": "same"
+    },
+    "Hero eyebrow": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero headline": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Hero subhead": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Problem headline": {
+      "es": "new",
+      "en": "same"
+    },
+    "Problem body": {
+      "es": "new",
+      "en": "same"
+    },
+    "Data strip": {
+      "es": "new",
+      "en": "new"
+    },
+    "Use cases headline": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Use cases": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Reference case": {
+      "es": "new",
+      "en": "new"
+    },
+    "Related solutions": {
+      "es": "new",
+      "en": "new"
+    },
+    "Benefits list": {
+      "es": "same",
+      "en": "changed"
+    }
+  },
+  "retail": {
+    "SEO title and meta description": {
+      "es": "same",
+      "en": "same"
+    },
+    "Hero eyebrow": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero headline": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Hero subhead": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Problem headline": {
+      "es": "new",
+      "en": "same"
+    },
+    "Problem body": {
+      "es": "new",
+      "en": "same"
+    },
+    "Data strip": {
+      "es": "new",
+      "en": "new"
+    },
+    "Use cases headline": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Use cases": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Related solutions": {
+      "es": "new",
+      "en": "new"
+    },
+    "Benefits list": {
+      "es": "same",
+      "en": "changed"
+    }
+  },
+  "energy": {
+    "SEO title": {
+      "es": "same",
+      "en": "same"
+    },
+    "Meta description": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero eyebrow": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero headline": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Hero subhead": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Problem headline": {
+      "es": "new",
+      "en": "same"
+    },
+    "Problem body": {
+      "es": "new",
+      "en": "same"
+    },
+    "Use cases headline": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Use cases": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Related solutions": {
+      "es": "new",
+      "en": "new"
+    },
+    "Benefits list": {
+      "es": "same",
+      "en": "changed"
+    }
+  },
+  "payments": {
+    "SEO title and meta description": {
+      "es": "same",
+      "en": "same"
+    },
+    "Hero eyebrow": {
+      "es": "same",
+      "en": "same"
+    },
+    "Hero headline": {
+      "es": "changed",
+      "en": "same"
+    },
+    "Hero subhead": {
+      "es": "same",
+      "en": "same"
+    },
+    "Problem headline and body": {
+      "es": "same",
+      "en": "same"
+    },
+    "Data strip": {
+      "es": "new",
+      "en": "new"
+    },
+    "Use cases": {
+      "es": "same",
+      "en": "same"
+    },
+    "Related solutions": {
+      "es": "new",
+      "en": "new"
+    },
+    "Benefits list": {
+      "es": "same",
+      "en": "same"
+    }
+  },
+  "logistics": {
+    "SEO title and meta description": {
+      "es": "same",
+      "en": "same"
+    },
+    "Hero eyebrow": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero headline": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero subhead": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Problem headline": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Problem body": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Use cases headline": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Use cases": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Benefits list": {
+      "es": "same",
+      "en": "changed"
+    }
+  },
+  "company": {
+    "SEO title": {
+      "es": "same",
+      "en": "same"
+    },
+    "Meta description": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero eyebrow": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero headline": {
+      "es": "same",
+      "en": "same"
+    },
+    "Hero subhead": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "01 Who we are": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "02 What makes us different": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "03 Market position": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "04 Proof": {
+      "es": "same",
+      "en": "same"
+    },
+    "05 Reference clients": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "06 Closing CTA": {
+      "es": "changed",
+      "en": "changed"
+    }
+  },
+  "faq": {
+    "SEO title, meta, hero": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Q01": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Q02": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Q03": {
+      "es": "same",
+      "en": "same"
+    },
+    "Q04": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Q05": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Q06": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Q07": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Q08": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Q09": {
+      "es": "same",
+      "en": "same"
+    },
+    "Q10": {
+      "es": "new",
+      "en": "new"
+    },
+    "Q11": {
+      "es": "new",
+      "en": "new"
+    },
+    "Q12": {
+      "es": "new",
+      "en": "new"
+    },
+    "Q13": {
+      "es": "new",
+      "en": "new"
+    },
+    "Q14": {
+      "es": "new",
+      "en": "new"
+    },
+    "Q15 (was Q10)": {
+      "es": "changed",
+      "en": "changed"
+    }
+  },
+  "contact": {
+    "SEO title and meta description": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Hero eyebrow": {
+      "es": "same",
+      "en": "same"
+    },
+    "Hero headline": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Hero subhead": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Form block, 01–04": {
+      "es": "changed",
+      "en": "changed"
+    }
+  },
+  "global": {
+    "Header menu and button": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Footer tagline": {
+      "es": "same",
+      "en": "same"
+    },
+    "Footer links": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Footer contact": {
+      "es": "same",
+      "en": "same"
+    },
+    "Footer legal": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Footer SEO keyword line": {
+      "es": "changed",
+      "en": "changed"
+    },
+    "Chat widget header": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Chat widget greeting": {
+      "es": "same",
+      "en": "changed"
+    },
+    "Chat widget form": {
+      "es": "same",
+      "en": "changed"
+    }
+  }
+}
