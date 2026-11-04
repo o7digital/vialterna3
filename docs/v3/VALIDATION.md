@@ -56,3 +56,9 @@ Les destinataires réels Formspree/HubSpot, les emails et les automatisations CR
 - Composition inspirée de la capture WhatsApp : six encadrés NOC, indépendance, gestion, contrats, pilote et SLA, avec les faits ES/EN déjà approuvés dans la copie V3. Sept points et liaisons illustratifs, sans affirmation d'implantations physiques.
 - Vérification sur les versions du site actuel et V3, en ES/EN, à 1628, 1024, 768, 390 et 320 px : six encadrés, carte présente, aucun chevauchement, aucun débordement horizontal et aucune exception navigateur.
 - Livraison sur branches `feat/mexico-map-preview`, en déploiements Vercel Preview uniquement. Le demandeur veut voir l'aperçu avant toute mise en ligne sur `www.vialterna.com` ; aucune publication de cette nouvelle carte sur les domaines publics existants n'est effectuée à ce stade.
+
+## Publication de la carte sur l'URL principale V3 — 4 novembre 2026
+
+- Intégration de la carte validée dans `feat/v3-restructure`, pour publication sur `https://vialterna3.vercel.app`.
+- Accès direct : `/?review=1#noc-map`, ainsi que les équivalents anglais et Edge to Cloud. Le nouveau contour et les six encadrés remplacent l'ancienne silhouette dans le socle NOC.
+- Le mode jaune, les marqueurs éditoriaux et la correction du titre d'accueil sont conservés. Cette livraison ne modifie pas `www.vialterna.com`.
