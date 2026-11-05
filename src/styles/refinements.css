@@ -1,5 +1,4 @@
 /* A readable editorial scale for the longer V3 copy. */
-:root { --review-yellow: #ffe082; }
 body { line-height: 1.6; }
 h1, h2, h3, h4 { font-weight: 600; text-wrap: pretty; }
 h1, .detail-title { font-size: clamp(2rem, 3.4vw, 3.25rem); line-height: 1.15; letter-spacing: -.025em; margin-bottom: 24px; }
@@ -102,15 +101,6 @@ h3 { letter-spacing: -.01em; line-height: 1.35; }
 .v3-stack-foundation { padding: 18px; line-height: 1.8; font-size: .85rem; }
 .v3-noc-foundation { margin: 0; }
 .v3-noc-visual { margin-top: 18px; }
-/* Review colours describe editorial changes; switching off restores the design. */
-html[data-review-active] [data-v3-change], html[data-review-active] [data-v3-change] :is(.accent,strong,span,p) { color: var(--review-yellow) !important; }
-html[data-review-active] [data-v3-change="new"] { text-decoration-color: rgba(255,224,130,.3); }
-.v3-review-control { position: fixed; z-index: 40; bottom: 20px; left: 20px; max-width: 270px; padding: 10px 14px; border: 1px solid rgba(255,224,130,.4); border-radius: 10px; background: rgba(11,14,19,.96); box-shadow: 0 6px 24px rgba(0,0,0,.2); font-size: .75rem; }
-.v3-review-control button { display: flex; align-items: center; gap: 9px; padding: 0; border: 0; background: none; color: var(--text); cursor: pointer; font-size: .78rem; font-weight: 500; }
-.v3-review-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--review-yellow); }
-.v3-review-control button[aria-pressed="false"] .v3-review-dot { background: #7a828d; }
-.v3-review-state { margin-left: 8px; color: var(--review-yellow); font-size: .7rem; }
-.v3-review-control p { margin: 4px 0 0; color: var(--muted); font-size: .67rem; line-height: 1.5; }
 @media (max-width: 1050px) {
  .v3-path-card { grid-template-columns: minmax(180px,.8fr) minmax(0,1.4fr); gap: 14px 28px; }
  .v3-path-card .v3-card-link { grid-column: 1; grid-row: 3; }
@@ -174,11 +164,4 @@ html[data-review-active] [data-v3-change="new"] { text-decoration-color: rgba(25
  .industry h3 { font-size: 1.3rem; margin-top: 24px; }
  .cta-section { padding: 60px 0; }
  .cta-section h2 { font-size: 1.75rem; }
- .v3-review-control { bottom: 16px; left: 14px; padding: 10px 12px; max-width: 155px; }
- .v3-review-control p { display: none; }
- .v3-review-control button { font-size: .72rem; gap: 7px; }
- .v3-review-state { margin-left: 0; }
 }
-html[data-review-active] .button[data-v3-change], html[data-review-active] .button[data-v3-change] span { color: #fff !important; }
-html[data-review-active] .button[data-v3-change] { outline: 1px solid var(--review-yellow); outline-offset: 3px; }
-@media (max-width: 360px) { .v3-review-control { bottom: 80px; } }

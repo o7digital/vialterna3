@@ -62,3 +62,8 @@ Les destinataires réels Formspree/HubSpot, les emails et les automatisations CR
 - Intégration de la carte validée dans `feat/v3-restructure`, pour publication sur `https://vialterna3.vercel.app`.
 - Accès direct : `/?review=1#noc-map`, ainsi que les équivalents anglais et Edge to Cloud. Le nouveau contour et les six encadrés remplacent l'ancienne silhouette dans le socle NOC.
 - Le mode jaune, les marqueurs éditoriaux et la correction du titre d'accueil sont conservés. Cette livraison ne modifie pas `www.vialterna.com`.
+
+## Retour aux couleurs d’origine — 4 novembre 2026
+
+- Suppression du mode de revue jaune et du contrôle « Cambios V3 / V3 changes » sur toutes les pages ES/EN. Les anciennes préférences du navigateur et les liens `?review=1` ne réactivent plus le surlignage.
+- Les styles existants reprennent leurs couleurs d’origine : textes blancs, accents turquoise, boutons orange et fonds sombres. Les contenus et la carte validée sont conservés.
