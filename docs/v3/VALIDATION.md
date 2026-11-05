@@ -67,3 +67,9 @@ Les destinataires réels Formspree/HubSpot, les emails et les automatisations CR
 
 - Suppression du mode de revue jaune et du contrôle « Cambios V3 / V3 changes » sur toutes les pages ES/EN. Les anciennes préférences du navigateur et les liens `?review=1` ne réactivent plus le surlignage.
 - Les styles existants reprennent leurs couleurs d’origine : textes blancs, accents turquoise, boutons orange et fonds sombres. Les contenus et la carte validée sont conservés.
+
+## Répartition des couleurs des captures du site actuel — 4 novembre 2026
+
+- Référence : les deux captures du Bureau de 23 h 12 montrent le hero noir et le bloc de risque bleu, avec la conclusion des titres en turquoise.
+- Accueil ES/EN : première phrase du titre de risque en blanc et seconde phrase en turquoise, sans changement de texte. Le hero conserve son traitement blanc/turquoise.
+- Rétablissement du dégradé bleu `#053060` vers le noir et du halo cyan du site actuel, en retirant la surcharge V3 qui assombrissait le bloc.

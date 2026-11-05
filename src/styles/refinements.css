@@ -24,7 +24,8 @@ h3 { letter-spacing: -.01em; line-height: 1.35; }
 .detail-copy h2 { margin-top: 18px; }
 .detail-copy p { font-size: 1.05rem; line-height: 1.8; }
 .detail-copy .v3-data-strip p { font-size: .9rem; }
-.risk { min-height: auto; background: linear-gradient(145deg, #061b32, #02080f 85%); }
+/* Keep the live site’s blue-to-black risk background and cyan glow. */
+.risk { min-height: auto; }
 .risk-lead, .v3-lead { max-width: 880px; font-size: 1.05rem; line-height: 1.8; }
 .risk-proof { max-width: 880px; font-size: 1rem; font-weight: 500; }
 .v3-modernization { margin-top: 56px; }
