@@ -77,6 +77,8 @@ Les destinataires réels Formspree/HubSpot, les emails et les automatisations CR
 ## Rétablissement de la revue client en jaune — 6 novembre 2026
 
 - Mode « Cambios V3 / V3 changes » réactivé par défaut en ES/EN, à partir des statuts « New » et « Changed » du document client enregistrés dans `src/data/v3/changes.json`. Le repérage porte sur les blocs éditoriaux ; les blocs « Same » conservent leurs couleurs.
-- Prise en compte des titres FAQ, des textes adaptés du bloc Contact et de la bande partenaires. Les boutons modifiés sont entourés de jaune pour conserver leur lisibilité.
+- Prise en compte des titres FAQ, des textes adaptés du bloc Contact, des badges d'accueil, des cas de référence et de la bande partenaires. Les boutons modifiés sont entourés de jaune pour conserver leur lisibilité.
 - Le bouton en bas à gauche permet de masquer le jaune ; `?review=1` le force, `?review=0` le désactive. Une nouvelle préférence évite qu'un ancien réglage masque le rétablissement du mode lors de la première visite.
 - Contrôles de types, build, régression V3, SEO et traduction des 33 articles par langue réussis.
+- Recette navigateur sur les 30 routes ES/EN, sur ordinateur et mobile : activation par défaut, exceptions « Same », bouton, persistance et paramètres d'URL ; aucun débordement ni erreur JavaScript.
+- L'ancien projet lié était inaccessible et l'URL répondait en 404. Projet `vialterna3` recréé dans l'équipe `olivier-steineur`, liaison locale actualisée et connexion au service Olivia de démonstration rétablie. Publication sur la même URL `https://vialterna3.vercel.app` ; session et réponse d'accueil Olivia vérifiées sans envoi de lead.

@@ -14,7 +14,7 @@ const data=reviewData(Astro.url.pathname,en?'en':'es');
  const en=document.documentElement.lang==='en';
  const data=JSON.parse(document.getElementById('v3-review-data')?.textContent||'{"entries":[]}') as {page:string;newPage:boolean;entries:[string,string][]};
  const entries=new Map(data.entries);
- const selector='h1,h2,h3,h4,p,li,summary,label,a,.eyebrow,.kicker,.v3-platform-caption,.footer-keywords,.v3-stack-sources>div,.v3-stack-foundation,.v3-entry-link,.v3-stack-services strong';
+ const selector='h1,h2,h3,h4,p,li,blockquote,summary,label,a,.eyebrow,.kicker,.v3-platform-caption,.footer-keywords,.detail-strip strong,.detail-strip span,.v3-stack-sources>div,.v3-stack-foundation,.v3-entry-link,.v3-stack-services strong';
  document.querySelectorAll<HTMLElement>(`main ${selector.split(',').join(',main ')},footer p,footer a,footer .footer-bottom span,footer .footer-keywords,[data-olivia-root] p`).forEach(element=>{
   if(element.closest('form,script,style,.v3-review-control')||element.matches('.number,.v3-step'))return;
   const normalized=normalizeReviewText(element.textContent||'');
@@ -25,7 +25,8 @@ const data=reviewData(Astro.url.pathname,en?'en':'es');
  // These rendered blocks adapt the document's wording rather than repeat it verbatim.
  const mark=(selector:string)=>document.querySelectorAll<HTMLElement>(selector).forEach(element=>{element.dataset.v3Change='changed';});
  if(data.page==='contact')mark('.contact-form-header :is(.kicker,h2,p),.editorial-list :is(h2,p)');
- if(data.page==='home')mark('.v3-partners p');
+ if(data.page==='contact'&&en)mark('.editorial-hero h1');
+ if(data.page==='home')mark('.v3-partners p,.v3-platform-caption,.capabilities-track>span');
  if(data.page==='faq')mark('.editorial-hero :is(h1,.detail-lead)');
  document.querySelectorAll<HTMLElement>('[data-audit-form] label:not(.v3-honeypot)').forEach(label=>{label.dataset.v3Change='changed';});
  document.querySelectorAll<HTMLAnchorElement>('header a,footer a').forEach(link=>{
