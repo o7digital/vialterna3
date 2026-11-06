@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import OliviaAI from "../components/OliviaAI.astro";
+import ReviewMode from "../components/v3/ReviewMode.astro";
 import "../styles/refinements.css";
 import { absoluteUrl, getSeoMetadata, getSeoRoute } from "../lib/seo";
 
@@ -115,6 +116,7 @@ const additionalStructuredData = Array.isArray(structuredData) ? structuredData 
     </>}
     <slot />
     <OliviaAI />
+    <ReviewMode />
     <script is:inline>
       const nav = document.querySelector('[data-header]');
       const menuButton = document.querySelector('[data-menu-button]');

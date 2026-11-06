@@ -73,3 +73,10 @@ Les destinataires réels Formspree/HubSpot, les emails et les automatisations CR
 - Référence : les deux captures du Bureau de 23 h 12 montrent le hero noir et le bloc de risque bleu, avec la conclusion des titres en turquoise.
 - Accueil ES/EN : première phrase du titre de risque en blanc et seconde phrase en turquoise, sans changement de texte. Le hero conserve son traitement blanc/turquoise.
 - Rétablissement du dégradé bleu `#053060` vers le noir et du halo cyan du site actuel, en retirant la surcharge V3 qui assombrissait le bloc.
+
+## Rétablissement de la revue client en jaune — 6 novembre 2026
+
+- Mode « Cambios V3 / V3 changes » réactivé par défaut en ES/EN, à partir des statuts « New » et « Changed » du document client enregistrés dans `src/data/v3/changes.json`. Le repérage porte sur les blocs éditoriaux ; les blocs « Same » conservent leurs couleurs.
+- Prise en compte des titres FAQ, des textes adaptés du bloc Contact et de la bande partenaires. Les boutons modifiés sont entourés de jaune pour conserver leur lisibilité.
+- Le bouton en bas à gauche permet de masquer le jaune ; `?review=1` le force, `?review=0` le désactive. Une nouvelle préférence évite qu'un ancien réglage masque le rétablissement du mode lors de la première visite.
+- Contrôles de types, build, régression V3, SEO et traduction des 33 articles par langue réussis.
